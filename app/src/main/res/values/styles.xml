@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <!-- 继承可以用parent方式，同理，也可在名称中加入前缀，如Theme.AppCompat.Light.NoActionBar，此时不写parent也是可以的-->
+    <style name="Theme.AppCompat.Light.NoActionBar" parent="@style/Theme.AppCompat.Light">
+        <item name="android:windowNoTitle">true</item>
+    </style>
 </resources>
