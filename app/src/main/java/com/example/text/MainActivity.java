@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -240,6 +241,12 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         super.onPause();
 // 这是前提——你的app至少运行了一个service。这里表示当进程不在前台时，马上开启一个service
         Intent intent = new Intent(this, MyService.class);
-        startService(intent);
+        // Android 8.0使用startForegroundService在前台启动新服务
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            startForegroundService(intent);
+        }else{
+            startService(intent);
+        }
+
     }
 }

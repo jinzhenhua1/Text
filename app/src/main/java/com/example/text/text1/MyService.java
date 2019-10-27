@@ -62,7 +62,7 @@ public class MyService extends Service {
     private Notification getNotification()
     {
         NotificationManager notificationManager = (NotificationManager) getSystemService(Service.NOTIFICATION_SERVICE);
-        if (Build.VERSION.SDK_INT >= 26) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             createNotificationChannel(notificationManager);//安卓8.0以上
         }
 
@@ -77,6 +77,11 @@ public class MyService extends Service {
                 .setWhen(System.currentTimeMillis())
                 .setDefaults(NotificationCompat.DEFAULT_ALL)
                 .setContentIntent(pendingIntent);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            builder.setChannelId("YOUR_CHANNEL_ID001");
+        }
+
         Notification notification = builder.build();
         notification.flags = Notification.FLAG_AUTO_CANCEL;
         return notification;
