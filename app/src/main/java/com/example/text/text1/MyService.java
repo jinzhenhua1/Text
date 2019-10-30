@@ -20,10 +20,9 @@ public class MyService extends Service {
     private final static String TAG = MyService.class.getSimpleName();
     // 启动notification的id，两次启动应是同一个id
     private final static int NOTIFICATION_ID = android.os.Process.myPid();
+
 //    private AssistServiceConnection mServiceConnection;
 
-    public MyService() {
-    }
 
     @Override
     public IBinder onBind(Intent intent) {
