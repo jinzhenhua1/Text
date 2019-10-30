@@ -30,6 +30,11 @@ android {
 //        }
     }
 
+    //MVVM模式
+    dataBinding {
+        enabled = true
+    }
+
 
     useLibrary 'org.apache.http.legacy'//27版本中没有HttpPost，使用低版本的HttpPost类
 }

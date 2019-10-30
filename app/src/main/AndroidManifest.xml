@@ -20,12 +20,8 @@
     <permission android:name="android.permission.WRITE_SETTINGS" /> <!-- 手机定位信息，用来为语义等功能提供定位，提供更精准的服务 -->
     <!-- 定位信息是敏感信息，可通过Setting.setLocationEnable(false)关闭定位请求 -->
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 如需使用人脸识别，还要添加：摄相头权限，拍照需要用到 -->
-    <uses-permission android:name="android.permission.CAMERA" />
-
-
-    <!--<permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" android:protectionLevel="signature"/>-->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- <permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" android:protectionLevel="signature"/> -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-
 
     <application
         android:name=".MyApplication.MyApplication"
@@ -35,7 +31,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GreenDaoActivity"></activity>
+        <activity android:name=".DataBindActivity"></activity>
+        <activity android:name=".GreenDaoActivity" />
         <activity android:name=".TextRxjavaActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -45,8 +42,7 @@
             </intent-filter>
         </activity>
 
-        <service android:name=".text1.MyService"/>
-
+        <service android:name=".text1.MyService" />
     </application>
 
 </manifest>
