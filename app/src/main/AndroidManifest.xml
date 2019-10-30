@@ -31,7 +31,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DataBindActivity"></activity>
+        <activity android:name=".mvvm.DataBindActivity"></activity>
         <activity android:name=".GreenDaoActivity" />
         <activity android:name=".TextRxjavaActivity" />
         <activity android:name=".MainActivity">
