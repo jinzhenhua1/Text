@@ -7,8 +7,8 @@ import com.example.text.mvp.base.BasePresenter;
 import com.example.text.mvp.base.HttpResponseListener;
 import com.example.text.mvp.model.WeatherModel;
 
-public class WeatherPresenter extends BasePresenter<IWeatherContract.IWeatherView> implements IWeatherContract.IWeatherPresenter {
-    private WeatherModel model;
+public class WeatherPresenter extends BasePresenter<IWeatherContract.IWeatherView, IWeatherContract.IWeatherModel> implements IWeatherContract.IWeatherPresenter {
+//    private WeatherModel model;
 
     public WeatherPresenter(IWeatherContract.IWeatherView view){
         super(view);
@@ -25,7 +25,7 @@ public class WeatherPresenter extends BasePresenter<IWeatherContract.IWeatherVie
 
             @Override
             public void onFailure(Throwable throwable) {
-                getView().showError(throwable.toString());
+                getView().showError(throwable.getMessage());
             }
         });
     }
