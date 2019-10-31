@@ -3,8 +3,13 @@
     <data>
 
         <variable
-            name="user"
-            type="com.example.text.bean.User" />
+            name="userModel"
+            type="com.example.text.mvvm.UserModel" />
+
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
     </data>
 
     <LinearLayout
@@ -16,6 +21,14 @@
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{String.valueOf(age)}"/>
+            android:text="@{String.valueOf(userModel.name)}"/>
+
+        <Button
+            android:text="改变"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{listener}"/>
     </LinearLayout>
 </layout>

@@ -2,6 +2,7 @@ package com.example.text.text1;
 
 import com.example.text.bean.ContextData;
 import com.example.text.bean.ResponseData;
+import com.example.text.bean.WeatherData;
 
 import org.json.JSONObject;
 
@@ -23,5 +24,8 @@ public interface TextService {
 
     @GET("/weather_mini")
     Observable<ResponseData<ContextData>> getResponseBody(@Query("city") String str);
+
+    @GET("/weather_mini")
+    Observable<WeatherData> getWeatherData(@Query("city") String str);
 
 }

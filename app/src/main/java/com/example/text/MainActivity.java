@@ -13,6 +13,8 @@ import android.widget.Toast;
 
 import com.example.text.bean.ContextData;
 import com.example.text.bean.ResponseData;
+import com.example.text.mvp.view.WeatherActivity;
+import com.example.text.mvvm.DataBindActivity;
 import com.example.text.text1.HttpClient;
 import com.example.text.text1.MyService;
 import com.example.text.text1.TextBzrule;
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private Button btn_http;//调用接口测试
     private Button btn_nextPage;//跳转到rxjava页
     private Button but_greendao;//跳转到greenDao页
+    private Button btn_textMVVM;//MVVM
+    private Button btn_textMVP;//MVP
 
 
     @Override
@@ -99,7 +103,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
 
                     @Override
                     public void onFailure(Call<ResponseData<ContextData>> call, Throwable t) {
-
+                        Log.e(TAG,t.toString());
                     }
                 });
             }
@@ -231,6 +235,21 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(),GreenDaoActivity.class));
+            }
+        });
+        btn_textMVVM = findViewById(R.id.btn_textMVVM);
+        btn_textMVVM.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), DataBindActivity.class));
+            }
+        });
+
+        btn_textMVP = findViewById(R.id.btn_textMVP);
+        btn_textMVP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), WeatherActivity.class));
             }
         });
     }

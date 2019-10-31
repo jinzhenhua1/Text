@@ -4,7 +4,7 @@ import org.greenrobot.greendao.annotation.Entity;
 import org.greenrobot.greendao.annotation.Generated;
 
 @Entity //@Entity 将我们的java普通类变为一个能够被greenDAO识别的数据库类型的实体类
-public class User {
+public class User  {
     private String name = "";
 
     private String age = "";
