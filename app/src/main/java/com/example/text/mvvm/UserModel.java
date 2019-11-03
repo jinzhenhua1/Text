@@ -3,7 +3,7 @@ package com.example.text.mvvm;
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 import androidx.databinding.ObservableInt;
-import androidx.databinding.library.baseAdapters.BR;
+
 
 /**
  * 单向绑定 继承BaseObservable 后可
@@ -21,7 +21,7 @@ public class UserModel extends BaseObservable {
     public void setName(String name) {
         this.name = name;
         //更新指定的某个字段
-        notifyPropertyChanged(BR.name);
+        notifyPropertyChanged(com.example.text.BR.name);
     }
 
     public void setAge(String age) {

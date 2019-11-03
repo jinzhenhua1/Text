@@ -13,6 +13,7 @@ import android.widget.Toast;
 
 import com.example.text.bean.ContextData;
 import com.example.text.bean.ResponseData;
+import com.example.text.dagger.DaggerActivity;
 import com.example.text.mvp.view.WeatherActivity;
 import com.example.text.mvvm.DataBindActivity;
 import com.example.text.text1.HttpClient;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private Button but_greendao;//跳转到greenDao页
     private Button btn_textMVVM;//MVVM
     private Button btn_textMVP;//MVP
+    private Button btn_dagger;//dagger
 
 
     @Override
@@ -252,6 +254,13 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
                 startActivity(new Intent(getApplicationContext(), WeatherActivity.class));
             }
         });
+        btn_dagger = findViewById(R.id.btn_dagger);
+        btn_dagger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), DaggerActivity.class));
+            }
+        });
     }
 
 
@@ -261,11 +270,11 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
 // 这是前提——你的app至少运行了一个service。这里表示当进程不在前台时，马上开启一个service
         Intent intent = new Intent(this, MyService.class);
         // Android 8.0使用startForegroundService在前台启动新服务
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            startForegroundService(intent);
-        }else{
-            startService(intent);
-        }
+//        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+//            startForegroundService(intent);
+//        }else{
+//            startService(intent);
+//        }
 
     }
 }
