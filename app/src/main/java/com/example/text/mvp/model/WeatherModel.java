@@ -12,7 +12,7 @@ public class WeatherModel extends BaseModel implements IWeatherContract.IWeather
 
     @Override
     public void getWeather(String city, HttpResponseListener listener) {
-        sendRequest(getService(TextService.class).getWeatherData(city),listener);
+        sendRequestUntilStop(getService(TextService.class).getWeatherData(city),listener);
 
     }
 }
