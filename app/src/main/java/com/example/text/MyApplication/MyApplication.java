@@ -6,6 +6,8 @@ import android.database.sqlite.SQLiteDatabase;
 import com.xiaoyehai.landsurvey.greendao.DaoMaster;
 import com.xiaoyehai.landsurvey.greendao.DaoSession;
 
+import timber.log.Timber;
+
 public class MyApplication extends Application {
 
     public static final String DB_NAME = "text.db";
@@ -17,9 +19,17 @@ public class MyApplication extends Application {
         super.onCreate();
 
         initGreenDao();
+        initTimber();
 
     }
 
+    private void initTimber(){
+        Timber.plant(new Timber.DebugTree());
+    }
+
+    /**
+     * 初始化数据库框架
+     */
     private void initGreenDao(){
         DaoMaster.DevOpenHelper helper = new DaoMaster.DevOpenHelper(this, DB_NAME);
         SQLiteDatabase db = helper.getWritableDatabase();
