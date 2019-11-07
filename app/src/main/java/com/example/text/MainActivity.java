@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
                 //使用Gson解析器,可以替换其他的解析器
                 .addConverterFactory(GsonConverterFactory.create())
                 //设置OKHttpClient,如果不设置会提供一个默认的
-//                .client(new HttpClient().getClient())
+                .client(new HttpClient().getClient())
 
                 // 针对rxjava2.x
 //                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
