@@ -21,6 +21,7 @@ import com.example.text.text1.MyService;
 import com.example.text.text1.TextBzrule;
 import com.example.text.text1.TextService;
 import com.example.text.util.StatusBarUtil;
+import com.example.text.view.TestGridLayoutActivity;
 
 import org.json.JSONObject;
 import org.reactivestreams.Subscriber;
@@ -57,6 +58,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private Button btn_textMVVM;//MVVM
     private Button btn_textMVP;//MVP
     private Button btn_dagger;//dagger
+    private Button btn_gridview;//gridView
 
 
     @Override
@@ -259,6 +261,14 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), DaggerActivity.class));
+            }
+        });
+
+        btn_gridview = findViewById(R.id.btn_gridview);
+        btn_gridview.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(), TestGridLayoutActivity.class));
             }
         });
     }
