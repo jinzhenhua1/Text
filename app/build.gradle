@@ -17,6 +17,12 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+
     greendao {
         schemaVersion 2//数据库版本号
         daoPackage 'com.xiaoyehai.landsurvey.greendao'//设置DaoMaster、DaoSession、Dao包名
@@ -39,6 +45,10 @@ android {
 
 
     useLibrary 'org.apache.http.legacy'//27版本中没有HttpPost，使用低版本的HttpPost类
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 }
 
 dependencies {
