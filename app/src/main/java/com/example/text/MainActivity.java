@@ -1,11 +1,14 @@
 package com.example.text;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -57,6 +60,8 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private Button btn_textMVVM;//MVVM
     private Button btn_textMVP;//MVP
     private Button btn_dagger;//dagger
+
+    private Handler handler = new Handler();
 
 
     @Override
@@ -111,8 +116,10 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
             }
         });
 
-
-
+        Log.e(TAG,"threadName:" + Thread.currentThread().getName());
+        handler.postDelayed(() -> {
+            Log.e(TAG,"threadName:" + Thread.currentThread().getName());
+        },1000);
 
 //
 //        service.getResponseBody("北京")

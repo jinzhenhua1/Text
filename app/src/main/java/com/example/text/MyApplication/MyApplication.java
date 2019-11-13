@@ -6,6 +6,7 @@ import android.database.sqlite.SQLiteDatabase;
 import com.xiaoyehai.landsurvey.greendao.DaoMaster;
 import com.xiaoyehai.landsurvey.greendao.DaoSession;
 
+import androidx.multidex.MultiDex;
 import timber.log.Timber;
 
 public class MyApplication extends Application {
@@ -20,6 +21,9 @@ public class MyApplication extends Application {
 
         initGreenDao();
         initTimber();
+
+        // 初始化MultiDex
+        MultiDex.install(this);
 
     }
 
