@@ -10,11 +10,19 @@ android {
     buildToolsVersion "29.0.0"
     defaultConfig {
         applicationId "com.example.text"
-        minSdkVersion 21
+        minSdkVersion 17
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        // 项目过大，这里添加
+        multiDexEnabled true
+    }
+
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
     }
 
     greendao {
@@ -39,6 +47,10 @@ android {
 
 
     useLibrary 'org.apache.http.legacy'//27版本中没有HttpPost，使用低版本的HttpPost类
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
 }
 
 dependencies {
@@ -78,6 +90,14 @@ dependencies {
     implementation 'org.glassfish:javax.annotation:10.0-b28'
     //Timber框架
     implementation 'com.jakewharton.timber:timber:4.6.0'
+
+    //项目过大，需要导入该类库
+    implementation 'com.android.support:multidex:1.0.3'
+    //MaterialDialog：一个漂亮、流畅、可定制的对话框。
+    implementation  "com.afollestad.material-dialogs:core:0.9.6.0"
+    implementation  "com.afollestad.material-dialogs:commons:0.9.6.0"
+    //StringUtils类库
+    implementation 'org.apache.commons:commons-lang3:3.7'
 }
 repositories {
     mavenCentral()

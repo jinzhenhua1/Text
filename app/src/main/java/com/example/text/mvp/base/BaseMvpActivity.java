@@ -61,7 +61,15 @@ public abstract class BaseMvpActivity<T extends IBaseContract.IBasePresenter> ex
      */
     protected abstract void initViewAndData(Bundle savedInstanceState);
 
+    /**
+     * 注入P层对象
+     * @return
+     */
     protected abstract T createPresenter();
 
+    /**
+     * 设置布局文件ID
+     * @return
+     */
     protected abstract int getLayoutId();
 }

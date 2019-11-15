@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:gravity="center_horizontal"
+	android:orientation="vertical">
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_16"
+		android:layout_gravity="center"
+		android:text="@string/string_title_dialog"
+		android:textColor="@color/colorPrimary"
+		android:textSize="@dimen/dimen_sp_22"/>
+
+	<TextView
+		android:id="@+id/dialog_common_inquiry_tv_message"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="@dimen/dimen_24"
+		android:layout_marginBottom="@dimen/dimen_12"
+		android:layout_marginStart="@dimen/dimen_24"
+		android:layout_marginEnd="@dimen/dimen_24"
+		android:layout_gravity="center"
+		android:textColor="@color/color_424242"
+		android:textSize="@dimen/dimen_sp_20"/>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_margin="@dimen/dimen_16"
+		android:layout_gravity="bottom"
+		android:orientation="horizontal">
+
+		<Button
+			android:id="@+id/dialog_common_inquiry_btn_confirm"
+			style="@android:style/Widget.Button"
+			android:layout_width="0dp"
+			android:layout_height="@dimen/dimen_40"
+			android:layout_weight="0.5"
+			android:layout_marginEnd="@dimen/dimen_16"
+			android:background="@drawable/blue_selector"
+			android:text="@string/string_confirm"
+			android:textColor="@android:color/white"
+			android:textSize="@dimen/dimen_sp_20"/>
+
+		<Button
+			android:id="@+id/dialog_common_inquiry_btn_cancel"
+			style="@android:style/Widget.Button"
+			android:layout_width="0dp"
+			android:layout_height="@dimen/dimen_40"
+			android:layout_weight="0.5"
+			android:background="@drawable/blue_selector"
+			android:text="@string/string_cancel"
+			android:textColor="@android:color/white"
+			android:textSize="@dimen/dimen_sp_20"/>
+	</LinearLayout>
+</LinearLayout>

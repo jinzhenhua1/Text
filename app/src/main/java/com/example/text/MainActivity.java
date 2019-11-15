@@ -1,11 +1,14 @@
 package com.example.text;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -60,6 +63,8 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private Button btn_dagger;//dagger
     private Button btn_gridview;//gridView
 
+    private Handler handler = new Handler();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +87,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
                 //使用Gson解析器,可以替换其他的解析器
                 .addConverterFactory(GsonConverterFactory.create())
                 //设置OKHttpClient,如果不设置会提供一个默认的
-//                .client(new HttpClient().getClient())
+                .client(new HttpClient().getClient())
 
                 // 针对rxjava2.x
 //                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
@@ -113,8 +118,10 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
             }
         });
 
-
-
+        Log.e(TAG,"threadName:" + Thread.currentThread().getName());
+        handler.postDelayed(() -> {
+            Log.e(TAG,"threadName:" + Thread.currentThread().getName());
+        },1000);
 
 //
 //        service.getResponseBody("北京")

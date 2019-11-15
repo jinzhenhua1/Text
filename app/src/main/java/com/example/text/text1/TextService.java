@@ -2,6 +2,7 @@ package com.example.text.text1;
 
 import com.example.text.bean.ContextData;
 import com.example.text.bean.ResponseData;
+import com.example.text.bean.TestStringResponse;
 import com.example.text.bean.WeatherData;
 
 import org.json.JSONObject;
@@ -28,4 +29,12 @@ public interface TextService {
     @GET("/weather_mini")
     Observable<WeatherData> getWeatherData(@Query("city") String str);
 
+
+    /**
+     * 测试返回数据中是否可以有字符串
+     * @param str
+     * @return
+     */
+    @GET("/weather_mini")
+    Observable<TestStringResponse> getStringResponse(@Query("city") String str);
 }
