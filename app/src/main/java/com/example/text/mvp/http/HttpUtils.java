@@ -4,7 +4,6 @@ import com.example.text.constant.URLConstant;
 
 import java.util.concurrent.TimeUnit;
 
-import io.reactivex.Observable;
 import okhttp3.OkHttpClient;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
@@ -24,7 +23,7 @@ public class HttpUtils {
     private static Retrofit retrofit;
 
 
-    public synchronized static Retrofit getRetrofit() {
+    public static synchronized Retrofit getRetrofit() {
         //初始化retrofit的配置
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()
@@ -37,7 +36,4 @@ public class HttpUtils {
         return retrofit;
     }
 
-//    public Observable getObservable(Class aClass,Object object){
-//        return retrofit.create(aClass)
-//    }
 }

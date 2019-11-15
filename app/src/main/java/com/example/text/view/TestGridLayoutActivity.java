@@ -7,11 +7,9 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.GridLayout;
-import android.widget.GridView;
 import android.widget.TextView;
 
 import com.example.text.R;
-import com.example.text.databinding.ActivityDataBindBindingImpl;
 import com.example.text.databinding.ActivityTextGridViewBinding;
 
 public class TestGridLayoutActivity extends AppCompatActivity {
@@ -44,8 +42,7 @@ public class TestGridLayoutActivity extends AppCompatActivity {
                 params.columnSpec = GridLayout.spec(i % 2,2,2f);
             }
 
-            textView.setGravity(Gravity.CENTER);
-//            textView.setGravity(Gravity.BOTTOM|Gravity.RIGHT);
+            textView.setGravity(Gravity.CENTER);//设置对齐方式
 
 
             // 背景

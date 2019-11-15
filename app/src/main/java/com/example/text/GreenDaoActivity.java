@@ -13,7 +13,6 @@ import com.example.text.MyApplication.MyApplication;
 import com.example.text.bean.User;
 import com.xiaoyehai.landsurvey.greendao.UserDao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class GreenDaoActivity extends AppCompatActivity {
