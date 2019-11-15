@@ -1,10 +1,14 @@
 package com.example.text.MyApplication;
 
+import android.app.Activity;
 import android.app.Application;
 import android.database.sqlite.SQLiteDatabase;
 
 import com.xiaoyehai.landsurvey.greendao.DaoMaster;
 import com.xiaoyehai.landsurvey.greendao.DaoSession;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import androidx.multidex.MultiDex;
 import timber.log.Timber;
@@ -14,6 +18,7 @@ public class MyApplication extends Application {
     public static final String DB_NAME = "text.db";
 
     private static DaoSession mDaoSession;
+    private Map<String, Activity> lruActivityMaps = new HashMap<>();
 
     @Override
     public void onCreate() {
@@ -27,6 +32,17 @@ public class MyApplication extends Application {
 
     }
 
+    public Map<String, Activity> getLruActivityMaps() {
+        return lruActivityMaps;
+    }
+
+    public void setLruActivityMaps(Map<String, Activity> lruActivityMaps) {
+        this.lruActivityMaps = lruActivityMaps;
+    }
+
+    /**
+     * 初始化Timber 框架
+     */
     private void initTimber(){
         Timber.plant(new Timber.DebugTree());
     }
