@@ -18,7 +18,9 @@ public abstract class BaseViewModel {
         destroy();
     }
 
-    abstract void destroy();
+    public abstract void init();
 
-    abstract void init();
+    public abstract void destroy();
+
+
 }

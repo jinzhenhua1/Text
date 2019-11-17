@@ -6,6 +6,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,8 +24,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.ViewDataBinding;
 
+import timber.log.Timber;
+
 public class BaseActivity<T extends ViewDataBinding, E extends BaseViewModel> extends AppCompatActivity
-        implements IBaseView, IListener {
+        implements IBaseView, IListener , View.OnClickListener {
     protected Context context;
     protected Activity activity;
     protected T dataBinding;
@@ -46,11 +49,12 @@ public class BaseActivity<T extends ViewDataBinding, E extends BaseViewModel> ex
     private MaterialDialog.SingleButtonCallback cancelCallback = (dialog, which) -> onCancelCallback();
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState, @Nullable PersistableBundle persistentState) {
-        super.onCreate(savedInstanceState, persistentState);
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         context = this;
         activity = this;
         loadingDialog = DialogHelper.loadingDialog(context);
+        inquiryDialog = DialogHelper.inquiryDialog(context, this);
         confirmDialog = DialogHelper.confirmDialog(context, confirmCallback, cancelCallback);
         Map<String, Activity> map = ((MyApplication) getApplication()).getLruActivityMaps();
         map.put(activity.getClass().getSimpleName(), activity);
@@ -115,8 +119,18 @@ public class BaseActivity<T extends ViewDataBinding, E extends BaseViewModel> ex
     }
 
     @Override
-    public void showInquiryDialog(String msg) {
-
+    public void showInquiryDialog(String message) {
+        if (null != inquiryDialog && !inquiryDialog.isShowing()) {
+            runOnUiThread(() -> {
+                if (null != inquiryDialog.getCustomView()) {
+                    TextView tvMessage = inquiryDialog.getCustomView().findViewById(R.id.dialog_common_inquiry_tv_message);
+                    tvMessage.setText(message);
+                    inquiryDialog.show();
+                } else {
+                    Timber.e("inquiry dialog custom view is null.");
+                }
+            });
+        }
     }
 
     @Override
@@ -162,6 +176,29 @@ public class BaseActivity<T extends ViewDataBinding, E extends BaseViewModel> ex
             loadingDialog.dismiss();
         }
         loadingDialog = null;
+    }
+
+    @Override
+    public void onClick(View v) {
+        if (R.id.dialog_common_inquiry_btn_confirm == v.getId()) {
+            onInquiryConfirm();
+        } else if (R.id.dialog_common_inquiry_btn_cancel == v.getId()) {
+            onInquiryCancel();
+        }
+    }
+
+    @Override
+    public void onInquiryConfirm() {
+        if (null != inquiryDialog && inquiryDialog.isShowing()) {
+            inquiryDialog.dismiss();
+        }
+    }
+
+    @Override
+    public void onInquiryCancel() {
+        if (null != inquiryDialog && inquiryDialog.isShowing()) {
+            inquiryDialog.dismiss();
+        }
     }
 
     @Override

@@ -19,9 +19,11 @@ public class IBaseContract {
 
         public void  showError(String msg);
 
-        public void  showLoading(String loadingText);
+        public void  showLoadingWithMessage(String loadingText);
 
-        public void  showContent();
+        public void  showLoading();
+
+        public void  showContent(String message,int duration);
 
         public void  dismissLoading();
 

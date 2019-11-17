@@ -32,11 +32,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".mvvm.StudentActivity"></activity>
+        <activity android:name=".mvvm.view.StudentActivity"></activity>
         <activity android:name=".dagger.DaggerActivity" />
         <activity android:name=".view.TestGridLayoutActivity"></activity>
         <activity android:name=".mvp.view.WeatherActivity" />
-        <activity android:name=".mvvm.DataBindActivity" />
+        <activity android:name=".mvvm.view.DataBindActivity" />
         <activity android:name=".GreenDaoActivity" />
         <activity android:name=".TextRxjavaActivity" />
         <activity android:name=".MainActivity">

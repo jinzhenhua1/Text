@@ -1,10 +1,15 @@
 package com.example.text.mvp.base;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Context;
 import android.os.Bundle;
+import android.view.Gravity;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.text.R;
+import com.example.text.helper.DialogHelper;
 import com.example.text.mvp.IBaseContract;
 
 /**
@@ -13,7 +18,12 @@ import com.example.text.mvp.IBaseContract;
  */
 public abstract class BaseMvpActivity<T extends IBaseContract.IBasePresenter> extends Activity implements IBaseContract.IBaseView {
     protected T presenter;
-    private Context context;
+    protected Context context;
+    /**
+     * 进度框
+     */
+    protected Dialog loadingDialog;
+    protected Toast toast;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +32,7 @@ public abstract class BaseMvpActivity<T extends IBaseContract.IBasePresenter> ex
         presenter = createPresenter();
         setContentView(getLayoutId());
         initViewAndData(savedInstanceState);
+        loadingDialog = DialogHelper.loadingDialog(context);
     }
 
     @Override
@@ -36,18 +47,43 @@ public abstract class BaseMvpActivity<T extends IBaseContract.IBasePresenter> ex
     }
 
     @Override
-    public void showLoading(String loadingText) {
-
+    public void showLoadingWithMessage(String loadingText) {
+        if (null != loadingDialog && !loadingDialog.isShowing()) {
+            runOnUiThread(() -> {
+                if (null != loadingDialog.getWindow()) {
+                    TextView tvLoad = loadingDialog.getWindow().findViewById(R.id.tv_load_dialog);
+                    tvLoad.setText(loadingText);
+                    loadingDialog.show();
+                }
+            });
+        }
     }
 
     @Override
-    public void showContent() {
+    public void showLoading() {
+        if (null != loadingDialog && !loadingDialog.isShowing()) {
+            runOnUiThread(() -> loadingDialog.show());
+        }
+    }
 
+    @Override
+    public void showContent(String message,int duration) {
+        runOnUiThread(() -> {
+            if (toast == null) {
+                toast = Toast.makeText(context, message, duration);
+            }
+            toast.setText(message);
+            toast.setDuration(duration);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+        });
     }
 
     @Override
     public void dismissLoading() {
-
+        if (null != loadingDialog && loadingDialog.isShowing()) {
+            runOnUiThread(() -> loadingDialog.dismiss());
+        }
     }
 
     @Override

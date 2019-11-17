@@ -1,14 +1,20 @@
-package com.example.text.mvvm;
+package com.example.text.mvvm.viewModel;
+
+import android.content.Context;
+import android.content.Intent;
 
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
 import androidx.databinding.ObservableInt;
+
+import com.example.text.mvvm.view.StudentActivity;
 
 
 /**
  * 单向绑定 继承BaseObservable 后可
  */
 public class UserModel extends BaseObservable {
+    private Context context;
 
     //如果是 public 修饰符，则可以直接在成员变量上方加上 @Bindable 注解
 //    @Bindable
@@ -17,6 +23,9 @@ public class UserModel extends BaseObservable {
     private String age = "";
 
 
+    public UserModel(Context context) {
+        this.context = context;
+    }
 
     public void setName(String name) {
         this.name = name;
@@ -37,5 +46,9 @@ public class UserModel extends BaseObservable {
 
     public String getAge() {
         return age;
+    }
+
+    public void clickJump(){
+        context.startActivity(new Intent(context, StudentActivity.class));
     }
 }

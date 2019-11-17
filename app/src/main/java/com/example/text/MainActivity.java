@@ -1,14 +1,10 @@
 package com.example.text;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Message;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,7 +14,7 @@ import com.example.text.bean.ContextData;
 import com.example.text.bean.ResponseData;
 import com.example.text.dagger.DaggerActivity;
 import com.example.text.mvp.view.WeatherActivity;
-import com.example.text.mvvm.DataBindActivity;
+import com.example.text.mvvm.view.DataBindActivity;
 import com.example.text.text1.HttpClient;
 import com.example.text.text1.MyService;
 import com.example.text.text1.TextBzrule;
@@ -26,30 +22,18 @@ import com.example.text.text1.TextService;
 import com.example.text.util.StatusBarUtil;
 import com.example.text.view.TestGridLayoutActivity;
 
-import org.json.JSONObject;
-import org.reactivestreams.Subscriber;
-import org.reactivestreams.Subscription;
-
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
-import io.reactivex.ObservableSource;
-import io.reactivex.ObservableTransformer;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.disposables.Disposable;
-import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
-import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
-import retrofit2.adapter.rxjava2.Result;
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.converter.scalars.ScalarsConverterFactory;
 
 //public class MainActivity extends Activity {
 public class MainActivity extends AppCompatActivity {//带有titleBar
@@ -72,8 +56,8 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         setContentView(R.layout.activity_main);
         initView();
 
-        StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);//改变状态栏背景的颜色
-        StatusBarUtil.statusBarLightMode(this);//改变状态栏字体图标为黑色
+//        StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);//改变状态栏背景的颜色
+//        StatusBarUtil.statusBarLightMode(this);//改变状态栏字体图标为黑色
 
 
         Retrofit retrofit = new Retrofit.Builder()

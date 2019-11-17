@@ -3,8 +3,12 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+
+        <!-- 应用的主要色调,actionBar默认使用该颜色，Toolbar导航栏的底色 -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <!-- 应用的主要暗色调,系统状态栏 默认使用该颜色 -->
+        <item name="colorPrimaryDark">@color/black</item>
+        <!-- 一般控件的选中效果默认采用该颜色,如 CheckBox,RadioButton,SwitchCompat，ProcessBar等-->
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 

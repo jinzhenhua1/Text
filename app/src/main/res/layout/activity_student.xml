@@ -1,10 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".mvvm.StudentActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+    <data>
+
+        <import type="android.view.View"/>
+
+        <variable
+            name="student"
+            type="com.example.text.mvvm.viewModel.StudentViewModel"/>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:id="@+id/activity_test_ll_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="姓名：" />
+            <TextView
+                android:id="@+id/activity_test_tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{student.studentName}"
+                tools:text="测试"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/activity_test_ll_class"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/activity_test_ll_name">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="班级："/>
+            <TextView
+                android:id="@+id/activity_test_tv_class"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{student.className}"
+                tools:text="测试"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/activity_test_ll_level"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/activity_test_ll_class">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="年级：" />
+            <TextView
+                android:id="@+id/activity_test_tv_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{student.level}"
+                tools:text="测试"/>
+        </LinearLayout>
+
+        <Button
+            android:text="变换"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{() -> student.clickChange()}"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/activity_test_ll_level" />
 
 
-</Layout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_margin="@dimen/dimen_10">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            -->
+<!--        </LinearLayout>-->
+
+
+
+<!--    </LinearLayout>-->
+
+
+</layout>

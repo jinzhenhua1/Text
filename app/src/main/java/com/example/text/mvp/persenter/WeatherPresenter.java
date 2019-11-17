@@ -17,15 +17,18 @@ public class WeatherPresenter extends BasePresenter<IWeatherContract.IWeatherVie
 
     @Override
     public void getWeather(String city) {
+        getView().showLoading();
         model.getWeather(city, new HttpResponseListener<WeatherData>() {
             @Override
             public void onSuccess(Object tag, WeatherData weatherData) {
                 getView().showWeahter(weatherData);
+                getView().dismissLoading();
             }
 
             @Override
             public void onFailure(Throwable throwable) {
                 getView().showError(throwable.getMessage());
+                getView().dismissLoading();
             }
         });
     }
