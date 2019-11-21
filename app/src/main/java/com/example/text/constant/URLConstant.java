@@ -1,13 +1,9 @@
 package com.example.text.constant;
 
 /**
- * 作者： 周旭 on 2017年10月17日 0017.
- * 邮箱：374952705@qq.com
- * 博客：http://www.jianshu.com/u/56db5d78044d
  */
 
 public class URLConstant {
-    public static final String URL_NEWS = "https://news-at.zhihu.com/api/4/themes";
     public static final String URL_BASE = "http://wthrcdn.etouch.cn/";
-    public static final String URL_PATH = "api/4/themes";
+    public static final String IP_BASE = "14.215.166.63";//上面接口的IP
 }

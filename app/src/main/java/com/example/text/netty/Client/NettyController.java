@@ -25,12 +25,19 @@ import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
 
 public class NettyController {
-    private Bootstrap bootstrap;
+    private Bootstrap bootstrap = new Bootstrap();
     private Gson gson;
     //接收到返回数据时的回调
     private HashMap<String, NettyListener> nettyListenerHashMap = new HashMap<>();
     //连接池
     private FixedChannelPool fixedChannelPool;
+
+    /**
+     * 默认构造方法
+     */
+    public NettyController(String localAddress,int localPort) {
+        init(localAddress,localPort);
+    }
 
     /**
      * 使用FixedChannelPool连接池
@@ -73,6 +80,7 @@ public class NettyController {
 
                 @Override
                 public void messageReceive(String resp) {
+                    //接收成功时，在ChannelInboundHandlerAdapter 中调用该方法
                     if (emitter == null || emitter.isDisposed()) {
                         return;
                     }
@@ -170,7 +178,7 @@ public class NettyController {
          */
         @Override
         public void channelReleased(Channel channel) throws Exception {
-
+            System.out.println("通道释放");
         }
 
         /**
@@ -180,7 +188,7 @@ public class NettyController {
          */
         @Override
         public void channelAcquired(Channel channel) throws Exception {
-
+            System.out.println("通道获取");
         }
 
         /**
@@ -191,6 +199,53 @@ public class NettyController {
         @Override
         public void channelCreated(Channel channel) throws Exception {
             channel.pipeline().addLast(new NettyClientHandler(NettyController.this));
+            System.out.println("通道建立");
         }
+    }
+
+
+    public void sendTest(final Object obj, @NonNull String requestCode,NettyListener nettyListener){
+        addNettyListener(requestCode,nettyListener);//添加监听器
+        new Thread(() -> {
+            final String exMsg = "网络连接异常，请检查";
+            if (null == fixedChannelPool) {
+                NettyListener listener = findNettyListenerByCode(requestCode);
+                if (null != listener) {
+                    listener.onError(new Exception(exMsg));
+                }
+                return;
+            }
+            // 申请连接，没有申请到或者网络断开，返回null
+            Future<Channel> future = fixedChannelPool.acquire();
+            future.addListener(new GenericFutureListener<Future<Channel>>() {
+                @Override
+                public void operationComplete(Future<Channel> future) throws Exception {
+                    //连接后台成功，发送请求
+                    if (future.isSuccess()) {
+                        Channel channel = future.getNow();
+                        String content = gson.toJson(obj) + "," + requestCode;
+
+                        byte[] contentBytes = content.getBytes(Charset.defaultCharset());
+                        channel.writeAndFlush(contentBytes);
+
+                        // 释放连接
+                        fixedChannelPool.release(channel);
+                    } else {
+                        Channel channel = future.getNow();
+                        Throwable cause = future.cause();
+                        Exception e = cause != null ? new Exception(exMsg, cause) : new Exception(exMsg);
+                        Timber.e(e);
+                        if (channel != null) {
+                            fixedChannelPool.release(channel);
+                        }
+                        NettyListener listener = findNettyListenerByCode(requestCode);
+                        if (null != listener) {
+                            listener.onError(e);
+                        }
+                    }
+                }
+            });
+        }).start();
+
     }
 }

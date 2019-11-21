@@ -32,8 +32,8 @@ import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class TextRxjavaActivity extends AppCompatActivity {
-    private String TAG = "TextRxjavaActivity";
+public class TestRxjavaActivity extends AppCompatActivity {
+    private String TAG = "TestRxjavaActivity";
     private Button but_textRxjava;
     private Button but_Retrofit;
     private TextService service;

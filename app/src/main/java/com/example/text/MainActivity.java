@@ -19,7 +19,6 @@ import com.example.text.text1.HttpClient;
 import com.example.text.text1.MyService;
 import com.example.text.text1.TextBzrule;
 import com.example.text.text1.TextService;
-import com.example.text.util.StatusBarUtil;
 import com.example.text.view.TestGridLayoutActivity;
 
 import io.reactivex.Observable;
@@ -221,7 +220,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         btn_nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),TextRxjavaActivity.class));
+                startActivity(new Intent(getApplicationContext(), TestRxjavaActivity.class));
             }
         });
 

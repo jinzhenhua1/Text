@@ -38,7 +38,7 @@
         <activity android:name=".mvp.view.WeatherActivity" />
         <activity android:name=".mvvm.view.DataBindActivity" />
         <activity android:name=".GreenDaoActivity" />
-        <activity android:name=".TextRxjavaActivity" />
+        <activity android:name=".TestRxjavaActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
