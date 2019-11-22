@@ -94,8 +94,8 @@ dependencies {
     //项目过大，需要导入该类库
     implementation 'com.android.support:multidex:1.0.3'
     //MaterialDialog：一个漂亮、流畅、可定制的对话框。
-    implementation  "com.afollestad.material-dialogs:core:0.9.6.0"
-    implementation  "com.afollestad.material-dialogs:commons:0.9.6.0"
+    implementation "com.afollestad.material-dialogs:core:0.9.6.0"
+    implementation "com.afollestad.material-dialogs:commons:0.9.6.0"
     //StringUtils类库
     implementation 'org.apache.commons:commons-lang3:3.7'
 }

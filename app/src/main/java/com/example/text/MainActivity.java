@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.text.bean.ContextData;
 import com.example.text.bean.ResponseData;
+import com.example.text.bluetooth.FindBlueToothActivity;
 import com.example.text.dagger.DaggerActivity;
 import com.example.text.mvp.view.WeatherActivity;
 import com.example.text.mvvm.view.DataBindActivity;
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private Button btn_textMVP;//MVP
     private Button btn_dagger;//dagger
     private Button btn_gridview;//gridView
+    private Button activity_main_btn_blue_tooth;//蓝牙
 
     private Handler handler = new Handler();
 
@@ -206,9 +208,6 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         });
 
 
-
-
-
     }
 
 
@@ -259,6 +258,14 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), TestGridLayoutActivity.class));
+            }
+        });
+
+        activity_main_btn_blue_tooth = findViewById(R.id.activity_main_btn_blue_tooth);
+        activity_main_btn_blue_tooth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), FindBlueToothActivity.class));
             }
         });
     }
