@@ -11,6 +11,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.LineBasedFrameDecoder;
 import io.netty.handler.codec.string.StringDecoder;
 import io.netty.handler.codec.string.StringEncoder;
 
@@ -46,6 +47,7 @@ public class NettyService {
                             channel.pipeline().addLast("decoder", new StringDecoder());
                             //往 Pipeline 链中添加一个编码器
                             channel.pipeline().addLast("encoder", new StringEncoder());
+                            channel.pipeline().addLast(new LineBasedFrameDecoder(1024));
                             channel.pipeline().addLast(new DiscardServerHandler());
                         }
                     })

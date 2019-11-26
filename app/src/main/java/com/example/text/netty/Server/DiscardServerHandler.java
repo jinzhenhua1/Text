@@ -20,22 +20,21 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         super.channelActive(ctx);
         System.out.println("channelActive:已连接");
-        final ChannelFuture future = ctx.writeAndFlush("112233");
-        future.addListener(channelFuture  -> {
-            assert future == channelFuture;
-            ctx.close();
-        });
+//        final ChannelFuture future = ctx.writeAndFlush("112233");
+//        future.addListener(channelFuture  -> {
+//            assert future == channelFuture;
+//            ctx.close();
+//        });
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-        System.out.println("channelRead:收到数据");
+        System.out.println("channelRead:收到数据" + msg);
 
-        ByteBuf in = (ByteBuf) msg;
+//        ByteBuf in = (ByteBuf) msg;
+//        System.out.println("Server received:" + in.toString(CharsetUtil.UTF_8));
 
-        System.out.println("Server received:" + in.toString(CharsetUtil.UTF_8));
-
-        ctx.write(msg);
+        ctx.write(msg + "\r\n");
         ctx.flush();
     }
 

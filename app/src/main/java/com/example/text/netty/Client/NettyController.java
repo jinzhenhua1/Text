@@ -45,7 +45,7 @@ public class NettyController {
      * 默认构造方法
      */
     public NettyController(String localAddress,int localPort) {
-//        init(localAddress,localPort);
+        init(localAddress,localPort);
     }
 
     /**
@@ -69,7 +69,7 @@ public class NettyController {
         poolChannelPoolMap = new ChannelPoolMap<String, FixedChannelPool>() {
             @Override
             public FixedChannelPool get(String s) {
-                return new FixedChannelPool(bootstrap,new NettyChannelPoolHandler(),15);
+                return new FixedChannelPool(bootstrap,new NettyChannelPoolHandler(),2);
             }
 
             @Override
@@ -94,9 +94,9 @@ public class NettyController {
             @Override
             protected void initChannel(Channel channel) throws Exception {
                 //往 Pipeline 链中添加一个解码器
-                channel.pipeline().addLast("decoder", new StringDecoder());
+                channel.pipeline().addLast( new StringDecoder());
                 //往 Pipeline 链中添加一个编码器
-                channel.pipeline().addLast("encoder", new StringEncoder());
+                channel.pipeline().addLast( new StringEncoder());
                 channel.pipeline().addLast(new NettyClientHandler(NettyController.this));
             }
         });
@@ -247,9 +247,6 @@ public class NettyController {
             channel.pipeline().addLast("decoder", new StringDecoder());
             //往 Pipeline 链中添加一个编码器
             channel.pipeline().addLast("encoder", new StringEncoder());
-
-//            channel.pipeline().addLast(new MessageEncoder());
-//            channel.pipeline().addLast(new MessageDecoder());
             channel.pipeline().addLast(new NettyClientHandler(NettyController.this));
             System.out.println("通道建立");
         }
@@ -258,46 +255,45 @@ public class NettyController {
 
     public void sendTest(final Object obj, @NonNull String requestCode,NettyListener nettyListener){
         addNettyListener(requestCode,nettyListener);//添加监听器
-        new Thread(() -> {
-            final String exMsg = "网络连接异常，请检查";
-            // 从连接池中获取连接
-            final FixedChannelPool pool = poolChannelPoolMap.get(host);
-            if (null == pool) {
-                NettyListener listener = findNettyListenerByCode(requestCode);
-                if (null != listener) {
-                    listener.onError(new Exception(exMsg));
-                }
-                return;
+        final String exMsg = "网络连接异常，请检查";
+        // 从连接池中获取连接
+        final FixedChannelPool pool = poolChannelPoolMap.get(host);
+        if (null == pool) {
+            NettyListener listener = findNettyListenerByCode(requestCode);
+            if (null != listener) {
+                listener.onError(new Exception(exMsg));
             }
-            // 申请连接，没有申请到或者网络断开，返回null
-            Future<Channel> future = pool.acquire();
-            future.addListener(new GenericFutureListener<Future<Channel>>() {
-                @Override
-                public void operationComplete(Future<Channel> future) throws Exception {
-                    //连接后台成功，发送请求
-                    if (future.isSuccess()) {
-                        Channel channel = future.getNow();
-                        String content = gson.toJson(obj) + "," + requestCode + "\n";
+            return;
+        }
 
-                        byte[] contentBytes = content.getBytes(Charset.defaultCharset());
-                        channel.writeAndFlush(contentBytes);
+        // 申请连接，没有申请到或者网络断开，返回null
+        Future<Channel> future = pool.acquire();
+        future.addListener(new GenericFutureListener<Future<Channel>>() {
+            @Override
+            public void operationComplete(Future<Channel> future) throws Exception {
+                //连接后台成功，发送请求
+                if (future.isSuccess()) {
+                    Channel channel = future.getNow();
+                    String content = gson.toJson(obj) + "," + requestCode + "\r\n";
+//                    byte[] contentBytes = content.getBytes(Charset.defaultCharset());
+//                    channel.writeAndFlush(contentBytes);
+                    channel.writeAndFlush(content);
+                    pool.release(channel);
+                } else {
+                    Channel channel = future.getNow();
+                    Throwable cause = future.cause();
+                    Exception e = cause != null ? new Exception(exMsg, cause) : new Exception(exMsg);
+                    Timber.e(e);
+                    if (channel != null) {
                         pool.release(channel);
-                    } else {
-                        Channel channel = future.getNow();
-                        Throwable cause = future.cause();
-                        Exception e = cause != null ? new Exception(exMsg, cause) : new Exception(exMsg);
-                        Timber.e(e);
-                        if (channel != null) {
-                            pool.release(channel);
-                        }
-                        NettyListener listener = findNettyListenerByCode(requestCode);
-                        if (null != listener) {
-                            listener.onError(e);
-                        }
+                    }
+                    NettyListener listener = findNettyListenerByCode(requestCode);
+                    if (null != listener) {
+                        listener.onError(e);
                     }
                 }
-            });
-        }).start();
+            }
+        });
 
     }
 }
