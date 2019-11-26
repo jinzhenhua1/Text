@@ -1,9 +1,7 @@
-package com.example.text.netty.Client;
+package com.example.text.netty.client;
 
 import com.example.text.bean.Student;
 import com.example.text.netty.NettyListener;
-
-import io.reactivex.functions.Consumer;
 
 /**
  * <p></p>
@@ -15,7 +13,7 @@ import io.reactivex.functions.Consumer;
 public class Test {
 
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception{
         Student student = new Student();
         student.setName("张三");
         student.setClassName("3班");
@@ -33,5 +31,6 @@ public class Test {
                 System.out.println("成功");
             }
         });
+
     }
 }

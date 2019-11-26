@@ -1,9 +1,7 @@
-package com.example.text.netty.Server;
+package com.example.text.netty.server;
 
-import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.util.ReferenceCountUtil;
 
 /**
  * <p> 写一个类继承 ChannelInboundHandlerAdapter 处理服务端的 channel</p>
@@ -17,31 +15,30 @@ public class DiscardServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         super.channelActive(ctx);
-        System.out.println("netty:已连接");
+        System.out.println("channelActive:已连接");
+//        final ChannelFuture future = ctx.writeAndFlush("112233");
+//        future.addListener(channelFuture  -> {
+//            assert future == channelFuture;
+//            ctx.close();
+//        });
     }
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
-//        super.channelRead(ctx, msg);
+        System.out.println("channelRead:收到数据" + msg);
 
-        ByteBuf in = (ByteBuf) msg;
-        ctx.write(msg);
+//        ByteBuf in = (ByteBuf) msg;
+//        System.out.println("Server received:" + in.toString(CharsetUtil.UTF_8));
+
+        ctx.write(msg + "\r\n");
         ctx.flush();
-        try {
-            while (in.isReadable()) {  // 1.
-                System.out.print((char) in.readByte());
-                System.out.flush();
-            }
-        } finally {
-            ReferenceCountUtil.release(msg);
-        }
     }
 
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) throws Exception {
 
-        System.out.println("服务端异常" + cause.toString());
+        System.out.println("exceptionCaught服务端异常：" + cause.toString());
         // 处理异常
         cause.printStackTrace();
         ctx.close();
