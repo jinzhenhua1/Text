@@ -1,11 +1,7 @@
-package com.example.text.netty.Server;
+package com.example.text.netty.server;
 
-import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
-import io.netty.util.CharsetUtil;
-import io.netty.util.ReferenceCountUtil;
 
 /**
  * <p> 写一个类继承 ChannelInboundHandlerAdapter 处理服务端的 channel</p>

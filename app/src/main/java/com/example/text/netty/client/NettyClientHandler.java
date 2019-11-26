@@ -1,4 +1,4 @@
-package com.example.text.netty.Client;
+package com.example.text.netty.client;
 
 /**
  * <p>Netty的管道处理数据类.</p>
@@ -6,7 +6,6 @@ package com.example.text.netty.Client;
  * @author 金振华 ,
  * @version 1.0 , create at 2019年11月12日12:15:28
  */
-import android.util.Log;
 
 import com.example.text.netty.NettyListener;
 

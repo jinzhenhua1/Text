@@ -1,4 +1,4 @@
-package com.example.text.netty.Client;
+package com.example.text.netty.client;
 
 import com.example.text.bean.Student;
 import com.example.text.netty.NettyListener;

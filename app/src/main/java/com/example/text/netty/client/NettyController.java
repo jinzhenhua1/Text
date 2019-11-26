@@ -1,7 +1,5 @@
-package com.example.text.netty.Client;
+package com.example.text.netty.client;
 
-import com.example.text.netty.MessageDecoder;
-import com.example.text.netty.MessageEncoder;
 import com.example.text.netty.NettyListener;
 import com.google.gson.Gson;
 
@@ -25,8 +23,6 @@ import io.netty.handler.codec.string.StringEncoder;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 import io.reactivex.Observable;
-import io.reactivex.ObservableEmitter;
-import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 import timber.log.Timber;
@@ -64,7 +60,7 @@ public class NettyController {
         bootstrap.remoteAddress(localAddress, localPort);
 
         //第二个参数是通道状态变更时候的监听器；第三个参数是最大通道数
-//        fixedChannelPool = new FixedChannelPool(bootstrap,new NettyChannelPoolHandler(),15);
+//        fixedChannelPool = new FixedChannelPool(bootstrap,new NettyChannelPoolHandler(),2);
 
         poolChannelPoolMap = new ChannelPoolMap<String, FixedChannelPool>() {
             @Override
@@ -268,29 +264,24 @@ public class NettyController {
 
         // 申请连接，没有申请到或者网络断开，返回null
         Future<Channel> future = pool.acquire();
-        future.addListener(new GenericFutureListener<Future<Channel>>() {
-            @Override
-            public void operationComplete(Future<Channel> future) throws Exception {
-                //连接后台成功，发送请求
-                if (future.isSuccess()) {
-                    Channel channel = future.getNow();
-                    String content = gson.toJson(obj) + "," + requestCode + "\r\n";
-//                    byte[] contentBytes = content.getBytes(Charset.defaultCharset());
-//                    channel.writeAndFlush(contentBytes);
-                    channel.writeAndFlush(content);
+        future.addListener(future1 -> {
+            //连接后台成功，发送请求
+            if (future.isSuccess()) {
+                Channel channel = future.getNow();
+                String content = gson.toJson(obj) + "," + requestCode + "\r\n";
+                channel.writeAndFlush(content);
+                pool.release(channel);
+            } else {
+                Channel channel = future.getNow();
+                Throwable cause = future.cause();
+                Exception e = cause != null ? new Exception(exMsg, cause) : new Exception(exMsg);
+                Timber.e(e);
+                if (channel != null) {
                     pool.release(channel);
-                } else {
-                    Channel channel = future.getNow();
-                    Throwable cause = future.cause();
-                    Exception e = cause != null ? new Exception(exMsg, cause) : new Exception(exMsg);
-                    Timber.e(e);
-                    if (channel != null) {
-                        pool.release(channel);
-                    }
-                    NettyListener listener = findNettyListenerByCode(requestCode);
-                    if (null != listener) {
-                        listener.onError(e);
-                    }
+                }
+                NettyListener listener = findNettyListenerByCode(requestCode);
+                if (null != listener) {
+                    listener.onError(e);
                 }
             }
         });
