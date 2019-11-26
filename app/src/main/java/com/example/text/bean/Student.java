@@ -1,5 +1,7 @@
 package com.example.text.bean;
 
+import java.io.Serializable;
+
 /**
  * <p></p >
  * <p></p >
@@ -7,7 +9,7 @@ package com.example.text.bean;
  * @author jinzhenhua
  * @version 1.0  ,create at:2019/11/16 21:41
  */
-public class Student {
+public class Student implements Serializable {
     private String name = "";
     private String className = "";
     private String level = "";

@@ -10,6 +10,9 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import io.netty.channel.socket.nio.NioSocketChannel;
+import io.netty.handler.codec.string.StringDecoder;
+import io.netty.handler.codec.string.StringEncoder;
 
 
 /**
@@ -36,9 +39,13 @@ public class NettyService {
 
             bootstrap.group(bossGroup, workGroup)
                     .channel(NioServerSocketChannel.class) // 3.这个例子中我们特别指定使用NioServerSocketChannel类来实例化channel接受传入的链接。
-                    .childHandler(new ChannelInitializer<SocketChannel>() { // 4.
+                    .childHandler(new ChannelInitializer<NioSocketChannel>() { // 4.
                         @Override
-                        protected void initChannel(SocketChannel channel) throws Exception {
+                        protected void initChannel(NioSocketChannel  channel) throws Exception {
+                            //往 Pipeline 链中添加一个解码器
+                            channel.pipeline().addLast("decoder", new StringDecoder());
+                            //往 Pipeline 链中添加一个编码器
+                            channel.pipeline().addLast("encoder", new StringEncoder());
                             channel.pipeline().addLast(new DiscardServerHandler());
                         }
                     })

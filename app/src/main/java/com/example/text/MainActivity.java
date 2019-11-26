@@ -12,10 +12,12 @@ import android.widget.Toast;
 
 import com.example.text.bean.ContextData;
 import com.example.text.bean.ResponseData;
+import com.example.text.bean.Student;
 import com.example.text.bluetooth.FindBlueToothActivity;
 import com.example.text.dagger.DaggerActivity;
 import com.example.text.mvp.view.WeatherActivity;
 import com.example.text.mvvm.view.DataBindActivity;
+import com.example.text.netty.Client.NettyController;
 import com.example.text.text1.HttpClient;
 import com.example.text.text1.MyService;
 import com.example.text.text1.TextBzrule;
@@ -38,7 +40,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 //public class MainActivity extends Activity {
 public class MainActivity extends AppCompatActivity {//带有titleBar
     private String TAG = "MainActivity";
-    private Button button;
+    private Button button;//retrofit测试
     private Button btn_http;//调用接口测试
     private Button btn_nextPage;//跳转到rxjava页
     private Button but_greendao;//跳转到greenDao页
@@ -63,7 +65,6 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
 
         Retrofit retrofit = new Retrofit.Builder()
                 //设置baseUrl,注意baseUrl 应该以/ 结尾。
-//                .baseUrl("http://wthrcdn.etouch.cn/weather_mini?city=广州")
                 .baseUrl("http://wthrcdn.etouch.cn/")
 
                 //添加ScalarsConverterFactory支持
@@ -73,7 +74,6 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
                 .addConverterFactory(GsonConverterFactory.create())
                 //设置OKHttpClient,如果不设置会提供一个默认的
                 .client(new HttpClient().getClient())
-
                 // 针对rxjava2.x
 //                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
@@ -148,14 +148,12 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         final Observable novel = Observable.create(new ObservableOnSubscribe<String>() {
             @Override
             public void subscribe(ObservableEmitter<String> emitter) throws Exception {
-                TextBzrule.doPostHttp("http://wthrcdn.etouch.cn/weather_mini?city=广州");///没有数据返回
-                TextBzrule.doGet("http://wthrcdn.etouch.cn/weather_mini?city=广州");
+//                TextBzrule.doPostHttp("http://wthrcdn.etouch.cn/weather_mini?city=广州");///没有数据返回
+                String str = TextBzrule.doGet("http://wthrcdn.etouch.cn/weather_mini?city=广州");
 
 //                TextBzrule.requestGet();
 
-//                emitter.onNext("连载1");
-//                emitter.onNext("连载2");
-//                emitter.onNext("连载3");
+                emitter.onNext(str);
                 emitter.onComplete();
             }
         });
@@ -196,9 +194,36 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
             public void onClick(View view) {
                 try{
 
-                    novel.observeOn(AndroidSchedulers.mainThread())//回调在主线程
-                            .subscribeOn(Schedulers.io())//执行在io线程
-                            .subscribe(reader);//一行代码搞定
+//                    novel.observeOn(AndroidSchedulers.mainThread())//回调在主线程
+//                            .subscribeOn(Schedulers.io())//执行在io线程
+//                            .subscribe(reader);//一行代码搞定
+
+                    Student student = new Student();
+                    student.setName("张三");
+                    student.setClassName("3班");
+                    student.setLevel("高一");
+                    NettyController controller = new NettyController("192.168.1.115",8080);
+                    controller.send(student,"01").subscribe(new Observer() {
+                        @Override
+                        public void onSubscribe(Disposable d) {
+
+                        }
+
+                        @Override
+                        public void onNext(Object o) {
+                            System.out.println("成功");
+                        }
+
+                        @Override
+                        public void onError(Throwable e) {
+                            System.out.println("失败");
+                        }
+
+                        @Override
+                        public void onComplete() {
+
+                        }
+                    });
                 }catch (Exception e){
                     Log.e(TAG,e.toString());
                     e.printStackTrace();

@@ -25,7 +25,7 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelActive(ChannelHandlerContext ctx) throws Exception {
         super.channelActive(ctx);
-        System.out.println("netty:已连接");
+        System.out.println("channelActive:已连接");
     }
 
     /**
@@ -37,14 +37,15 @@ public class NettyClientHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         //可以在返回的数据中加入请求的标志，然后根据标志获取到对应请求的回调对象
 
-        Log.e("netty",msg.toString());
-        System.out.println("netty:" + msg.toString());
+        System.out.println("channelRead:接收到服务端返回数据");
+//        Log.e("netty",msg.toString());
+        System.out.println("channelRead:" + msg.toString());
     }
 
     @Override
     public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-        Log.e("netty","ChatClientHandler exceptionCaught.");
-        System.out.println("客户端异常" + cause.toString());
+//        Log.e("netty","ChatClientHandler exceptionCaught.");
+        System.out.println("exceptionCaught客户端异常" + cause.toString());
         ctx.close();
 
         Collection<NettyListener> nettyListeners = nettyController.getAllNettyListener();
