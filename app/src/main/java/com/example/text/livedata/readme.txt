@@ -1,0 +1,2 @@
+//Android文档中建议LiveData配合ViewModel使用更加哦，其实呢，你也可以不使用ViewModel，但是一定要做到LiveData中保存的数据和组件分离
+//此次在mvvm包中的StudentViewModel测试编写

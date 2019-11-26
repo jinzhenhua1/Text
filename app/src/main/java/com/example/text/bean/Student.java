@@ -12,6 +12,15 @@ public class Student {
     private String className = "";
     private String level = "";
 
+    public Student() {
+    }
+
+    public Student(String name, String className, String level) {
+        this.name = name;
+        this.className = className;
+        this.level = level;
+    }
+
     public void setName(String name) {
         this.name = name;
     }
