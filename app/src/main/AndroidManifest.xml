@@ -34,7 +34,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.ViewPagerActivity"></activity>
+        <activity android:name=".view.viewpager.ViewPagerActivity"></activity>
         <activity android:name=".bluetooth.FindBlueToothActivity" />
         <activity android:name=".mvvm.view.StudentActivity" />
         <activity android:name=".dagger.DaggerActivity" />
