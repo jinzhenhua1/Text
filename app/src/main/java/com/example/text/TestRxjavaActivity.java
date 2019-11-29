@@ -5,13 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.text.bean.ContextData;
 import com.example.text.bean.ResponseData;
 import com.example.text.bean.TestStringResponse;
 import com.example.text.text1.HttpClient;
 import com.example.text.text1.TextService;
+import com.example.text.view.FlowLayout;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
@@ -37,6 +40,8 @@ public class TestRxjavaActivity extends AppCompatActivity {
     private Button but_textRxjava;
     private Button but_Retrofit;
     private TextService service;
+    private FlowLayout flowlayout;
+    private String[] texts = {"生鲜","大沙发斯蒂芬","去玩儿过","阿斯顿法国的风神股份的","企鹅窝若","我","会更好","啊是电饭锅","234","地方","请问","去玩儿群翁人","共和国","线程V型从"};
 
     final Observable observable = Observable.create(new ObservableOnSubscribe<Integer>() {
         @Override
@@ -263,5 +268,18 @@ public class TestRxjavaActivity extends AppCompatActivity {
                 .build();
 
         service = retrofit.create(TextService.class);
+
+
+        flowlayout = findViewById(R.id.flowlayout);
+        for(int i = 0; i < texts.length; i++){
+            TextView textView = new TextView(this);
+            textView.setText(texts[i]);
+            textView.setBackgroundResource(R.color.gray);
+            textView.setTextColor(R.color.black );
+            ViewGroup.MarginLayoutParams params= new ViewGroup.MarginLayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            params.setMargins(10,10,10,10);//设置边距
+            flowlayout.addView(textView,params);//指定params类型，不然在viewGroup中获取时会默认是LayoutParams
+        }
+
     }
 }

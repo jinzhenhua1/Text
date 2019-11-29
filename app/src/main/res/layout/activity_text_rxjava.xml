@@ -26,4 +26,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/but_Retrofit"
+        app:layout_constraintBottom_toBottomOf="parent">
+        <TextView
+            android:text="阿达是打发斯蒂芬"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"/>
+        <com.example.text.view.FlowLayout
+            android:padding="10dp"
+            android:id="@+id/flowlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/color_click_blue" />
+    </LinearLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
