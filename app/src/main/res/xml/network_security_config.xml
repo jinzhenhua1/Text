@@ -2,3 +2,4 @@
 <network-security-config>
     <base-config cleartextTrafficPermitted="true" />
 </network-security-config>
+<!--安卓9.0禁止访问http请求，只能访问https-->
