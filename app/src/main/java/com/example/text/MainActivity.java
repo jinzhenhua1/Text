@@ -17,6 +17,7 @@ import com.example.text.bluetooth.FindBlueToothActivity;
 import com.example.text.dagger.DaggerActivity;
 import com.example.text.mvp.view.WeatherActivity;
 import com.example.text.mvvm.view.DataBindActivity;
+import com.example.text.netty.client.NettyActivity;
 import com.example.text.netty.client.NettyController;
 import com.example.text.text1.HttpClient;
 import com.example.text.text1.MyService;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private Button btn_dagger;//dagger
     private Button btn_gridview;//gridView
     private Button activity_main_btn_blue_tooth;//蓝牙
+    private Button activity_main_btn_netty;//netty测试页面
 
     private Handler handler = new Handler();
 
@@ -290,6 +292,14 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(getApplicationContext(), FindBlueToothActivity.class));
+            }
+        });
+
+        activity_main_btn_netty = findViewById(R.id.activity_main_btn_netty);
+        activity_main_btn_netty.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), NettyActivity.class));
             }
         });
     }

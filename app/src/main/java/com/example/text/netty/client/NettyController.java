@@ -268,7 +268,7 @@ public class NettyController {
             //连接后台成功，发送请求
             if (future.isSuccess()) {
                 Channel channel = future.getNow();
-                String content = gson.toJson(obj) + "," + requestCode + "\r\n";
+                String content = gson.toJson(obj) + "," + requestCode + "\r\n";//一定要加上这个，不然无法发送数据
                 channel.writeAndFlush(content);
                 pool.release(channel);
             } else {
