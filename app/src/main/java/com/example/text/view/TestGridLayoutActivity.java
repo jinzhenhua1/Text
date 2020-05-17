@@ -15,8 +15,8 @@ import com.example.text.databinding.ActivityTextGridViewBinding;
 public class TestGridLayoutActivity extends AppCompatActivity {
     ActivityTextGridViewBinding binding;
     private GridLayout gridLayout;
-    private String[] mStrings = {"1","2","3"};
-//    private String[] mStrings = {"1","2","3","4","5","6"};
+//    private String[] mStrings = {"1","2","3"};
+    private String[] mStrings = {"1","2","3","4","5","6"};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -13,7 +13,7 @@ import androidx.fragment.app.Fragment;
 /**
  * <p></p>
  * <p></p>
- *
+ *  懒加载 fragment
  * @author jinzhenhua
  * @version 1.0  ,create at:2019/11/27 9:02
  */
@@ -39,7 +39,7 @@ public abstract class BaseFragment extends Fragment {
     }
 
     /**
-     * 在viewPager中会调用该方法，来设置fragment是否可见
+     * 在viewPager中会调用该方法，来设置fragment是否可见（即状态改变时调用，）
      * @param isVisibleToUser
      */
     @Override

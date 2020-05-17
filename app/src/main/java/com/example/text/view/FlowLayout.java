@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 /**
  * <p></p >
  * <p></p >
- *
+ *  横向排列的布局
  * @author jinzhenhua
  * @version 1.0  ,create at:2019/11/28 20:33
  */
