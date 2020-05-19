@@ -31,9 +31,9 @@ public class StudentViewModel extends BaseViewModel {
         DaggerAppComponent.create().inject(this);
         studentObservableField.set(studentModel.getStudent());
 
-//        studentName.set(studentObservableField.get().getName());
-//        className.set(studentObservableField.get().getClassName());
-//        level.set(studentObservableField.get().getLevel());
+        studentName.set(studentModel.getStudent().getName());
+        className.set(studentModel.getStudent().getClassName());
+        level.set(studentModel.getStudent().getLevel());
 
 
         mCurrentName.setValue(studentModel.getStudent());
@@ -69,6 +69,12 @@ public class StudentViewModel extends BaseViewModel {
 
         mCurrentName.setValue(student1);
         mCurrentName.postValue(student1);//可以在子线程中使用
+    }
+
+    public void observableFieldChange(){
+        studentName.set("李四");
+        className.set("9班");
+        level.set("初三");
     }
 
     public MutableLiveData<Student> getmCurrentName() {

@@ -87,6 +87,7 @@
             app:layout_constraintTop_toBottomOf="@id/activity_test_ll_level" />
 
         <LinearLayout
+            android:id="@+id/ll_livedata"
             android:orientation="vertical"
             android:layout_marginTop="10dp"
             android:layout_width="match_parent"
@@ -124,6 +125,43 @@
 
         </LinearLayout>
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/ll_livedata" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="结合ObservableField的使用："/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{student.studentName}"
+                tools:text="姓名"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:text="班级"
+                android:text="@{student.className}"/>
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@{student.level}"
+                tools:text="年级"/>
+
+            <Button
+                android:text="ObservableField改变数据"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="@{() -> student.observableFieldChange()}"/>
+
+        </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 <!--    <LinearLayout-->

@@ -18,7 +18,7 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:layout_width="200px"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="retrofit测试"
@@ -105,6 +105,7 @@
         android:layout_marginLeft="15dp"
         android:id="@+id/activity_main_btn_blue_tooth"
         android:text="蓝牙"
+        android:textSize="11sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/btn_dagger"
