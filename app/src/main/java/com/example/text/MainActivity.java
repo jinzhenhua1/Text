@@ -240,6 +240,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private void initView(){
         button = findViewById(R.id.button);
         btn_http = findViewById(R.id.btn_http);
+        //RXJAVA 按钮
         btn_nextPage = findViewById(R.id.btn_nextPage);
         btn_nextPage.setOnClickListener(new View.OnClickListener() {
             @Override
