@@ -23,6 +23,7 @@ public class UserModel extends BaseObservable {
     private String age = "";
 
 
+
     public UserModel(Context context) {
         this.context = context;
     }
