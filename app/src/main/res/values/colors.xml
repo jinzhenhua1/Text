@@ -10,4 +10,54 @@
     <color name="black">#000000</color>
     <color name="color_click_blue">#b1d3fa</color>
 
+    <!-- 公共资源 -->
+    <color name="color_black">#000000</color>
+    <color name="color_grey">#808080</color>
+    <color name="color_red">#E64A19</color>
+    <color name="color_green">#0bcc16</color>
+    <color name="color_white_small">#F0F0F0</color>
+    <color name="color_grey_small">#9E9E9E</color>
+    <color name="color_text_white">#FFFFFF</color>
+    <color name="color_text_black">#000000</color>
+    <color name="color_text_blue">#3090E6</color>
+    <color name="color_text_yellow">#F47C0B</color>
+    <color name="color_text_title">#212121</color>
+    <color name="color_text_body">#424242</color>
+    <color name="color_text_label">#757575</color>
+    <color name="color_text_blue_positive">#3090E6</color>
+    <color name="color_text_blue_negtive">#9E9E9E</color>
+    <color name="color_text_blue_pressed">#1A7BD2</color>
+    <color name="color_component_blue_positive">#3090E6</color>
+    <color name="color_component_blue_negtive">#7A3090E6</color>
+    <color name="color_component_blue_pressed">#1A7BD2</color>
+    <color name="color_component_bg_grey">#F0F0F0</color>
+    <color name="color_component_bg_white">#FFFFFF</color>
+    <color name="color_component_bg_blue">#3090E6</color>
+    <color name="color_component_bg_yellow">#F47C0B</color>
+    <color name="color_edit_control_normal">#f0f0f0</color>
+    <color name="color_edit_control_ctivated">#95c9f7</color>
+
+    <color name="color_btn_bg_blue_default">#803F51B5</color>
+    <color name="color_btn_bg_blue_normal">#3F51B5</color>
+    <color name="color_btn_bg_blue_pressed">#3246b6</color>
+    <color name="color_bg_dialog_main">#88000000</color>
+
+    <color name="color_bg_deliver">#dddddd</color>
+    <color name="color_ripple">#d9d9d9</color>
+
+
+    <!-- 登录 -->
+    <color name="login_activity_edit_driver_default">#9E9E9E</color>
+    <color name="login_activity_edit_driver_focused">#3F51B5</color>
+
+    <!-- 历史记录下拉菜单 item_rv_search_history_type -->
+    <color name="item_rv_drop_down_menu_selected">#3090E6</color>
+    <color name="item_rv_drop_down_menu_unselected">#404040</color>
+    <color name="item_rv_drop_down_menu_disable">#c9cacd</color>
+    <color name="item_rv_drop_down_menu_week">#888888</color>
+
+    <!-- wifi对话框 -->
+    <color name="wifi_dialog_tv_name_color">#404040</color>
+    <color name="wifi_dialog_tv_state_color">#999999</color>
+    <color name="wifi_dialog_divider">#e0e0e0</color>
 </resources>

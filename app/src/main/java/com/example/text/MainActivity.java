@@ -1,8 +1,12 @@
 package com.example.text;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
+
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -23,6 +27,8 @@ import com.example.text.text1.HttpClient;
 import com.example.text.text1.MyService;
 import com.example.text.text1.TextBzrule;
 import com.example.text.text1.TextService;
+import com.example.text.util.StatusBarUtil;
+import com.example.text.util.SystemUtils;
 import com.example.text.view.TestGridLayoutActivity;
 
 import io.reactivex.Observable;
@@ -35,6 +41,8 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+import static android.app.Application.getProcessName;
 
 //public class MainActivity extends Activity {
 public class MainActivity extends AppCompatActivity {//带有titleBar
@@ -49,6 +57,10 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private Button btn_gridview;//gridView
     private Button activity_main_btn_blue_tooth;//蓝牙
     private Button activity_main_btn_netty;//netty测试页面
+    private Button activity_main_btn_uid;//测试不同应用相同uid共享SharedPreference
+
+    Toolbar mToolbar;
+
 
     private Handler handler = new Handler();
 
@@ -58,9 +70,9 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
-
-//        StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);//改变状态栏背景的颜色
-//        StatusBarUtil.statusBarLightMode(this);//改变状态栏字体图标为黑色
+        initData();
+        StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);//改变状态栏背景的颜色
+        StatusBarUtil.statusBarLightMode(this);//改变状态栏字体图标为黑色
 
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -90,6 +102,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
                         try{
                             ResponseData<ContextData>  responseData = response.body();
                             Log.e(TAG,responseData.getStatus());
+//                            Log.e(TAG,responseData.getData());
                         }catch (Exception e){
                             e.printStackTrace();
                         }
@@ -107,41 +120,6 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         handler.postDelayed(() -> {
             Log.e(TAG,"threadName:" + Thread.currentThread().getName());
         },1000);
-
-//
-//        service.getResponseBody("北京")
-//                .compose(new ObservableTransformer<ResponseData, ResponseData>() {
-//                    @Override
-//                    public ObservableSource<ResponseData> apply(Observable<ResponseData> upstream) {
-//                        return upstream
-//                                .flatMap(new Function<ResponseData, ObservableSource<ResponseData>>() {
-//                                    @Override
-//                                    public ObservableSource<ResponseData> apply(ResponseData responseData) throws Exception {
-////                                        if (responseData instanceof  NetErrorException.ResponseException) {
-////                                            return Observable.error(responseData);
-////                                        }
-//                                        return Observable.just(responseData);
-//                                    }
-//                                })
-//                                .subscribeOn(Schedulers.io())
-//                                .observeOn(AndroidSchedulers.mainThread());
-//                    }
-//                })
-//                .subscribe(new Consumer<ResponseData>() {
-//                    @Override
-//                    public void accept(ResponseData o) throws Exception {
-//                        Log.e(TAG,o.getData().toString());
-//                    }
-//                }, new Consumer<Throwable>() {
-//                    @Override
-//                    public void accept(Throwable throwable) throws Exception {
-//                        Log.e(TAG,throwable.getMessage());
-//                    }
-//                });
-
-
-
-
 
 
         //被观察者
@@ -236,6 +214,10 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     }
 
 
+    private void initData(){
+        String processName = SystemUtils.getProcessName(android.os.Process.myPid());
+        Log.e(TAG,"进程名称为：:" + processName);
+    }
 
     private void initView(){
         button = findViewById(R.id.button);
@@ -302,7 +284,31 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
                 startActivity(new Intent(getApplicationContext(), NettyActivity.class));
             }
         });
+        activity_main_btn_uid = findViewById(R.id.activity_main_btn_uid);
+        activity_main_btn_uid.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                SharedPreferences sp = getSharedPreferences("text", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = sp.edit();
+                editor.putString("text","what the fuck");
+                editor.commit();
+                Toast.makeText(getApplicationContext(),sp.getString("text","1"),Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        setToolbar();
     }
+
+    private void setToolbar() {
+        mToolbar = findViewById(R.id.main_activity_toolbar);
+
+        setSupportActionBar(mToolbar);
+//        if (getSupportActionBar() != null) {
+//            getSupportActionBar().setDisplayShowTitleEnabled(false);
+//        }
+    }
+
 
 
     @Override

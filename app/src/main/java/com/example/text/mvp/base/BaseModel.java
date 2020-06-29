@@ -1,7 +1,9 @@
 package com.example.text.mvp.base;
 
 import com.example.text.mvp.IBaseContract;
+import com.example.text.mvp.http.HttpRespondData;
 import com.example.text.mvp.http.HttpUtils;
+import com.example.text.mvp.http.RxTransformer;
 
 import io.reactivex.Observable;
 import io.reactivex.android.schedulers.AndroidSchedulers;
@@ -14,6 +16,7 @@ public class BaseModel implements IBaseContract.IBaseModel {
 
     private CompositeDisposable disposableWhenStop = new CompositeDisposable();
     private CompositeDisposable disposableWhenDestory = new CompositeDisposable();
+    private RxTransformer api = new RxTransformer();
 
     @Override
     public void onStop() {
@@ -34,22 +37,8 @@ public class BaseModel implements IBaseContract.IBaseModel {
      * @param callback
      * @param <T>
      */
-    protected <T> void sendRequestUntilStop(@NonNull Observable<T> observable,final HttpResponseListener<T> callback) {
-        disposableWhenStop.add(
-            observable.observeOn(AndroidSchedulers.mainThread())//最后在主线程中执行
-                    .subscribeOn(Schedulers.io())
-                    .subscribe(new Consumer<T>() {
-                        @Override
-                        public void accept(T t) throws Exception {
-                            callback.onSuccess(t,t);
-                        }
-                    }, new Consumer<Throwable>() {
-                        @Override
-                        public void accept(Throwable throwable) throws Exception {
-                            callback.onFailure(throwable);
-                        }
-                    })
-        );
+    protected <T> void sendRequestUntilStop(@NonNull Observable<HttpRespondData<T>> observable, final HttpResponseListener<T> callback) {
+        disposableWhenStop.add(api.apiRequest(observable,callback));
     }
 
     /**
@@ -59,22 +48,8 @@ public class BaseModel implements IBaseContract.IBaseModel {
      * @param callback
      * @param <T>
      */
-    protected <T> void sendRequestUntilDestory(@NonNull Observable<T> observable,final HttpResponseListener<T> callback) {
-        disposableWhenDestory.add(
-                observable.observeOn(AndroidSchedulers.mainThread())//最后在主线程中执行
-                        .subscribeOn(Schedulers.io())
-                        .subscribe(new Consumer<T>() {
-                            @Override
-                            public void accept(T t) throws Exception {
-                                callback.onSuccess(t,t);
-                            }
-                        }, new Consumer<Throwable>() {
-                            @Override
-                            public void accept(Throwable throwable) throws Exception {
-                                callback.onFailure(throwable);
-                            }
-                        })
-        );
+    protected <T> void sendRequestUntilDestory(@NonNull Observable<HttpRespondData<T>> observable,final HttpResponseListener<T> callback) {
+        disposableWhenDestory.add(api.apiRequest(observable,callback));
     }
 
 

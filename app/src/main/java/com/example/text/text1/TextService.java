@@ -4,6 +4,7 @@ import com.example.text.bean.ContextData;
 import com.example.text.bean.ResponseData;
 import com.example.text.bean.TestStringResponse;
 import com.example.text.bean.WeatherData;
+import com.example.text.mvp.http.HttpRespondData;
 
 import org.json.JSONObject;
 
@@ -26,8 +27,13 @@ public interface TextService {
     @GET("/weather_mini")
     Observable<ResponseData<ContextData>> getResponseBody(@Query("city") String str);
 
+    /**
+     * MVP模式中使用的数据格式
+     * @param str
+     * @return ContextData可以替换为任意类型，但是HttpRespondData 为固定的数据格式
+     */
     @GET("/weather_mini")
-    Observable<WeatherData> getWeatherData(@Query("city") String str);
+    Observable<HttpRespondData<ContextData>> getWeatherData(@Query("city") String str);
 
 
     /**
