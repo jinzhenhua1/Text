@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_activity_toolbar"
+    style="@style/toolbar_common"
+    app:contentInsetStart="0dp"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.andexert.library.RippleView
+            android:id="@+id/main_activity_toolbar_ripple_menu"
+            android:layout_width="?android:actionBarSize"
+            android:layout_height="?android:actionBarSize"
+            app:rv_color="@color/color_white"
+            app:rv_centered="true"
+            app:rv_type="simpleRipple">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="15dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_toolbar_menu" />
+
+        </com.andexert.library.RippleView>
+
+        <TextView
+            android:id="@+id/main_activity_toolbar_tv_title"
+            style="@style/toolbar_main_activity_tv_title"
+            android:layout_centerVertical="true"
+            android:text="wtf" />
+
+        <!--<com.andexert.library.RippleView-->
+            <!--android:id="@+id/main_activity_toolbar_ripple_manage"-->
+            <!--android:layout_width="?android:actionBarSize"-->
+            <!--android:layout_height="?android:actionBarSize"-->
+            <!--android:layout_alignParentEnd="true"-->
+            <!--app:rv_color="@color/color_white"-->
+            <!--app:rv_centered="true"-->
+            <!--app:rv_type="simpleRipple"-->
+            <!--app:rv_rippleDuration="120">-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_centerInParent="true"-->
+                <!--android:contentDescription="@null"-->
+                <!--android:src="@mipmap/ic_toolbar_manage" />-->
+
+        <!--</com.andexert.library.RippleView>-->
+
+</androidx.appcompat.widget.Toolbar>
