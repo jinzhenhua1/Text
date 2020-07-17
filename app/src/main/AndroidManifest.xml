@@ -38,7 +38,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppThemeNew">
         <activity android:name=".text1.service.TextBinderActivity"></activity>
-        <activity android:name=".netty.client.NettyActivity" />
+        <activity android:name=".netty.client.NettyActivity"/>
         <activity android:name=".view.viewpager.ViewPagerActivity" />
         <activity android:name=".bluetooth.FindBlueToothActivity" />
         <activity android:name=".mvvm.view.StudentActivity" />
