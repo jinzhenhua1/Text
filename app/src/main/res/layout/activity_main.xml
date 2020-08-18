@@ -135,6 +135,15 @@
         android:textSize="11sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_btn_blue_tooth"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+        android:layout_marginLeft="15dp"
+        android:id="@+id/activity_main_btn_test_adapter"
+        android:text="测试adapter"
+        android:textSize="11sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:layout_constraintTop_toBottomOf="@+id/activity_main_btn_blue_tooth"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintStart_toEndOf="@id/activity_main_btn_test_scroll"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

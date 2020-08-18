@@ -31,6 +31,7 @@ import com.example.text.text1.TextService;
 import com.example.text.util.SystemUtils;
 import com.example.text.view.ScrollView.TestScrollActivity;
 import com.example.text.view.TestGridLayoutActivity;
+import com.example.text.view.adapter.TestAdapterActivity;
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private Button activity_main_btn_netty;//netty测试页面
     private Button activity_main_btn_uid;//测试不同应用相同uid共享SharedPreference
     private Button activity_main_btn_scroll;//
+    private Button activity_main_btn_test_adapter;//
 
     Toolbar mToolbar;
 
@@ -261,6 +263,8 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         });
         activity_main_btn_scroll = findViewById(R.id.activity_main_btn_test_scroll);
         activity_main_btn_scroll.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TestScrollActivity.class)));
+        activity_main_btn_test_adapter = findViewById(R.id.activity_main_btn_test_adapter);
+        activity_main_btn_test_adapter.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TestAdapterActivity.class)));
 
 //        setToolbar();
     }
