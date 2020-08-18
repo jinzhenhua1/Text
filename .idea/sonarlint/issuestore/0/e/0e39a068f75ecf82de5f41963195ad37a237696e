@@ -1,0 +1,39 @@
+
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(”ùŠüùÿÿÿÿ
+D
+java:S1068")Remove this unused "state" private field.(¸üˆÈüÿÿÿÿ
+V	java:S1255"<This block of commented-out lines of code should be removed.(Øˆâóşÿÿÿÿ
+X	java:S125X"<This block of commented-out lines of code should be removed.(óÓºë8“­Â .
+]	java:S125["<This block of commented-out lines of code should be removed.(œó±Ğÿÿÿÿÿ8ŞˆÂ .
+o
+java:S1450"TRemove the "state" field and declare it as a local variable in the relevant methods.(¸üˆÈüÿÿÿÿ
+t
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÖóÄşÿÿÿÿ
+F
+java:S1068"0Remove this unused "mBitmapPaint" private field.(ü„Êì
+@
+java:S1659"*Declare "mBitmapPaint" on a separate line.(ü„Êì
+j	java:S100p"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‘ÌË…8“­Â .
+]	java:S125c"<This block of commented-out lines of code should be removed.(Åª³éıÿÿÿÿ8“­Â .
+p	java:S100‚"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ú×…£ûÿÿÿÿ8“­Â .
+I
+java:S1128"3Remove this unused import 'android.graphics.RectF'.(ı‚›µ
+>
+java:S1185:"(Remove this method to simply inherit it.(Ÿ½Ÿ»
+=
+java:S1659""Declare "size" on a separate line.(¸üˆÈüÿÿÿÿ
+6
+java:S1659" Declare "mY" on a separate line.(ŠÔéš
+A
+java:S1172&"&Remove these unused method parameters.(¼¤úıûÿÿÿÿ
+X	java:S125"<This block of commented-out lines of code should be removed.(ü„‚è8¹Û©Á .
+X	java:S125)"<This block of commented-out lines of code should be removed.(­Ò²õ8†÷©Á .
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßÁğõ
+D	java:S131""Add a default case to this switch.(ãÁğ™øÿÿÿÿ8“­Â .
+>
+java:S1659"#Declare "state" on a separate line.(¸üˆÈüÿÿÿÿ
+o	java:S100x"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¥×Ğ›ûÿÿÿÿ8“­Â .
+o
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(š§ëì

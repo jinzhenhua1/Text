@@ -3,6 +3,7 @@ package com.example.text.util;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Context;
 import android.graphics.Color;
 import android.os.Build;
 import android.view.View;
@@ -185,5 +186,25 @@ public class StatusBarUtil {
             }
         }
         return result;
+    }
+
+
+    /**
+     * 通过状态栏资源id来获取状态栏高度
+     *
+     * @param context
+     * @return
+     */
+    private static int getStatusBarByResId(Context context) {
+        int height = 0;
+        //获取状态栏资源id
+        int resourceId = context.getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            try {
+                height = context.getResources().getDimensionPixelSize(resourceId);
+            } catch (Exception e) {
+            }
+        }
+        return height;
     }
 }

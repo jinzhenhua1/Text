@@ -1,0 +1,12 @@
+
+squid:S00116"`Rename this field "activity_netty_et_ip4" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(è¤÷ö8£¢ÃÂï-
+„squid:S00116"`Rename this field "activity_netty_et_ip2" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñÔÖçøÿÿÿÿ8£¢ÃÂï-
+‰squid:S00116"eRename this field "activity_netty_btn_connect" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æ²‡³ÿÿÿÿÿ8äõÓÂï-
+squid:S00116"`Rename this field "activity_netty_et_ip1" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÉùÒÌ8£¢ÃÂï-
+isquid:UselessImportCheck">Remove this unused import 'io.netty.util.internal.StringUtil'.(‡ÛÖ†8äõÓÂï-
+Œsquid:S1450"iRemove the "activity_netty_btn_connect" field and declare it as a local variable in the relevant methods.(æ²‡³ÿÿÿÿÿ8äõÓÂï-
+[
+squid:S106?"9Replace this use of System.out or System.err by a logger.(º×¦Ïùÿÿÿÿ8à¶İÂï-
+squid:S00116"`Rename this field "activity_netty_et_ip3" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á´İŞ8äõÓÂï-
+[
+squid:S106D"9Replace this use of System.out or System.err by a logger.(®ÖĞùÿÿÿÿ8à¶İÂï-

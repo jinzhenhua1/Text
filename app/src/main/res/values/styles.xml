@@ -11,15 +11,15 @@
         <!-- 一般控件的选中效果默认采用该颜色,如 CheckBox,RadioButton,SwitchCompat，ProcessBar等-->
         <item name="colorAccent">@color/colorAccent</item>
 
-        <!-- ActionBar -->
-        <item name="android:textAllCaps">false</item>
-        <item name="android:windowActionBar">false</item>
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
     </style>
 
     <!-- 公用的页面theme -->
     <style name="AppThemeNew" parent="@style/BaseAppTheme">
+    </style>
+
+<!--    解决启动白屏，设置一个背景图，启动时显示的就是这个背景图，而不会出现白屏-->
+    <style name="AppTheme.customeTheme" parent="AppThemeNew">
+        <item name="android:windowBackground">@mipmap/launch_image</item>
     </style>
 
     <style name="BaseAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">

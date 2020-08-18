@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -27,22 +28,25 @@ import com.example.text.text1.HttpClient;
 import com.example.text.text1.MyService;
 import com.example.text.text1.TextBzrule;
 import com.example.text.text1.TextService;
-import com.example.text.util.StatusBarUtil;
 import com.example.text.util.SystemUtils;
+import com.example.text.view.ScrollView.TestScrollActivity;
 import com.example.text.view.TestGridLayoutActivity;
+import com.tbruyelle.rxpermissions2.Permission;
+import com.tbruyelle.rxpermissions2.RxPermissions;
+
+import java.io.File;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.Observer;
 import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
-import static android.app.Application.getProcessName;
 
 //public class MainActivity extends Activity {
 public class MainActivity extends AppCompatActivity {//带有titleBar
@@ -58,6 +62,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private Button activity_main_btn_blue_tooth;//蓝牙
     private Button activity_main_btn_netty;//netty测试页面
     private Button activity_main_btn_uid;//测试不同应用相同uid共享SharedPreference
+    private Button activity_main_btn_scroll;//
 
     Toolbar mToolbar;
 
@@ -71,8 +76,8 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         setContentView(R.layout.activity_main);
         initView();
         initData();
-        StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);//改变状态栏背景的颜色
-        StatusBarUtil.statusBarLightMode(this);//改变状态栏字体图标为黑色
+//        StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);//改变状态栏背景的颜色
+//        StatusBarUtil.statusBarLightMode(this);//改变状态栏字体图标为黑色
 
 
         Retrofit retrofit = new Retrofit.Builder()
@@ -217,6 +222,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private void initData(){
         String processName = SystemUtils.getProcessName(android.os.Process.myPid());
         Log.e(TAG,"进程名称为：:" + processName);
+        requestPermission();
     }
 
     private void initView(){
@@ -224,90 +230,65 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         btn_http = findViewById(R.id.btn_http);
         //RXJAVA 按钮
         btn_nextPage = findViewById(R.id.btn_nextPage);
-        btn_nextPage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), TestRxjavaActivity.class));
-            }
-        });
+        btn_nextPage.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), TestRxjavaActivity.class)));
 
         but_greendao = findViewById(R.id.but_greendao);
-        but_greendao.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),GreenDaoActivity.class));
-            }
-        });
+        but_greendao.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(),GreenDaoActivity.class)));
         btn_textMVVM = findViewById(R.id.btn_textMVVM);
-        btn_textMVVM.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), DataBindActivity.class));
-            }
-        });
+        btn_textMVVM.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), DataBindActivity.class)));
 
         btn_textMVP = findViewById(R.id.btn_textMVP);
-        btn_textMVP.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), WeatherActivity.class));
-            }
-        });
+        btn_textMVP.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), WeatherActivity.class)));
         btn_dagger = findViewById(R.id.btn_dagger);
-        btn_dagger.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), DaggerActivity.class));
-            }
-        });
+        btn_dagger.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), DaggerActivity.class)));
 
         btn_gridview = findViewById(R.id.btn_gridview);
-        btn_gridview.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), TestGridLayoutActivity.class));
-            }
-        });
+        btn_gridview.setOnClickListener(view -> startActivity(new Intent(getApplicationContext(), TestGridLayoutActivity.class)));
 
         activity_main_btn_blue_tooth = findViewById(R.id.activity_main_btn_blue_tooth);
-        activity_main_btn_blue_tooth.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), FindBlueToothActivity.class));
-            }
-        });
+        activity_main_btn_blue_tooth.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), FindBlueToothActivity.class)));
 
         activity_main_btn_netty = findViewById(R.id.activity_main_btn_netty);
-        activity_main_btn_netty.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), NettyActivity.class));
-            }
-        });
+        activity_main_btn_netty.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), NettyActivity.class)));
+
         activity_main_btn_uid = findViewById(R.id.activity_main_btn_uid);
-        activity_main_btn_uid.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                SharedPreferences sp = getSharedPreferences("text", Context.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sp.edit();
-                editor.putString("text","what the fuck");
-                editor.commit();
-                Toast.makeText(getApplicationContext(),sp.getString("text","1"),Toast.LENGTH_SHORT).show();
-            }
+        activity_main_btn_uid.setOnClickListener(v -> {
+            SharedPreferences sp = getSharedPreferences("text", Context.MODE_PRIVATE);
+            SharedPreferences.Editor editor = sp.edit();
+            editor.putString("text","what the fuck");
+            editor.commit();
+            Toast.makeText(getApplicationContext(),sp.getString("text","1"),Toast.LENGTH_SHORT).show();
         });
+        activity_main_btn_scroll = findViewById(R.id.activity_main_btn_test_scroll);
+        activity_main_btn_scroll.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TestScrollActivity.class)));
 
-
-        setToolbar();
+//        setToolbar();
     }
 
     private void setToolbar() {
         mToolbar = findViewById(R.id.main_activity_toolbar);
 
         setSupportActionBar(mToolbar);
-//        if (getSupportActionBar() != null) {
-//            getSupportActionBar().setDisplayShowTitleEnabled(false);
-//        }
+        if (getSupportActionBar() != null) {
+            //隐藏默认的标题
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        }
     }
+
+    //设置标题栏的按钮
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        getMenuInflater().inflate(R.menu.menu_main_activity, menu);
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        if (R.id.main_activity_menu_manager == item.getItemId()) {
+//            Toast.makeText(MainActivity.this, "点击了菜单健",Toast.LENGTH_SHORT).show();
+//        }
+//        return true;
+//    }
 
 
 
@@ -323,5 +304,17 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
 //            startService(intent);
 //        }
 
+    }
+
+    private Disposable requestPermission() {
+        return new RxPermissions(this)
+                .requestEachCombined(
+                        android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_EXTERNAL_STORAGE)
+                .subscribe(new Consumer<Permission>() { // will emit 1 Permission object
+                    @Override
+                    public void accept(Permission permission) {
+                    }
+                });
     }
 }
