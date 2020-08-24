@@ -20,6 +20,10 @@ import com.google.gson.GsonBuilder;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;
@@ -281,5 +285,15 @@ public class TestRxjavaActivity extends AppCompatActivity {
             flowlayout.addView(textView,params);//指定params类型，不然在viewGroup中获取时会默认是LayoutParams
         }
 
+    }
+
+    ArrayList<HashMap> checklist = new ArrayList();
+    public boolean check(){
+        for(HashMap map : checklist){
+            if(map.get("isCheck").equals(true)){
+                return true;
+            }
+        }
+        return false;
     }
 }

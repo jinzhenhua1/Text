@@ -1,4 +1,3 @@
 
-v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì™ıÖ8ÜùËé¡.
-a
-java:S1128"?Remove this unused import 'androidx.databinding.ObservableInt'.(ç»ğ±ıÿÿÿÿ8ÜùËé¡.
+rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì™ıÖ
+hsquid:UselessImportCheck"?Remove this unused import 'androidx.databinding.ObservableInt'.(ç»ğ±ıÿÿÿÿ

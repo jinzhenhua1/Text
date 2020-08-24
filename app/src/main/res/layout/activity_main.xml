@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include layout="@layout/activity_main_toolbar"/>
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
@@ -18,9 +20,9 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="200px"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="50dp"
         android:text="retrofit测试"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +32,7 @@
         android:id="@+id/btn_http"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="84dp"
+        android:layout_marginTop="94dp"
         android:text="接口调用"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,5 +128,22 @@
         android:layout_height="wrap_content"
         app:layout_constraintLeft_toRightOf="@+id/activity_main_btn_netty"
         app:layout_constraintTop_toBottomOf="@+id/btn_dagger"/>
-
+    <Button
+        android:layout_marginLeft="15dp"
+        android:id="@+id/activity_main_btn_test_scroll"
+        android:text="TestScrollActivity"
+        android:textSize="11sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/activity_main_btn_blue_tooth"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <Button
+        android:layout_marginLeft="15dp"
+        android:id="@+id/activity_main_btn_test_adapter"
+        android:text="测试adapter"
+        android:textSize="11sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/activity_main_btn_blue_tooth"
+        app:layout_constraintStart_toEndOf="@id/activity_main_btn_test_scroll"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

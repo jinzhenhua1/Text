@@ -1,5 +1,5 @@
 
-vsquid:S1450"ZRemove the "btn_weather" field and declare it as a local variable in the relevant methods.(ç‘Âåÿÿÿÿÿ
-ssquid:S00116"VRename this field "btn_weather" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç‘Âåÿÿÿÿÿ
 lsquid:S00116"URename this field "tv_weather" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÄÚX
 `squid:UselessImportCheck"=Remove this unused import 'android.widget.QuickContactBadge'.(”ü>
+vsquid:S1450"ZRemove the "btn_weather" field and declare it as a local variable in the relevant methods.(ç‘Âåÿÿÿÿÿ
+ssquid:S00116"VRename this field "btn_weather" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ç‘Âåÿÿÿÿÿ

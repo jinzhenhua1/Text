@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.text"
-    android:sharedUserId="com.text.jzh"
-    >
-<!--    android:sharedUserId="com.text.jzh"-->
-
+    android:sharedUserId="com.text.jzh">
+    <!-- android:sharedUserId="com.text.jzh" -->
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" /> <!-- 存储 -->
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
@@ -37,11 +35,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeNew">
-        <activity android:name=".text1.service.TextBinderActivity"></activity>
-        <activity android:name=".netty.client.NettyActivity"/>
+        <activity android:name=".view.adapter.TestAdapterActivity"></activity>
+        <activity android:name=".view.ScrollView.TestScrollActivity" />
+
+        <service
+            android:name=".aidl.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".text1.service.TextBinderActivity" />
+        <activity android:name=".netty.client.NettyActivity" />
         <activity android:name=".view.viewpager.ViewPagerActivity" />
-        <activity android:name=".bluetooth.FindBlueToothActivity"
-            android:theme="@style/TextStatusBar"/>
+        <activity android:name=".bluetooth.FindBlueToothActivity" />
         <activity android:name=".mvvm.view.StudentActivity" />
         <activity android:name=".dagger.DaggerActivity" />
         <activity android:name=".view.TestGridLayoutActivity" />
@@ -49,7 +54,9 @@
         <activity android:name=".mvvm.view.DataBindActivity" />
         <activity android:name=".GreenDaoActivity" />
         <activity android:name=".TestRxjavaActivity" />
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.customeTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

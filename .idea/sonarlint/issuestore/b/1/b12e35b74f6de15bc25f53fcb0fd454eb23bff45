@@ -1,0 +1,31 @@
+
+j
+java:S2095Ò"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(Ë×Ï©ÿÿÿÿÿ
+D
+java:S1444")Make this "public static TAG" field final(°’ı­ÿÿÿÿÿ
+\	java:S112Æ"FDefine and throw a dedicated exception instead of using a generic one.(Å¹Æ„
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ô‰Ø
+>
+java:S1148Q"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+>
+java:S1148s"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ
+j
+java:S1104"OMake TAG a static final constant or non-public and provide accessors if needed.(°’ı­ÿÿÿÿÿ
+w
+java:S1488¶"`Immediately return this expression instead of assigning it to the temporary variable "fileName".(Î¶ôÍ
+i
+java:S3008"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°’ı­ÿÿÿÿÿ
+v
+java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
+o
+java:S2293'"YReplace the type specification in this constructor call with the diamond operator ("<>").(­ÿ³ü
+K
+java:S2209O"5Change this instance-reference to a static reference.(½Œ
+8
+java:S1116Í"Remove this empty statement.(Ğà›œüÿÿÿÿ
+V	java:S125A"<This block of commented-out lines of code should be removed.(ÓĞä–ùÿÿÿÿ
+V	java:S125N"<This block of commented-out lines of code should be removed.(ÓÖ¥ùÿÿÿÿ
+Q	java:S125q"<This block of commented-out lines of code should be removed.(ğÕ‡à
+W	java:S125â"<This block of commented-out lines of code should be removed.(£ˆ¨šşÿÿÿÿ
+R	java:S125æ"<This block of commented-out lines of code should be removed.(©¯’
+W	java:S125î"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ

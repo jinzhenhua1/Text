@@ -1,68 +1,60 @@
 
-N
-java:S1481‘"+Remove this unused "reader" local variable.(˜ÚŞıÿÿÿÿ8™°ØÉ³.
-ƒ	java:S116?"bRename this field "activity_main_btn_netty" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ø‹—øÿÿÿÿ8™°ØÉ³.
-Ÿ
-java:S1186¾"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÑ¯¤8™°ØÉ³.
-[	java:S106É"9Replace this use of System.out or System.err by a logger.(º×¦Ïùÿÿÿÿ8™°ØÉ³.
-q	java:S116<"URename this field "btn_dagger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„÷íª8™°ØÉ³.
-Ÿ
-java:S1186Í"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×İŠÎ8™°ØÉ³.
-|
-java:S1450;"ZRemove the "btn_textMVP" field and declare it as a local variable in the relevant methods.(ŞğÊ­şÿÿÿÿ8™°ØÉ³.
+ƒ	java:S116<"gRename this field "activity_main_btn_blue_tooth" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ÿ¿ü8è‘Øã™.
 \
-java:S1854‚"9Remove this useless assignment to local variable "novel".(ô¦Ûôûÿÿÿÿ8™°ØÉ³.
-ˆ
-java:S1450?"fRemove the "activity_main_btn_netty" field and declare it as a local variable in the relevant methods.(«ø‹—øÿÿÿÿ8™°ØÉ³.
-M
-java:S1128$"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8‰¢Ù÷³.
-Z
-java:S1128"=Remove this unused import 'com.example.text.dagger.TestBean'.(Š÷¶ò8‰¢Ù÷³.
-X	java:S1253"<This block of commented-out lines of code should be removed.(ªûœ¥8™°ØÉ³.
-^	java:S125·"<This block of commented-out lines of code should be removed.(–Š½Áüÿÿÿÿ8š°ØÉ³.
-ƒ	java:S116>"gRename this field "activity_main_btn_blue_tooth" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ÿ¿ü8™°ØÉ³.
-†
-java:S1450@"dRemove the "activity_main_btn_uid" field and declare it as a local variable in the relevant methods.(ÚìèÉøÿÿÿÿ8™°ØÉ³.
-x
-java:S14509"[Remove the "but_greendao" field and declare it as a local variable in the relevant methods.(¶ƒØ’8™°ØÉ³.
-M
-java:S1481‚"*Remove this unused "novel" local variable.(ô¦Ûôûÿÿÿÿ8™°ØÉ³.
-R
-java:S3740¼"/Provide the parametrized type for this generic.(ŒÕ¼³ÿÿÿÿÿ8™°ØÉ³.
+java:S1854€"9Remove this useless assignment to local variable "novel".(ô¦Ûôûÿÿÿÿ8è‘Øã™.
+Ÿ
+java:S1186¼"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÑ¯¤8è‘Øã™.
+o	java:S1163"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù¦€şÿÿÿÿ8è‘Øã™.
+ƒ	java:S116="bRename this field "activity_main_btn_netty" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(«ø‹—øÿÿÿÿ8è‘Øã™.
 v
-java:S1450<"YRemove the "btn_dagger" field and declare it as a local variable in the relevant methods.(„÷íª8™°ØÉ³.
+java:S1450:"YRemove the "btn_dagger" field and declare it as a local variable in the relevant methods.(„÷íª8è‘Øã™.
 E
-java:S1148o"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8™°ØÉ³.
-^	java:S125ˆ"<This block of commented-out lines of code should be removed.(à®Œüÿÿÿÿ8™°ØÉ³.
-	java:S116@"`Rename this field "activity_main_btn_uid" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚìèÉøÿÿÿÿ8™°ØÉ³.
-R
-java:S3740‚"/Provide the parametrized type for this generic.(ô¦Ûôûÿÿÿÿ8™°ØÉ³.
-N
-java:S1481Ä"+Remove this unused "intent" local variable.(şöåìûÿÿÿÿ8İùËé¡.
+java:S1148m"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è‘Øã™.
+w	java:S1169"VRename this field "btn_textMVP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞğÊ­şÿÿÿÿ8è‘Øã™.
+Ÿ
+java:S1186Ë"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×İŠÎ8è‘Øã™.
+^	java:S125Ñ"<This block of commented-out lines of code should be removed.(ïÁ©àùÿÿÿÿ8è‘Øã™.
 x
-java:S1450:"[Remove the "btn_textMVVM" field and declare it as a local variable in the relevant methods.(—¤†¥8™°ØÉ³.
-^	java:S125Æ"<This block of commented-out lines of code should be removed.(ïÁ©àùÿÿÿÿ8İùËé¡.
-]
-java:S1854‘":Remove this useless assignment to local variable "reader".(˜ÚŞıÿÿÿÿ8™°ØÉ³.
-s	java:S116:"WRename this field "btn_textMVVM" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—¤†¥8™°ØÉ³.
+java:S14508"[Remove the "btn_textMVVM" field and declare it as a local variable in the relevant methods.(—¤†¥8è‘Øã™.
+N
+java:S1481"+Remove this unused "reader" local variable.(˜ÚŞıÿÿÿÿ8è‘Øã™.
 ˆ
-java:S1450>"kRemove the "activity_main_btn_blue_tooth" field and declare it as a local variable in the relevant methods.(¹ÿ¿ü8™°ØÉ³.
-[	java:S106Ä"9Replace this use of System.out or System.err by a logger.(®ÖĞùÿÿÿÿ8™°ØÉ³.
-X	java:S125m"<This block of commented-out lines of code should be removed.(ÄÎÍú8™°ØÉ³.
-o	java:S1167"SRename this field "btn_http" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÃ8™°ØÉ³.
-o	java:S1165"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ù¦€şÿÿÿÿ8™°ØÉ³.
-s	java:S116="WRename this field "btn_gridview" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şœıš8™°ØÉ³.
-w	java:S116;"VRename this field "btn_textMVP" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŞğÊ­şÿÿÿÿ8™°ØÉ³.
-]
-java:S1854Ä":Remove this useless assignment to local variable "intent".(şöåìûÿÿÿÿ8İùËé¡.
-s	java:S1169"WRename this field "but_greendao" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ƒØ’8™°ØÉ³.
+java:S1450<"kRemove the "activity_main_btn_blue_tooth" field and declare it as a local variable in the relevant methods.(¹ÿ¿ü8è‘Øã™.
 x
-java:S14508"[Remove the "btn_nextPage" field and declare it as a local variable in the relevant methods.(Şı½8™°ØÉ³.
+java:S14507"[Remove the "but_greendao" field and declare it as a local variable in the relevant methods.(¶ƒØ’8è‘Øã™.
+o	java:S1165"SRename this field "btn_http" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(õÃ8è‘Øã™.
+s	java:S1167"WRename this field "but_greendao" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¶ƒØ’8è‘Øã™.
+s	java:S1166"WRename this field "btn_nextPage" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şı½8è‘Øã™.
 x
-java:S1450="[Remove the "btn_gridview" field and declare it as a local variable in the relevant methods.(şœıš8™°ØÉ³.
+java:S1450;"[Remove the "btn_gridview" field and declare it as a local variable in the relevant methods.(şœıš8è‘Øã™.
 N
-java:S1602|",Remove useless curly braces around statement(İØ úÿÿÿÿ8™°ØÉ³.
-s	java:S1168"WRename this field "btn_nextPage" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şı½8™°ØÉ³.
-Y	java:S125”"<This block of commented-out lines of code should be removed.(¬“’¶8š°ØÉ³.
+java:S1602z",Remove useless curly braces around statement(İØ úÿÿÿÿ8è‘Øã™.
+M
+java:S1481€"*Remove this unused "novel" local variable.(ô¦Ûôûÿÿÿÿ8è‘Øã™.
+x
+java:S14506"[Remove the "btn_nextPage" field and declare it as a local variable in the relevant methods.(Şı½8è‘Øã™.
+q	java:S116:"URename this field "btn_dagger" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„÷íª8è‘Øã™.
+]
+java:S1854Ï":Remove this useless assignment to local variable "intent".(şöåìûÿÿÿÿ8è‘Øã™.
+Y	java:S125’"<This block of commented-out lines of code should be removed.(¬“’¶8è‘Øã™.
+X	java:S1251"<This block of commented-out lines of code should be removed.(ªûœ¥8è‘Øã™.
+ˆ
+java:S1450="fRemove the "activity_main_btn_netty" field and declare it as a local variable in the relevant methods.(«ø‹—øÿÿÿÿ8è‘Øã™.
+|
+java:S14509"ZRemove the "btn_textMVP" field and declare it as a local variable in the relevant methods.(ŞğÊ­şÿÿÿÿ8è‘Øã™.
+[	java:S106Ç"9Replace this use of System.out or System.err by a logger.(º×¦Ïùÿÿÿÿ8è‘Øã™.
+^	java:S125†"<This block of commented-out lines of code should be removed.(à®Œüÿÿÿÿ8è‘Øã™.
+s	java:S116;"WRename this field "btn_gridview" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şœıš8è‘Øã™.
+s	java:S1168"WRename this field "btn_textMVVM" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—¤†¥8è‘Øã™.
 F
-java:S1148Ó"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8™°ØÉ³.
+java:S1148Ñ"#Use a logger to log this exception.(€ÉÔ…ıÿÿÿÿ8è‘Øã™.
+]
+java:S1854":Remove this useless assignment to local variable "reader".(˜ÚŞıÿÿÿÿ8è‘Øã™.
+[	java:S106Â"9Replace this use of System.out or System.err by a logger.(®ÖĞùÿÿÿÿ8è‘Øã™.
+N
+java:S1481Ï"+Remove this unused "intent" local variable.(şöåìûÿÿÿÿ8è‘Øã™.
+†
+java:S1450>"dRemove the "activity_main_btn_uid" field and declare it as a local variable in the relevant methods.(ÚìèÉøÿÿÿÿ8®“£ò¯.
+	java:S116>"`Rename this field "activity_main_btn_uid" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÚìèÉøÿÿÿÿ8®“£ò¯.
+X	java:S125k"<This block of commented-out lines of code should be removed.(ÄÎÍú8®“£ò¯.
+^	java:S125µ"<This block of commented-out lines of code should be removed.(–Š½Áüÿÿÿÿ8®“£ò¯.
