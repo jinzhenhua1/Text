@@ -74,8 +74,8 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         setContentView(R.layout.activity_main);
         initView();
         initData();
-        StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);//改变状态栏背景的颜色
-        StatusBarUtil.statusBarLightMode(this);//改变状态栏字体图标为黑色
+//        StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);//改变状态栏背景的颜色
+//        StatusBarUtil.statusBarLightMode(this);//改变状态栏字体图标为黑色
 
 
         Retrofit retrofit = new Retrofit.Builder()

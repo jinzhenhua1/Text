@@ -1,0 +1,7 @@
+
+8squid:S1643H"Use a StringBuilder instead.(õß‚ûùÿÿÿÿ
+osquid:S00116"RRename this field "et_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(°¯¬¤ùÿÿÿÿ
+msquid:S1450"VRemove the "but_add" field and declare it as a local variable in the relevant methods.(¹ÏýÐ
+jsquid:S00116"RRename this field "but_add" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¹ÏýÐ
+osquid:S00116"RRename this field "tv_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª »²ùÿÿÿÿ
+osquid:S1450"SRemove the "list" field and declare it as a local variable in the relevant methods.(’†ƒÿüÿÿÿÿ

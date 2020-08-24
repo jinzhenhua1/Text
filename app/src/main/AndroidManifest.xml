@@ -40,7 +40,8 @@
         <activity android:name=".text1.service.TextBinderActivity"></activity>
         <activity android:name=".netty.client.NettyActivity"/>
         <activity android:name=".view.viewpager.ViewPagerActivity" />
-        <activity android:name=".bluetooth.FindBlueToothActivity" />
+        <activity android:name=".bluetooth.FindBlueToothActivity"
+            android:theme="@style/TextStatusBar"/>
         <activity android:name=".mvvm.view.StudentActivity" />
         <activity android:name=".dagger.DaggerActivity" />
         <activity android:name=".view.TestGridLayoutActivity" />

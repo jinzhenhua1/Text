@@ -1,0 +1,4 @@
+
+lsquid:S1450 "URemove the "action" field and declare it as a local variable in the relevant methods.(Ýƒ•±
+bsquid:CommentedOutCodeLineL"<This block of commented-out lines of code should be removed.(ÛÚÌ
+gsquid:CommentedOutCodeLine^"<This block of commented-out lines of code should be removed.(÷ª Ûùÿÿÿÿ

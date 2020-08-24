@@ -1,0 +1,11 @@
+
+psquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(€ø²É
+asquid:UselessImportCheck"?Remove this unused import 'io.reactivex.ObservableOnSubscribe'.(¹¾
+]squid:UselessImportCheck";Remove this unused import 'io.reactivex.ObservableEmitter'.(¥Óó„
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(…«¶”üÿÿÿÿ
+@squid:S1172"&Remove these unused method parameters.(…«¶”üÿÿÿÿ
+gsquid:S3776"RRefactor this method to reduce its Cognitive Complexity from 29 to the 15 allowed.(¦ÓËú
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(’±ö²üÿÿÿÿ
+›squid:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ñÂèûÿÿÿÿÿ
+Qsquid:UnusedPrivateMethod")Remove this unused private "init" method.(Õé†²şÿÿÿÿ
+Rsquid:UnusedPrivateMethod"*Remove this unused private "init2" method.(…«¶”üÿÿÿÿ

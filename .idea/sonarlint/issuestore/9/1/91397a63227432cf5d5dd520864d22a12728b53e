@@ -1,0 +1,19 @@
+
+X	java:S1253"<This block of commented-out lines of code should be removed.(¯®¼¹8ÇúÍé¡.
+„
+java:S1104"bMake studentObservableField a static final constant or non-public and provide accessors if needed.(ï“¬®üÿÿÿÿ8ÇúÍé¡.
+y
+java:S1104"WMake studentName a static final constant or non-public and provide accessors if needed.(ßÁóüÿÿÿÿ8ÇúÍé¡.
+T
+java:S1128"7Remove this unused import 'com.example.text.bean.User'.(Í¼ÿö8ÇúÍé¡.
+k
+java:S1104"OMake age a static final constant or non-public and provide accessors if needed.(¾Á¹8ÇúÍé¡.
+s
+java:S1104"QMake level a static final constant or non-public and provide accessors if needed.(Ñ·í¡üÿÿÿÿ8ÇúÍé¡.
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì™ıÖ8ÇúÍé¡.
+z
+java:S1104"XMake mCurrentName a static final constant or non-public and provide accessors if needed.(Ñ·ÿÚøÿÿÿÿ8ÇúÍé¡.
+r
+java:S1104"UMake className a static final constant or non-public and provide accessors if needed.(ªòøÇ8ÇúÍé¡.
+
+java:S1186,"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8ÇúÍé¡.

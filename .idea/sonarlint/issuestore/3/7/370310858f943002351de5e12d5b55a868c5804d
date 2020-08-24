@@ -1,0 +1,57 @@
+
+?squid:S1148y"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+@squid:S1148Ø"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+asquid:CallToDeprecatedMethod>"4Remove this use of "HttpResponse"; it is deprecated.(¹æ¸ïýÿÿÿÿ
+bsquid:CommentedOutCodeLineB"<This block of commented-out lines of code should be removed.(¼¶ô
+^squid:S00112+"FDefine and throw a dedicated exception instead of using a generic one.(å¹ó°
+Zsquid:CallToDeprecatedMethod/"2Remove this use of "HttpClient"; it is deprecated.(è—ÄŒ
+hsquid:CommentedOutCodeLine±"<This block of commented-out lines of code should be removed.(¬øš®øÿÿÿÿ
+^squid:CallToDeprecatedMethod3"1Remove this use of "getParams"; it is deprecated.(è‚„•üÿÿÿÿ
+[squid:CallToDeprecatedMethod"2Remove this use of "getContent"; it is deprecated.(ÿË©ä
+\squid:CallToDeprecatedMethod>"/Remove this use of "execute"; it is deprecated.(¹æ¸ïýÿÿÿÿ
+\squid:CallToDeprecatedMethodf"4Remove this use of "HttpResponse"; it is deprecated.(³‚Üç
+bsquid:CallToDeprecatedMethodg"5Remove this use of "getStatusCode"; it is deprecated.(½ûž¯ùÿÿÿÿ
+asquid:CommentedOutCodeLinei"<This block of commented-out lines of code should be removed.(¢¿\
+\squid:S2147~"ECombine this catch with the one at line 120, which has the same body.(ï­£Ä
+bsquid:CommentedOutCodeLineN"<This block of commented-out lines of code should be removed.( ¯»Ô
+]squid:S2147‚"ECombine this catch with the one at line 120, which has the same body.(”ý¾
+@squid:S1148€"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+gsquid:CommentedOutCodeLine`"<This block of commented-out lines of code should be removed.(ŽÝœùúÿÿÿÿ
+\squid:CallToDeprecatedMethod‘".Remove this use of "Header"; it is deprecated.(ÿ¸Ý¼ýÿÿÿÿ
+gsquid:CommentedOutCodeLine7"<This block of commented-out lines of code should be removed.(’—Ø³øÿÿÿÿ
+_squid:CallToDeprecatedMethodE"2Remove this use of "HttpStatus"; it is deprecated.(½ûž¯ùÿÿÿÿ
+Zsquid:CallToDeprecatedMethodE"-Remove this use of "SC_OK"; it is deprecated.(½ûž¯ùÿÿÿÿ
+Zsquid:CallToDeprecatedMethodg"-Remove this use of "SC_OK"; it is deprecated.(½ûž¯ùÿÿÿÿ
+`squid:CallToDeprecatedMethod‘"2Remove this use of "getHeaders"; it is deprecated.(ÿ¸Ý¼ýÿÿÿÿ
+asquid:CallToDeprecatedMethod/"9Remove this use of "DefaultHttpClient"; it is deprecated.(è—ÄŒ
+\squid:CallToDeprecatedMethod;"/Remove this use of "HttpGet"; it is deprecated.(™ÿž›øÿÿÿÿ
+bsquid:CallToDeprecatedMethodE"5Remove this use of "getStatusLine"; it is deprecated.(½ûž¯ùÿÿÿÿ
+_squid:CallToDeprecatedMethodg"2Remove this use of "HttpStatus"; it is deprecated.(½ûž¯ùÿÿÿÿ
+Wsquid:UselessImportCheck".Remove this unused import 'java.util.HashMap'.(™˜”€ùÿÿÿÿ
+?squid:S1148|"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+@squid:S1148 "#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+bsquid:CallToDeprecatedMethodE"5Remove this use of "getStatusCode"; it is deprecated.(½ûž¯ùÿÿÿÿ
+\squid:CallToDeprecatedMethod“".Remove this use of "Header"; it is deprecated.(°´‹óüÿÿÿÿ
+bsquid:CallToDeprecatedMethod‹"4Remove this use of "HttpResponse"; it is deprecated.(ÌÿØÁþÿÿÿÿ
+bsquid:CommentedOutCodeLineo"<This block of commented-out lines of code should be removed.( ¯»Ô
+Wsquid:CallToDeprecatedMethodf"/Remove this use of "execute"; it is deprecated.(³‚Üç
+Xsquid:CallToDeprecatedMethodc"1Remove this use of "getParams"; it is deprecated.(§Á›b
+lsquid:CallToDeprecatedMethod{"?Remove this use of "ClientProtocolException"; it is deprecated.(‡¤“Óûÿÿÿÿ
+Zsquid:CallToDeprecatedMethod"1Remove this use of "getEntity"; it is deprecated.(ÿË©ä
+Xsquid:CallToDeprecatedMethod1"1Remove this use of "getParams"; it is deprecated.(§Á›b
+@squid:S1148ƒ"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ
+asquid:S2147{"ECombine this catch with the one at line 120, which has the same body.(‡¤“Óûÿÿÿÿ
+Nsquid:S1135"2Complete the task associated to this TODO comment.(ÕÌ®þÿÿÿÿ
+Zsquid:CallToDeprecatedMethod^"2Remove this use of "HttpClient"; it is deprecated.(è—ÄŒ
+Xsquid:CallToDeprecatedMethod_"0Remove this use of "HttpPost"; it is deprecated.(òûñâ
+Xsquid:CallToDeprecatedMethod”"0Remove this use of "getValue"; it is deprecated.(îá´\
+asquid:CallToDeprecatedMethod^"9Remove this use of "DefaultHttpClient"; it is deprecated.(è—ÄŒ
+gsquid:CommentedOutCodeLineD"<This block of commented-out lines of code should be removed.(¶¥ƒ„ýÿÿÿÿ
+hsquid:CommentedOutCodeLineÙ"<This block of commented-out lines of code should be removed.(ôþ¢Ôùÿÿÿÿ
+^squid:CallToDeprecatedMethode"1Remove this use of "getParams"; it is deprecated.(è‚„•üÿÿÿÿ
+asquid:CommentedOutCodeLineH"<This block of commented-out lines of code should be removed.(¢¿\
+Vsquid:S1118%":Add a private constructor to hide the implicit public one.(èÚÃèúÿÿÿÿ
+\squid:CallToDeprecatedMethod;"/Remove this use of "HttpGet"; it is deprecated.(™ÿž›øÿÿÿÿ
+bsquid:CallToDeprecatedMethodg"5Remove this use of "getStatusLine"; it is deprecated.(½ûž¯ùÿÿÿÿ
+Rsquid:S1143†"5Remove this return statement from this finally block.(áÿèˆýÿÿÿÿ
+Xsquid:CallToDeprecatedMethod_"0Remove this use of "HttpPost"; it is deprecated.(òûñâ

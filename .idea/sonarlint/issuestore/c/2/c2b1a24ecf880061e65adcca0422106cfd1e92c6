@@ -1,0 +1,42 @@
+
+q	java:S116)"WRename this field "but_Retrofit" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÁÒÎƒıÿÿÿÿ
+W	java:S125¨"<This block of commented-out lines of code should be removed.(àÑŸğùÿÿÿÿ
+G
+java:S1153["1Directly append the argument of String.valueOf().(¥ââ¬
+˜
+java:S1186Ö"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(×İŠÎ
+V	java:S125J"<This block of commented-out lines of code should be removed.(òğë’øÿÿÿÿ
+P	java:S125à"<This block of commented-out lines of code should be removed.(‚Š*
+W	java:S125Û"<This block of commented-out lines of code should be removed.(ê–¬Àûÿÿÿÿ
+Q	java:S125Ş"<This block of commented-out lines of code should be removed.(„Ğh
+R	java:S125¡"<This block of commented-out lines of code should be removed.(òÍ³Õ
+W	java:S125ï"<This block of commented-out lines of code should be removed.(’ÀñËıÿÿÿÿ
+W	java:S125Ÿ"<This block of commented-out lines of code should be removed.(±ôë¯ıÿÿÿÿ
+U
+java:S1117Â">Rename "observable" which hides the field declared at line 46.(İ«ı¦
+h	java:S116'"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(§ÄÂüÿÿÿÿ
+W	java:S125­"<This block of commented-out lines of code should be removed.(à™Ü›üÿÿÿÿ
+R	java:S125å"<This block of commented-out lines of code should be removed.(¯Á 
+V	java:S125{"<This block of commented-out lines of code should be removed.(´ÍÔÛùÿÿÿÿ
+S
+java:S1128"8Remove this unused import 'com.google.gson.GsonBuilder'.(”«à¬ÿÿÿÿÿ
+W	java:S125â"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+W	java:S125«"<This block of commented-out lines of code should be removed.(Óú‚Àûÿÿÿÿ
+
+java:S1186Š"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¸ÜÒÄøÿÿÿÿ
+n	java:S116("YRename this field "but_textRxjava" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(şèÚ
+h	java:S100B"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(µÇ«–ÿÿÿÿÿ
+˜
+java:S1186Ç"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(úÑ¯¤
+V	java:S125V"<This block of commented-out lines of code should be removed.(ÆÇşÿÿÿÿ
+Q	java:S125¥"<This block of commented-out lines of code should be removed.(Ù¥š!
+R	java:S125ê"<This block of commented-out lines of code should be removed.(®ïßú
+t
+java:S1450+"YRemove the "flowlayout" field and declare it as a local variable in the relevant methods.(ÀË™†üÿÿÿÿ
+W	java:S125ñ"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ
+Q
+java:S3740."/Provide the parametrized type for this generic.(ÚÚŸÿÿÿÿÿ8²´ü³.
+L
+java:S3740f"/Provide the parametrized type for this generic.(Ãü²ƒ8²´ü³.
+Q
+java:S3740~"/Provide the parametrized type for this generic.(°Çø£ıÿÿÿÿ8²´ü³.

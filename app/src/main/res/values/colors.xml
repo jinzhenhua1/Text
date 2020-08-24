@@ -36,6 +36,7 @@
     <color name="color_component_bg_yellow">#F47C0B</color>
     <color name="color_edit_control_normal">#f0f0f0</color>
     <color name="color_edit_control_ctivated">#95c9f7</color>
+    <color name="TRANSPARENT">#00000000</color>
 
     <color name="color_btn_bg_blue_default">#803F51B5</color>
     <color name="color_btn_bg_blue_normal">#3F51B5</color>

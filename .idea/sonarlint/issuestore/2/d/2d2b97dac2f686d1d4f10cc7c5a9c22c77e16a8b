@@ -1,0 +1,14 @@
+
+`
+java:S1854-">Remove this useless assignment to local variable "heightMode".(“âŠêûÿÿÿÿ8‰þ¬‹¢.
+Z
+java:S1854+"=Remove this useless assignment to local variable "widthMode".(Ã‡‰Ë8‰þ¬‹¢.
+]
+java:S1854‚"?Remove this useless assignment to local variable "totalHeight".(¼ù£»8‰þ¬‹¢.
+K
+java:S1481+".Remove this unused "widthMode" local variable.(Ã‡‰Ë8‰þ¬‹¢.
+j	java:S116"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(™Õ©½8‰þ¬‹¢.
+Q
+java:S1481-"/Remove this unused "heightMode" local variable.(“âŠêûÿÿÿÿ8‰þ¬‹¢.
+]	java:S1255"<This block of commented-out lines of code should be removed.(å©Õûþÿÿÿÿ8‰þ¬‹¢.
+X	java:S125{"<This block of commented-out lines of code should be removed.(€ô˜ß8‰þ¬‹¢.

@@ -1,0 +1,12 @@
+
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È®»ùÿÿÿÿ
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È®»ùÿÿÿÿ
+nsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(È®»ùÿÿÿÿ
+zsquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(È‘‹´ùÿÿÿÿ
+zsquid:UselessImportCheck"QRemove this unnecessary import: java.lang classes are always implicitly imported.(Ãş”«ıÿÿÿÿ
+Qsquid:S11339"5Do not forget to remove this deprecated code someday.(•¸ğ…ıÿÿÿÿ
+Usquid:MissingDeprecatedCheck9"(Add the missing @deprecated Javadoc tag.(•¸ğ…ıÿÿÿÿ
+Qsquid:S1133L"5Do not forget to remove this deprecated code someday.(•¸ğ…ıÿÿÿÿ
+Usquid:MissingDeprecatedCheckL"(Add the missing @deprecated Javadoc tag.(•¸ğ…ıÿÿÿÿ
+Qsquid:S1133]"5Do not forget to remove this deprecated code someday.(ŞÏ´şÿÿÿÿ
+Usquid:MissingDeprecatedCheck]"(Add the missing @deprecated Javadoc tag.(ŞÏ´şÿÿÿÿ
