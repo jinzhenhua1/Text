@@ -1,0 +1,14 @@
+
+E
+java:S3740"/Provide the parametrized type for this generic.(ˇ”¨Ä
+Å
+java:S1450"kRemove the "activity_bule_tooth_btn_find" field and declare it as a local variable in the relevant methods.(ë÷óã
+v	java:S116"aRename this field "activity_bule_tooth_lv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜÂÔŸ
+|	java:S116"gRename this field "activity_bule_tooth_btn_find" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë÷óã
+1
+java:S3626X"Remove this redundant jump.(…ä©É
+H
+java:S3398S"2Move this method into "DiscoverBlueToothReceiver".(πæØ∫
+Q	java:S125O"<This block of commented-out lines of code should be removed.(°€©‰
+Q	java:S125\"<This block of commented-out lines of code should be removed.(ªï›ú
+Q	java:S125^"<This block of commented-out lines of code should be removed.(π’©ï

@@ -21,6 +21,7 @@ import com.example.text.bean.ResponseData;
 import com.example.text.bean.Student;
 import com.example.text.bluetooth.FindBlueToothActivity;
 import com.example.text.dagger.DaggerActivity;
+import com.example.text.dagger.TestBean;
 import com.example.text.mvp.view.WeatherActivity;
 import com.example.text.mvvm.view.DataBindActivity;
 import com.example.text.netty.client.NettyActivity;
@@ -38,6 +39,8 @@ import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
 import java.io.File;
+
+import java.util.ArrayList;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
@@ -302,6 +305,8 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
 //        }
 //        return true;
 //    }
+
+
 
 
 
