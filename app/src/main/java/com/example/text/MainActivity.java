@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.text.aidl.TestAidlActivity;
 import com.example.text.bean.ContextData;
 import com.example.text.bean.ResponseData;
 import com.example.text.bean.Student;
@@ -32,6 +33,7 @@ import com.example.text.util.SystemUtils;
 import com.example.text.view.ScrollView.TestScrollActivity;
 import com.example.text.view.TestGridLayoutActivity;
 import com.example.text.view.adapter.TestAdapterActivity;
+import com.jzh.basemodule.utils.StorageUtils;
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
 
@@ -65,6 +67,8 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private Button activity_main_btn_uid;//测试不同应用相同uid共享SharedPreference
     private Button activity_main_btn_scroll;//
     private Button activity_main_btn_test_adapter;//
+    private Button activity_main_btn_test_aidl;//
+    private Button activity_main_btn_test_webview;//
 
     Toolbar mToolbar;
 
@@ -76,6 +80,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        preStart();
         initView();
         initData();
 //        StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);//改变状态栏背景的颜色
@@ -265,6 +270,10 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         activity_main_btn_scroll.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TestScrollActivity.class)));
         activity_main_btn_test_adapter = findViewById(R.id.activity_main_btn_test_adapter);
         activity_main_btn_test_adapter.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TestAdapterActivity.class)));
+        activity_main_btn_test_aidl = findViewById(R.id.activity_main_btn_test_aidl);
+        activity_main_btn_test_aidl.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), TestAidlActivity.class)));
+        activity_main_btn_test_webview = findViewById(R.id.activity_main_btn_test_webview);
+        activity_main_btn_test_webview.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), WebViewCacheActivity.class)));
 
 //        setToolbar();
     }
@@ -320,5 +329,20 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
                     public void accept(Permission permission) {
                     }
                 });
+    }
+
+    /**
+     * 初始化前的一些操作
+     */
+    private void preStart() {
+        try {
+            //通过手机安装安装包之后，点击打开，然后home回到桌面，再次点击图标打开APP，会打开两次主页
+            //但是第二次的flags 为 Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT
+            if ((getIntent().getFlags() & Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT) != 0) {
+                finish();
+                return;
+            }
+        }catch (Exception e){}
+
     }
 }

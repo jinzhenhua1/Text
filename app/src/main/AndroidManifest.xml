@@ -24,7 +24,13 @@
     <uses-permission android:name="android.permission.CAMERA" /> <!-- <permission android:name="android.permission.INTERACT_ACROSS_USERS_FULL" android:protectionLevel="signature"/> -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- //蓝牙权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
-    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 小米推送配置 -->
+    <permission
+        android:name="com.example.text.permission.MIPUSH_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.example.text.permission.MIPUSH_RECEIVE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:name=".MyApplication.MyApplication"
@@ -35,14 +41,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeNew">
-        <activity android:name=".view.adapter.TestAdapterActivity"></activity>
+        <activity android:name=".WebViewCacheActivity"></activity>
+        <activity android:name=".aidl.TestAidlActivity" />
+        <activity android:name=".view.adapter.TestAdapterActivity" />
         <activity android:name=".view.ScrollView.TestScrollActivity" />
-
-        <service
-            android:name=".aidl.MyService"
-            android:enabled="true"
-            android:exported="true" />
-
         <activity android:name=".text1.service.TextBinderActivity" />
         <activity android:name=".netty.client.NettyActivity" />
         <activity android:name=".view.viewpager.ViewPagerActivity" />
