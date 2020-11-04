@@ -61,5 +61,8 @@ ext {
             eventbus                 : "org.greenrobot:eventbus:3.1.1",
             spinner                  : "com.github.arcadefire:nice-spinner:1.4.4",
             sqlcipher                : "net.zetetic:android-database-sqlcipher:3.5.7@aar",
+
+            //修改系统状态栏，使其变为透明
+            systembar                : 'com.readystatesoftware.systembartint:systembartint:1.0.3',
     ]
 }

@@ -41,6 +41,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppThemeNew">
+
+        <service
+            android:name=".aidl.MyService"
+            android:enabled="true"
+            android:exported="true" />
+
         <activity android:name=".WebViewCacheActivity"></activity>
         <activity android:name=".aidl.TestAidlActivity" />
         <activity android:name=".view.adapter.TestAdapterActivity" />
@@ -48,7 +54,8 @@
         <activity android:name=".text1.service.TextBinderActivity" />
         <activity android:name=".netty.client.NettyActivity" />
         <activity android:name=".view.viewpager.ViewPagerActivity" />
-        <activity android:name=".bluetooth.FindBlueToothActivity" />
+        <activity android:name=".bluetooth.FindBlueToothActivity"
+            android:theme="@style/TextStatusBar"/>
         <activity android:name=".mvvm.view.StudentActivity" />
         <activity android:name=".dagger.DaggerActivity" />
         <activity android:name=".view.TestGridLayoutActivity" />

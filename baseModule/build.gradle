@@ -40,4 +40,5 @@ dependencies {
     api dependencies.rxJava
     api dependencies.rxAndroid
     api dependencies.securePreferences
+    api dependencies.systembar
 }

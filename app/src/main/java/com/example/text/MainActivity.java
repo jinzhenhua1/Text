@@ -30,6 +30,7 @@ import com.example.text.text1.HttpClient;
 import com.example.text.text1.MyService;
 import com.example.text.text1.TextBzrule;
 import com.example.text.text1.TextService;
+import com.example.text.util.StatusBarUtil;
 import com.example.text.util.SystemUtils;
 import com.example.text.view.ScrollView.TestScrollActivity;
 import com.example.text.view.TestGridLayoutActivity;
@@ -86,8 +87,8 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         preStart();
         initView();
         initData();
-//        StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);//改变状态栏背景的颜色
-//        StatusBarUtil.statusBarLightMode(this);//改变状态栏字体图标为黑色
+        StatusBarUtil.setStatusBarColor(this,R.color.colorAccent);//改变状态栏背景的颜色
+        StatusBarUtil.statusBarLightMode(this);//改变状态栏字体图标为黑色
 
 
         Retrofit retrofit = new Retrofit.Builder()
