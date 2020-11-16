@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jzh.basemodule">
+
+    <!--    (通过wifi和移动基站获取定位权限)，需要动态申请-->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!--    通过gps获取定位权限-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!--  获取网络状态的权限  -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 获取wifi状态的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!--    手机震动权限-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!--    读取电话状态，需要动态申请-->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+</manifest>

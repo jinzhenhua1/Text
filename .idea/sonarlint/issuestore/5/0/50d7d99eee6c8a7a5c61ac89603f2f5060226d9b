@@ -1,6 +1,22 @@
 
-lsquid:S00100§"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÂâüÿÿÿÿ
-Vsquid:S1118":Add a private constructor to hide the implicit public one.(ÑÔàšúÿÿÿÿ
-Bsquid:S00108™")Either remove or fill this block of code.(”ı¾
-lsquid:S00100„"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÈçÖûÿÿÿÿ
-Bsquid:S00108·")Either remove or fill this block of code.(”ı¾
+F
+java:S3740«"/Provide the parametrized type for this generic.(—ƒİà
+K
+java:S3740®"/Provide the parametrized type for this generic.(…¿áµùÿÿÿÿ
+U
+java:S1118":Add a private constructor to hide the implicit public one.(ÑÔàšúÿÿÿÿ
+F
+java:S1874:"0Remove this use of "getColor"; it is deprecated.(²ô”á
+i	java:S100…"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(òÈçÖûÿÿÿÿ
+H
+java:S3011",This accessibility update should be removed.(Ş¦ñşÿÿÿÿ
+H
+java:S3011",This accessibility update should be removed.(ğ“üÿÿÿÿ
+C
+java:S3011—",This accessibility bypass should be removed.(©±Ê
+?	java:S108š")Either remove or fill this block of code.(”ı¾
+i	java:S100¨"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ËÂâüÿÿÿÿ
+?	java:S108¸")Either remove or fill this block of code.(”ı¾
+?	java:S108Í")Either remove or fill this block of code.(”ı¾
+O
+java:S1144Æ"8Remove this unused private "getStatusBarByResId" method.(‹ÕŠ„

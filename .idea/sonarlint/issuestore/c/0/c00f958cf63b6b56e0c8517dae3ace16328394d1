@@ -1,0 +1,9 @@
+
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„ª×ûÿÿÿÿ
+q
+java:S1450"[Remove the "upScrollView" field and declare it as a local variable in the relevant methods.(ŸŞİ­
+>
+java:S5542P"#Use secure mode and padding scheme.(Ü øùÿÿÿÿ
+O
+java:S4719R"9Replace charset name argument with StandardCharsets.UTF_8(…Á…Î
+Q	java:S125V"<This block of commented-out lines of code should be removed.(ÌÑ”Ã

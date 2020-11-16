@@ -1,0 +1,13 @@
+
+V	java:S110"<This class has 8 parents which is greater than 5 authorized.(¦ËÉõüÿÿÿÿ
+‚
+java:S1450"gRemove the "activity_adapter_test_rv" field and declare it as a local variable in the relevant methods.(Ö¢òúÿÿÿÿ
+s
+java:S1450"XRemove the "btAdapter" field and declare it as a local variable in the relevant methods.(«íÀ’şÿÿÿÿ
+s
+java:S1450"XRemove the "wrAdapter" field and declare it as a local variable in the relevant methods.(ÁÑª­úÿÿÿÿ
+}	java:S116"cRename this field "activity_adapter_test_rv" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö¢òúÿÿÿÿ
+t
+java:S2293%"YReplace the type specification in this constructor call with the diamond operator ("<>").(úª°„øÿÿÿÿ
+t
+java:S2293&"YReplace the type specification in this constructor call with the diamond operator ("<>").(ªÜŠûÿÿÿÿ
