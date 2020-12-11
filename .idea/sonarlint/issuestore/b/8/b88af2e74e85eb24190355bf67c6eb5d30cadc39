@@ -1,0 +1,35 @@
+
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(Ÿ²É‡
+q
+java:S1450"[Remove the "lightModeBtn" field and declare it as a local variable in the relevant methods.(Ì¸×õ
+v
+java:S1450"[Remove the "nightModeBtn" field and declare it as a local variable in the relevant methods.(×„íşıÿÿÿÿ
+e
+java:S1874J"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(µÛÎ°üÿÿÿÿ
+=
+java:S1185Y"(Remove this method to simply inherit it.(û®«S
+e
+java:S1874^"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(—Ğ¶èÿÿÿÿÿ
+R
+java:S1874`"7Remove this use of "onReceivedError"; it is deprecated.(àø’¶şÿÿÿÿ
+P
+java:S1874‡"9Remove this use of "setRenderPriority"; it is deprecated.(á×³ß
+S
+java:S1874•"7Remove this use of "setDatabasePath"; it is deprecated.(ÎÆƒ¸ùÿÿÿÿ
+S
+java:S1874›"7Remove this use of "getDatabasePath"; it is deprecated.(ÛÂ’€ÿÿÿÿÿ
+j
+java:S4042¿"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
+V	java:S899¿";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
+T
+java:S1197Á"8Move the array designator from the variable to the type.(ê²§ôÿÿÿÿÿ
+j
+java:S4042Æ"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
+V	java:S899Æ";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
+O
+java:S3985Ò"3Remove this unused private "MyWebViewClient" class.(µ¿üãÿÿÿÿÿ
+f
+java:S1874×"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(µÛÎ°üÿÿÿÿ
+Q	java:S125-"<This block of commented-out lines of code should be removed.(ß•¼ç
+V	java:S1253"<This block of commented-out lines of code should be removed.(ªÀÅşÿÿÿÿ
+V	java:S1257"<This block of commented-out lines of code should be removed.(åÁÁšûÿÿÿÿ

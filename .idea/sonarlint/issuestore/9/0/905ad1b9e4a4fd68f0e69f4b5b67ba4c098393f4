@@ -1,0 +1,13 @@
+
+f
+java:S1301H"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ
+V	java:S110"<This class has 9 parents which is greater than 5 authorized.(™Í¡—üÿÿÿÿ
+>
+java:S1604E"(Make this anonymous inner class a lambda(Ä†Ÿ·
+c	java:S116"NRename this field "TAG" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(»¢©Ó
+7
+java:S1170"!Make this final field static too.(»¢©Ó
+<	java:S131H""Add a default case to this switch.(×“¾ñùÿÿÿÿ
+Y
+java:S3398c">Move this method into the anonymous class declared at line 69.(¾êÿðøÿÿÿÿ
+V	java:S1256"<This block of commented-out lines of code should be removed.(ÏÁò©ùÿÿÿÿ

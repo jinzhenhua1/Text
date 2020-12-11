@@ -1,0 +1,22 @@
+
+O
+java:S4973`"9Use the "equals" method if value comparison was intended.(¥¸õÉ
+O
+java:S4973b"9Use the "equals" method if value comparison was intended.(İ®¦
+O
+java:S4973d"9Use the "equals" method if value comparison was intended.(¦ÜËñ
+h
+java:S3776#"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(¡ê¨û
+S
+java:S1854?"8Remove this useless assignment to local variable "type".(™Éô¹ùÿÿÿÿ
+H
+java:S1874c"2Remove this use of "getCdmaDbm"; it is deprecated.(µ˜Œ©
+H
+java:S1874e"2Remove this use of "getEvdoDbm"; it is deprecated.(ù¯ˆ
+W
+java:S1874w"<Remove this use of "getGsmSignalStrength"; it is deprecated.(·ñÕÊùÿÿÿÿ
+V	java:S125F"<This block of commented-out lines of code should be removed.(¾­æšüÿÿÿÿ
+Q	java:S125h"<This block of commented-out lines of code should be removed.(®¸îî
+V	java:S125z"<This block of commented-out lines of code should be removed.(—ÆÊÆùÿÿÿÿ
+H
+java:S1144#"2Remove this unused private "getPhoneState" method.(¡ê¨û

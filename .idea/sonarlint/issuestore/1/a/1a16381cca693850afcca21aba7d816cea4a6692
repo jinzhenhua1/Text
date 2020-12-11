@@ -1,0 +1,5 @@
+
+d
+java:S3014y"IRemove this use of "ThreadGroup". Prefer the use of "ThreadPoolExecutor".(‹©Öıÿÿÿÿ
+q
+java:S3008="[Rename this field "THREAD_POOL_UTIL" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‹¦á¢
