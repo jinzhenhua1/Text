@@ -1,3 +1,14 @@
 
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ô‰Ø
-Rsquid:S26969"6Make the enclosing method "static" or remove this set.(ÿŞ¯øüÿÿÿÿ
+m
+java:S2095:"KUse try-with-resources or close this "DevOpenHelper" in a "finally" clause.(’·›æúÿÿÿÿ8«ôÙ.
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ô‰Ø8«ôÙ.
+P
+java:S1128"4Remove this unused import 'android.app.Application'.(¢¶ÿI8«ôÙ.
+S
+java:S2696 "6Make the enclosing method "static" or remove this set.(—ÈëÕ8«ôÙ.
+X
+java:S2696="6Make the enclosing method "static" or remove this set.(ÿŞ¯øüÿÿÿÿ8«ôÙ.
+]	java:S125"<This block of commented-out lines of code should be removed.(Éè¥Àûÿÿÿÿ8«ôÙ.
+]	java:S125!"<This block of commented-out lines of code should be removed.(‘¡´Èúÿÿÿÿ8«ôÙ.
+N
+java:S11449"1Remove this unused private "initGreenDao" method.(ª¬Œü8«ôÙ.

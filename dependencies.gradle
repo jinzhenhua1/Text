@@ -37,6 +37,8 @@ ext {
             // third-part library
             retrofit                 : "com.squareup.retrofit2:retrofit:2.5.0",
             retrofitConverterGson    : "com.squareup.retrofit2:converter-gson:2.5.0",
+            //Retrofit返回值支持String类型
+            retrofitConverterScalars    : 'com.squareup.retrofit2:converter-scalars:2.0.2',
             retrofitAdapterRxJava    : "com.squareup.retrofit2:adapter-rxjava2:2.5.0",
             okhttp_logging           : "com.squareup.okhttp3:logging-interceptor:3.10.0",
 

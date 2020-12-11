@@ -1,0 +1,50 @@
+
+J
+java:S14444"5Make this "public static HAVAE_SIME_CARD" field final(åÁÓd
+G
+java:S14445"2Make this "public static NO_SIME_CARD" field final(ß Õ/
+F
+java:S3740›"/Provide the parametrized type for this generic.(­•ø³
+F
+java:S3740Á"/Provide the parametrized type for this generic.(¸Ûò
+g	java:S117ì"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(š©…¯
+l	java:S117í"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÊÛî¼úÿÿÿÿ
+g	java:S117ï"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸Àğî
+p
+java:S11044"[Make HAVAE_SIME_CARD a static final constant or non-public and provide accessors if needed.(åÁÓd
+m
+java:S11045"XMake NO_SIME_CARD a static final constant or non-public and provide accessors if needed.(ß Õ/
+w
+java:S1488í"`Immediately return this expression instead of assigning it to the temporary variable "wifiInfo".(Şš²
+o
+java:S30084"ZRename this field "HAVAE_SIME_CARD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÁÓd
+l
+java:S30085"WRename this field "NO_SIME_CARD" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ß Õ/
+[
+java:S3252C"EUse static access with "android.content.Context" for "AUDIO_SERVICE".(í ‡
+J
+java:S1874P"/Remove this use of "vibrate"; it is deprecated.(èÌí‰ıÿÿÿÿ
+P
+java:S1874ù"4Remove this use of "getBlockSize"; it is deprecated.(ÄÀÆûÿÿÿÿÿ
+V
+java:S1874ú":Remove this use of "getAvailableBlocks"; it is deprecated.(æéöùÿÿÿÿ
+I
+java:S1874"3Remove this use of "NetworkInfo"; it is deprecated.(îÎÖ?
+R
+java:S1874"<Remove this use of "getActiveNetworkInfo"; it is deprecated.(îÎÖ?
+J
+java:S1874‚"3Remove this use of "isConnected"; it is deprecated.(ùãÍÃ
+G
+java:S1874„"0Remove this use of "getState"; it is deprecated.(•ÂÈ
+J
+java:S1874„"3Remove this use of "NetworkInfo"; it is deprecated.(•ÂÈ
+D
+java:S1874„"-Remove this use of "State"; it is deprecated.(•ÂÈ
+H
+java:S1874„"1Remove this use of "CONNECTED"; it is deprecated.(•ÂÈ
+J
+java:S1874„"3Remove this use of "getTypeName"; it is deprecated.(•ÂÈ
+X
+java:S1075¹"ARefactor your code to get this URI from a customizable parameter.(Òî˜Ÿ
+F
+java:S2093Ä"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ

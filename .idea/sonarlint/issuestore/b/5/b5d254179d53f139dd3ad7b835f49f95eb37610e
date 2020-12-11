@@ -1,0 +1,45 @@
+
+{
+java:S1488Ğ"eImmediately return this expression instead of assigning it to the temporary variable "resizedBitmap".(Ö½Ş|
+E
+java:S2093v"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+F
+java:S2093Ÿ"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+j
+java:S4042Ğ"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(é‘‚©úÿÿÿÿ
+V	java:S899Ğ";Do something with the "boolean" value returned by "delete".(é‘‚©úÿÿÿÿ
+F
+java:S2093Ò"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+Q
+java:S1854ã":Remove this useless assignment to local variable "bitmap".(ˆ´æ¦
+I
+java:S1874ù"3Remove this use of "inPurgeable"; it is deprecated.(ƒšg
+N
+java:S1874û"8Remove this use of "inInputShareable"; it is deprecated.(£ñı8
+j
+java:S4042"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
+V	java:S899";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
+\
+java:S2147š"ECombine this catch with the one at line 280, which has the same body.(ï­£Ä
+F
+java:S2093’"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+8
+java:S1116Ì"Remove this empty statement.(Åñ­õşÿÿÿÿ
+O	java:S106Î"9Replace this use of System.out or System.err by a logger.(œë‡
+j
+java:S4042‹"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
+V	java:S899‹";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
+]	java:S899"BDo something with the "boolean" value returned by "createNewFile".(Ğ’Íùÿÿÿÿ
+F
+java:S2093"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+8
+java:S2111ï"!Use "BigDecimal.valueOf" instead.(îÊ£ª
+j
+java:S4042ÿ"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
+V	java:S899ÿ";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
+j
+java:S4042"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(²Œ­ûÿÿÿÿ
+V	java:S899";Do something with the "boolean" value returned by "delete".(²Œ­ûÿÿÿÿ
+e
+java:S4042—"NUse "java.nio.file.Files#delete" here for better messages on error conditions.(íÔˆ¢
+Q	java:S899—";Do something with the "boolean" value returned by "delete".(íÔˆ¢
