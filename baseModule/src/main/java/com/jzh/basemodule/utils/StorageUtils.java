@@ -8,6 +8,7 @@ import android.os.StatFs;
 import android.os.storage.StorageManager;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 import static android.content.Context.MODE_PRIVATE;
@@ -32,8 +33,8 @@ public class StorageUtils {
         File path = Environment.getDataDirectory();
 //        return path.getTotalSpace();
         StatFs stat = new StatFs(path.getPath());
-        long blockSize = stat.getBlockSize();
-        long totalBlocks = stat.getBlockCount();
+        long blockSize = stat.getBlockSizeLong();
+        long totalBlocks = stat.getBlockCountLong();
         return totalBlocks * blockSize / 1000.0 / 1000.0 / 1000.0;
     }
 
@@ -55,6 +56,29 @@ public class StorageUtils {
         }
     }
 
+    /**
+     * 获取sdcard总内存
+     *
+     * @param sdcardPath sdcard根目录
+     * @return 总内存
+     */
+    public static long getSdcardTotalSize(String sdcardPath) throws FileNotFoundException {
+
+        String absolutePath = Environment.getExternalStorageDirectory().getAbsolutePath();
+        if (sdcardPath.equals(absolutePath)) {
+            return 0;
+        }
+
+        File file = new File(sdcardPath);
+        if (!file.exists()) {
+            throw new FileNotFoundException();
+        }
+//        return file.getTotalSpace();
+        StatFs stat = new StatFs(sdcardPath);
+        long blockSize = stat.getBlockSizeLong();
+        long totalBlocks = stat.getBlockCountLong();
+        return blockSize * totalBlocks;
+    }
 
     /**
      * 获取外部存储根目录
