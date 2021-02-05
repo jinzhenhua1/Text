@@ -1,5 +1,8 @@
 package com.example.text.view.adapter;
 
+import android.util.Log;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
@@ -25,6 +28,7 @@ class TestAdapterHelperAdapter extends BaseQuickAdapter<String, BaseViewHolder> 
 
     @Override
     protected void convert(BaseViewHolder helper, String item) {
+        Log.e("TestAdapterHelperAdapter","内容为：" + ((TextView)helper.getView(R.id.item_tv_name)).getText().toString());
         /**
          * 给指定的组件添加内容
          * helper.setImageResource  设置图片资源

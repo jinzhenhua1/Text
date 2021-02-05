@@ -15,6 +15,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.text.MyApplication.MyApplication;
 import com.example.text.aidl.TestAidlActivity;
 import com.example.text.bean.ContextData;
 import com.example.text.bean.ResponseData;
@@ -35,6 +36,7 @@ import com.example.text.util.SystemUtils;
 import com.example.text.view.ScrollView.TestScrollActivity;
 import com.example.text.view.TestGridLayoutActivity;
 import com.example.text.view.adapter.TestAdapterActivity;
+import com.jzh.basemodule.utils.PhoneUtil;
 import com.jzh.basemodule.utils.StorageUtils;
 import com.tbruyelle.rxpermissions2.Permission;
 import com.tbruyelle.rxpermissions2.RxPermissions;
@@ -111,6 +113,8 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                Log.e(TAG,"获取imei:" + PhoneUtil.getInstance(MyApplication.getContext()).getIMEI());
                 Call<ResponseData<ContextData>> call1 = service.getStartImage1("广州");
                 call1.enqueue(new Callback<ResponseData<ContextData>>() {
                     @Override
@@ -152,36 +156,6 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
             }
         });
 
-
-        //观察者
-        final Observer<String> reader=new Observer<String>() {
-            @Override
-            public void onSubscribe(Disposable d) {
-//                mDisposable=d;
-                Log.e(TAG,"onSubscribe");
-            }
-
-            @Override
-            public void onNext(String value) {
-                if ("2".equals(value)){
-//                    mDisposable.dispose();//解除订阅，不在接收消息
-                    return;
-                }
-                Log.e(TAG,"onNext:"+value);
-            }
-
-            @Override
-            public void onError(Throwable e) {
-                Log.e(TAG,"onError="+e.getMessage());
-            }
-
-            @Override
-            public void onComplete() {
-                Toast.makeText(getApplicationContext(),"接口执行完毕",Toast.LENGTH_SHORT).show();
-
-                Log.e(TAG,"onComplete()");
-            }
-        };
 
         btn_http.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -329,7 +303,9 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         return new RxPermissions(this)
                 .requestEachCombined(
                         android.Manifest.permission.WRITE_EXTERNAL_STORAGE,
-                        Manifest.permission.READ_EXTERNAL_STORAGE)
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.READ_PHONE_STATE
+                        )
                 .subscribe(new Consumer<Permission>() { // will emit 1 Permission object
                     @Override
                     public void accept(Permission permission) {

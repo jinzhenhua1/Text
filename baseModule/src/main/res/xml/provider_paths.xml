@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <external-path name="beta_external_files_path" path="Android/data/"/>
+    <external-path name="root_path" path="/"/>
+    <external-files-path name="root_files_path" path="/"/>
+
+
+<!--    其中 external-path 表示外置存储的根目录，path 则是具体的路径，这里是要把你存放安装包的路径分享出来，所以写存放安装包的路径，一般都下载到外置目录中的file目录下-->
+<!--    external-files-path：表示外置存储目录的关联目录的files文件夹，如：/sdcard/Android/data/packagename/files/-->
+<!--    external-cache-path：表示外置存储目录的关联目录的cache文件夹，如：/sdcard/Android/data/packagename/cache/-->
+<!--    cache-path：表示内置安装目录的cache文件夹，如：/data/user/0/packagename/cache/-->
+<!--    files-path：表示内置安装目录的files文件夹，如：/data/user/0/packagename/files/-->
+</paths>

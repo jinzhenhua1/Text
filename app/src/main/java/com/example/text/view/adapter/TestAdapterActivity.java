@@ -31,7 +31,7 @@ public class TestAdapterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_adapter);
 
-        for(int i = 0; i < 50; i++){
+        for(int i = 0; i < 100; i++){
             titles.add("这是标题" + i);
         }
 

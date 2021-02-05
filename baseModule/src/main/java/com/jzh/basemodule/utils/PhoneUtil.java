@@ -1,5 +1,6 @@
 package com.jzh.basemodule.utils;
 
+import android.Manifest;
 import android.app.Service;
 import android.content.Context;
 import android.hardware.Sensor;
@@ -13,6 +14,7 @@ import android.os.Build;
 import android.os.Environment;
 import android.os.StatFs;
 import android.os.Vibrator;
+import android.provider.Settings;
 import android.telephony.CellInfo;
 import android.telephony.CellInfoCdma;
 import android.telephony.CellInfoGsm;
@@ -25,6 +27,8 @@ import android.telephony.CellSignalStrengthWcdma;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 
+
+import androidx.annotation.RequiresPermission;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -357,14 +361,13 @@ public class PhoneUtil {
     /**
      * 获取当前的运营商 需要 android.permission.READ_PHONE_STATE 权限，6.0后要动态申请
      *
-     * @param context
      * @return 运营商名字
      */
-    public static String getOperator(Context context) {
+    @RequiresPermission(Manifest.permission.READ_PHONE_STATE)
+    public String getOperator() {
 
         String ProvidersName = "";
-        TelephonyManager telephonyManager = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-        String IMSI = telephonyManager.getSubscriberId();
+        String IMSI = mTelephonyManager.getSubscriberId();
         Log.i("qweqwes", "运营商代码" + IMSI);
         if (IMSI != null) {
             if (IMSI.startsWith("46000") || IMSI.startsWith("46002") || IMSI.startsWith("46007")) {
@@ -378,5 +381,25 @@ public class PhoneUtil {
         } else {
             return "没有获取到sim卡信息";
         }
+    }
+
+    /**
+     * 安卓10及以上 无法获取IMEI
+     * @return
+     */
+    @RequiresPermission(Manifest.permission.READ_PHONE_STATE)
+    public String getIMEI() {
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q){
+            return "";
+        }
+        //获取IMEI号
+        String imei = mTelephonyManager.getDeviceId();
+        //该方法需要SDK版本大于26
+//        String imei = mTelephonyManager.getImei();
+        //在次做个验证，也不是什么时候都能获取到的啊
+        if (imei == null) {
+            imei = Settings.Secure.getString(mContext.getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
+        }
+        return imei;
     }
 }

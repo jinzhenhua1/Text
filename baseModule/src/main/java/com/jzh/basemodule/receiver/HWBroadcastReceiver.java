@@ -166,7 +166,7 @@ public class HWBroadcastReceiver extends BroadcastReceiver {
 
                     //3G网络最佳范围  >-90dBm  越大越好  ps:中国移动3G获取不到  返回的无效dbm值是正数（85dbm）
                     //在这个范围的已经确定是3G，但不同运营商的3G有不同的获取方法，故在此需做判断 判断运营商与网络类型的工具类在最下方
-                    String yys = PhoneUtil.getOperator(context.getApplicationContext());//获取当前运营商
+                    String yys = PhoneUtil.getInstance(context.getApplicationContext()).getOperator();//获取当前运营商
                     if (yys == "中国移动") {
                         signal = 0;
                     } else if (yys == "中国联通") {
