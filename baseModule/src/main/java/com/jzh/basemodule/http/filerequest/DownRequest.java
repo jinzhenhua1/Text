@@ -4,7 +4,7 @@ package com.jzh.basemodule.http.filerequest;
 import androidx.annotation.NonNull;
 
 import com.jzh.basemodule.callback.FileDownloadCallback;
-import com.jzh.basemodule.rx.FileDownLoadObserver;
+import com.jzh.basemodule.http.rx.FileDownLoadObserver;
 import com.jzh.basemodule.utils.FileUtil;
 
 import java.io.File;

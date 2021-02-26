@@ -1,3 +1,4 @@
+include ':mvp'
 include ':baseModule'
 include ':miPusher'
 include ':app'
