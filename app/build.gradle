@@ -110,8 +110,8 @@ dependencies {
     implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.42'
     //小米推送
-    api project(':miPusher')
-    api project(':baseModule')
+    implementation project(':miPusher')
+    implementation project(':baseModule')
 }
 repositories {
     mavenCentral()
