@@ -1,0 +1,11 @@
+
+q
+java:S1450"[Remove the "upScrollView" field and declare it as a local variable in the relevant methods.(ŸŞİ­
+V
+java:S4719Z"9Replace charset name argument with StandardCharsets.UTF_8(…Á…Î8âÒšÍÄ.
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„ª×ûÿÿÿÿ
+n
+java:S1192?"QDefine a constant instead of duplicating this literal "ParentScrollView" 3 times.(ÔË£ 8³é˜ÍÄ.
+E
+java:S5542X"#Use secure mode and padding scheme.(Ü øùÿÿÿÿ8âÒšÍÄ.
+X	java:S125^"<This block of commented-out lines of code should be removed.(ÌÑ”Ã8âÒšÍÄ.

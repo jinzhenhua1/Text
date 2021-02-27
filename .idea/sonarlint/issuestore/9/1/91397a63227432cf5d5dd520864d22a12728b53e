@@ -1,12 +1,19 @@
 
-‘"squid:ClassVariableVisibilityCheck"WMake studentName a static final constant or non-public and provide accessors if needed.(ßÁóüÿÿÿÿ8áÀ´ì-
-’"squid:ClassVariableVisibilityCheck"XMake mCurrentName a static final constant or non-public and provide accessors if needed.(Ñ·ÿÚøÿÿÿÿ8áÀ´ì-
-isquid:CommentedOutCodeLine3"<This block of commented-out lines of code should be removed.(¯®¼¹8áÀ´ì-
-bsquid:UselessImportCheck"7Remove this unused import 'com.example.text.bean.User'.(Í¼ÿö8áÀ´ì-
-rsquid:S00120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì™ıÖ
-‹"squid:ClassVariableVisibilityCheck"QMake level a static final constant or non-public and provide accessors if needed.(Ñ·í¡üÿÿÿÿ8áÀ´ì-
-nsquid:CommentedOutCodeLine""<This block of commented-out lines of code should be removed.(‰’ÌÒÿÿÿÿÿ8áÀ´ì-
-Š"squid:ClassVariableVisibilityCheck"UMake className a static final constant or non-public and provide accessors if needed.(ªòøÇ8áÀ´ì-
-œ"squid:ClassVariableVisibilityCheck"bMake studentObservableField a static final constant or non-public and provide accessors if needed.(ï“¬®üÿÿÿÿ8áÀ´ì-
-ƒ"squid:ClassVariableVisibilityCheck"OMake age a static final constant or non-public and provide accessors if needed.(¾Á¹8áÀ´ì-
-Ÿsquid:S1186,"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8áÀ´ì-
+z
+java:S1104"XMake mCurrentName a static final constant or non-public and provide accessors if needed.(Ñ·ÿÚøÿÿÿÿ8ÇúÍé¡.
+k
+java:S1104"OMake age a static final constant or non-public and provide accessors if needed.(¾Á¹8ÇúÍé¡.
+X	java:S1253"<This block of commented-out lines of code should be removed.(¯®¼¹8ÇúÍé¡.
+T
+java:S1128"7Remove this unused import 'com.example.text.bean.User'.(Í¼ÿö8ÇúÍé¡.
+r
+java:S1104"UMake className a static final constant or non-public and provide accessors if needed.(ªòøÇ8ÇúÍé¡.
+s
+java:S1104"QMake level a static final constant or non-public and provide accessors if needed.(Ñ·í¡üÿÿÿÿ8ÇúÍé¡.
+y
+java:S1104"WMake studentName a static final constant or non-public and provide accessors if needed.(ßÁóüÿÿÿÿ8ÇúÍé¡.
+
+java:S1186,"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(‚“¶î8ÇúÍé¡.
+v	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ì™ıÖ8ÇúÍé¡.
+„
+java:S1104"bMake studentObservableField a static final constant or non-public and provide accessors if needed.(ï“¬®üÿÿÿÿ8ÇúÍé¡.
