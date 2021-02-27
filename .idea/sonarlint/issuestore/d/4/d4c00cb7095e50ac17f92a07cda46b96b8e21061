@@ -1,0 +1,55 @@
+
+2
+java:S1643×"Use a StringBuilder instead.(Ôãy
+Y
+java:S1155j">Use isEmpty() to check whether the collection is empty or not.(„Ýû¿ýÿÿÿÿ
+Z
+java:S1155³">Use isEmpty() to check whether the collection is empty or not.(„Ýû¿ýÿÿÿÿ
+r
+java:S14507"WRemove the "mAccount" field and declare it as a local variable in the relevant methods.(å”Ûëüÿÿÿÿ
+l
+java:S14509"WRemove the "mEndTime" field and declare it as a local variable in the relevant methods.(¹ç®%
+t
+java:S14508"YRemove the "mStartTime" field and declare it as a local variable in the relevant methods.(öý¼Éûÿÿÿÿ
+S
+java:S1854§"7Remove this useless assignment to local variable "log".(»ü¸šýÿÿÿÿ
+h
+java:S3776e"RRefactor this method to reduce its Cognitive Complexity from 38 to the 15 allowed.(…Í€Œ
+8
+java:S1116«"Remove this empty statement.(ôŸŽìúÿÿÿÿ
+S
+java:S1854½"7Remove this useless assignment to local variable "log".(»ü¸šýÿÿÿÿ
+C
+java:S1481l"(Remove this unused "log" local variable.(­ËÐíýÿÿÿÿ
+D
+java:S1481´"(Remove this unused "log" local variable.(­ËÐíýÿÿÿÿ
+E
+java:S10685"*Remove this unused "mTopic" private field.(Þ™¶€úÿÿÿÿ
+@
+java:S10686"*Remove this unused "mAlias" private field.(¨³Ãö
+G
+java:S10687",Remove this unused "mAccount" private field.(å”Ûëüÿÿÿÿ
+I
+java:S10688".Remove this unused "mStartTime" private field.(öý¼Éûÿÿÿÿ
+A
+java:S10689",Remove this unused "mEndTime" private field.(¹ç®%
+Q	java:S125p"<This block of commented-out lines of code should be removed.(À°äÿ
+Q	java:S125r"<This block of commented-out lines of code should be removed.(—ˆúõ
+Q	java:S125w"<This block of commented-out lines of code should be removed.(“¦»ø
+Q	java:S125y"<This block of commented-out lines of code should be removed.(ºÔù
+V	java:S125~"<This block of commented-out lines of code should be removed.(´†Øûÿÿÿÿ
+R	java:S125€"<This block of commented-out lines of code should be removed.(ÛÁ­ð
+W	java:S125…"<This block of commented-out lines of code should be removed.(¢è®èûÿÿÿÿ
+R	java:S125‡"<This block of commented-out lines of code should be removed.(ª©¯Ò
+R	java:S125Œ"<This block of commented-out lines of code should be removed.(ð˜àô
+R	java:S125Ž"<This block of commented-out lines of code should be removed.(–Îçï
+R	java:S125“"<This block of commented-out lines of code should be removed.(úÅ¶Å
+R	java:S125•"<This block of commented-out lines of code should be removed.(‰”å»
+W	java:S125š"<This block of commented-out lines of code should be removed.(žûâÿûÿÿÿÿ
+R	java:S125œ"<This block of commented-out lines of code should be removed.(«©Ùî
+W	java:S125¢"<This block of commented-out lines of code should be removed.(º¦Ôôþÿÿÿÿ
+Q	java:S125¤"<This block of commented-out lines of code should be removed.(¨žð6
+R	java:S125¸"<This block of commented-out lines of code should be removed.(À°äÿ
+R	java:S125º"<This block of commented-out lines of code should be removed.(—ˆúõ
+W	java:S125Æ"<This block of commented-out lines of code should be removed.(³´®Ëùÿÿÿÿ
+R	java:S125Œ"<This block of commented-out lines of code should be removed.(êÔÏ

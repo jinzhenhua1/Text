@@ -1,0 +1,13 @@
+
+w
+java:S14882"\Immediately return this expression instead of assigning it to the temporary variable "size".(óÖØúÿÿÿÿ
+O
+java:S1118":Add a private constructor to hide the implicit public one.(±€ôE
+O
+java:S1874#"4Remove this use of "getBlockSize"; it is deprecated.(ÄÀÆûÿÿÿÿÿ
+P
+java:S1874$"5Remove this use of "getBlockCount"; it is deprecated.(ê›Ù˜ùÿÿÿÿ
+Y
+java:S1874@"CRemove this use of "getExternalStorageDirectory"; it is deprecated.(£ó
+Q	java:S125!"<This block of commented-out lines of code should be removed.(¥ˆı
+V	java:S1251"<This block of commented-out lines of code should be removed.(÷…ùúÿÿÿÿ

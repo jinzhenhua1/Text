@@ -1,0 +1,9 @@
+
+Q	java:S110"<This class has 9 parents which is greater than 5 authorized.(¡†çë
+t	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(„ª×ûÿÿÿÿ
+N
+java:S1128"1Remove this unused import 'android.app.Activity'.(‡ÊÍÆ8±ôÙ.
+J
+java:S1185"(Remove this method to simply inherit it.(èÏ¦úÿÿÿÿ8±ôÙ.
+N
+java:S1068",Remove this unused "mHandler" private field.(çÎâÌúÿÿÿÿ8±ôÙ.

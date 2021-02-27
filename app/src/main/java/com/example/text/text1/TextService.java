@@ -36,6 +36,7 @@ public interface TextService {
     Observable<HttpRespondData<ContextData>> getWeatherData(@Query("city") String str);
 
 
+
     /**
      * 测试返回数据中是否可以有字符串
      * @param str
@@ -43,4 +44,9 @@ public interface TextService {
      */
     @GET("/weather_mini")
     Observable<TestStringResponse> getStringResponse(@Query("city") String str);
+
+
+
+    @GET("http://quan.suning.com/getSysTime.do")
+    Observable<ResponseBody> getTestTime();
 }

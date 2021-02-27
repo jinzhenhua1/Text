@@ -1,0 +1,55 @@
+
+E
+java:S1066V"/Merge this if statement with the enclosing one.(Ô²ª†
+E
+java:S1066["/Merge this if statement with the enclosing one.(Ô²ª†
+P
+java:S4973ª"9Use the "equals" method if value comparison was intended.(¥¸õÉ
+P
+java:S4973¬"9Use the "equals" method if value comparison was intended.(İ®¦
+P
+java:S4973®"9Use the "equals" method if value comparison was intended.(¦ÜËñ
+m
+java:S3776I"RRefactor this method to reduce its Cognitive Complexity from 24 to the 15 allowed.(š³ÿÿÿÿÿÿ
+P
+java:S1874N";Remove this use of "CONNECTIVITY_ACTION"; it is deprecated.(Œ¿—[
+I
+java:S1874R"3Remove this use of "NetworkInfo"; it is deprecated.(èÃµÆ
+R
+java:S1874R"<Remove this use of "getActiveNetworkInfo"; it is deprecated.(èÃµÆ
+N
+java:S1874T"3Remove this use of "isAvailable"; it is deprecated.(·ğ¶áşÿÿÿÿ
+K
+java:S1874T"0Remove this use of "getState"; it is deprecated.(·ğ¶áşÿÿÿÿ
+N
+java:S1874T"3Remove this use of "NetworkInfo"; it is deprecated.(·ğ¶áşÿÿÿÿ
+H
+java:S1874T"-Remove this use of "State"; it is deprecated.(·ğ¶áşÿÿÿÿ
+L
+java:S1874T"1Remove this use of "CONNECTED"; it is deprecated.(·ğ¶áşÿÿÿÿ
+E
+java:S1874U"/Remove this use of "getType"; it is deprecated.(¿Óœœ
+G
+java:S1874U"1Remove this use of "TYPE_WIFI"; it is deprecated.(¿Óœœ
+G
+java:S1874W"1Remove this use of "TYPE_WIFI"; it is deprecated.(…”â½
+E
+java:S1874Z"/Remove this use of "getType"; it is deprecated.(Ÿ–Îê
+I
+java:S1874Z"3Remove this use of "TYPE_MOBILE"; it is deprecated.(Ÿ–Îê
+I
+java:S1874\"3Remove this use of "TYPE_MOBILE"; it is deprecated.(±¶÷é
+h
+java:S3776n"RRefactor this method to reduce its Cognitive Complexity from 22 to the 15 allowed.(¡ê¨û
+T
+java:S1854Š"8Remove this useless assignment to local variable "type".(™Éô¹ùÿÿÿÿ
+I
+java:S1874­"2Remove this use of "getCdmaDbm"; it is deprecated.(µ˜Œ©
+I
+java:S1874¯"2Remove this use of "getEvdoDbm"; it is deprecated.(ù¯ˆ
+X
+java:S1874Á"<Remove this use of "getGsmSignalStrength"; it is deprecated.(·ñÕÊùÿÿÿÿ
+Q	java:S125L"<This block of commented-out lines of code should be removed.(ĞŒ†
+W	java:S125"<This block of commented-out lines of code should be removed.(¾­æšüÿÿÿÿ
+R	java:S125²"<This block of commented-out lines of code should be removed.(®¸îî
+W	java:S125Ä"<This block of commented-out lines of code should be removed.(—ÆÊÆùÿÿÿÿ

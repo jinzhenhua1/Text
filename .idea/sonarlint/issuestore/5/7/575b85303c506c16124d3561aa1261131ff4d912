@@ -1,0 +1,22 @@
+
+D
+java:S1066\"/Merge this if statement with the enclosing one.(Áç±=
+T
+java:S1155/">Use isEmpty() to check whether the collection is empty or not.(‡“ò€
+P
+java:S1118":Add a private constructor to hide the implicit public one.(úäââ
+P
+java:S1874.":Remove this use of "getRunningServices"; it is deprecated.(òô™–
+?
+java:S1940/")Use the opposite operator ("<=") instead.(‡“ò€
+C
+java:S11253"(Remove the literal "true" boolean value.(š€“œüÿÿÿÿ
+R
+java:S1874F"7Remove this use of "getRunningTasks"; it is deprecated.(ø³•ïüÿÿÿÿ
+R
+java:S1874p"7Remove this use of "getRunningTasks"; it is deprecated.(ø³•ïüÿÿÿÿ
+E
+java:S1874t"*Remove this use of "id"; it is deprecated.(Ë–°½ıÿÿÿÿ
+B
+java:S1172€"&Remove these unused method parameters.(ÿ¾¿£ÿÿÿÿÿ
+R	java:S125„"<This block of commented-out lines of code should be removed.(íàáÍ

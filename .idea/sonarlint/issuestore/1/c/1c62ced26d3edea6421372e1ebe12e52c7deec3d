@@ -1,0 +1,133 @@
+
+i
+java:S2095m"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(€ã¶“üÿÿÿÿ
+F
+java:S3740š"/Provide the parametrized type for this generic.(Êà·š
+F
+java:S3740¬"/Provide the parametrized type for this generic.(¢İÕğ
+]
+java:S2184Ğ"ACast one of the operands of this addition operation to a "float".(“ÂÇ¾ÿÿÿÿÿ
+]
+java:S2184Ò"ACast one of the operands of this addition operation to a "float".(îËï°ÿÿÿÿÿ
+]
+java:S2184Ö"ACast one of the operands of this addition operation to a "float".(ÂƒÌóúÿÿÿÿ
+]
+java:S2184İ"ACast one of the operands of this addition operation to a "float".(Ìåìµÿÿÿÿÿ
+l	java:S117À"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ü½«øÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯€±úÿÿÿÿ
+l	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯€±úÿÿÿÿ
+f	java:S117¢"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ñ‚Û#
+l	java:S117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Õ³É¨ùÿÿÿÿ
+g	java:S117®"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ëÚû·
+g	java:S117±"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¸—õ
+g	java:S117³"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(æŒÚ
+g	java:S117ß"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŠÈ»¢
+?
+java:S1604ô"(Make this anonymous inner class a lambda(ÉãÃ®
+]
+java:S2259À"AA "NullPointerException" could be thrown; "fis" is nullable here.(ß¶­†ÿÿÿÿÿ
+a
+java:S2259ï"J"NullPointerException" will be thrown when invoking method "createFile()".(ÛË¶Õ
+]
+java:S2259ß"AA "NullPointerException" could be thrown; "fis" is nullable here.(ß¶­†ÿÿÿÿÿ
+]
+java:S2259ø"AA "NullPointerException" could be thrown; "fis" is nullable here.(ß¶­†ÿÿÿÿÿ
+S
+java:S2589…"7Remove this expression which always evaluates to "true"(Ìàêøÿÿÿÿ
+|
+java:S1488‡"`Immediately return this expression instead of assigning it to the temporary variable "fileName".(´½øÿÿÿÿÿ
+|
+java:S1488á"eImmediately return this expression instead of assigning it to the temporary variable "resizedBitmap".(©ïÖÚ
+{
+java:S1488„"eImmediately return this expression instead of assigning it to the temporary variable "resizedBitmap".(Ö½Ş|
+w
+java:S1488é"`Immediately return this expression instead of assigning it to the temporary variable "drawable".(ÖÙ•
+x
+java:S1488ú"\Immediately return this expression instead of assigning it to the temporary variable "type".(§Š™Àúÿÿÿÿ
+z
+java:S1488·"^Immediately return this expression instead of assigning it to the temporary variable "bitmap".(‚˜½Ëøÿÿÿÿ
+z
+java:S1488ã"^Immediately return this expression instead of assigning it to the temporary variable "bitmap".(¿¯û›ÿÿÿÿÿ
+t	java:S115K"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(×ğ†ûÿÿÿÿ
+b
+java:S1874¦"FRemove this use of "ACTION_MEDIA_SCANNER_SCAN_FILE"; it is deprecated.(€×¢Íúÿÿÿÿ
+a
+java:S2147¼"ECombine this catch with the one at line 186, which has the same body.(ÉĞìâıÿÿÿÿ
+?	java:S108Á")Either remove or fill this block of code.(”ı¾
+a
+java:S2147Û"ECombine this catch with the one at line 217, which has the same body.(ÉĞìâıÿÿÿÿ
+?	java:S108à")Either remove or fill this block of code.(”ı¾
+F
+java:S2093Õ"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+a
+java:S2147ô"ECombine this catch with the one at line 242, which has the same body.(ÉĞìâıÿÿÿÿ
+?	java:S108ù")Either remove or fill this block of code.(”ı¾
+F
+java:S2093ï"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+Z
+java:S1874’"CRemove this use of "getExternalStorageDirectory"; it is deprecated.(®Îœ±
+_
+java:S1874¦"CRemove this use of "getExternalStorageDirectory"; it is deprecated.(ÍòÛÕşÿÿÿÿ
+_
+java:S1874©"CRemove this use of "getExternalStorageDirectory"; it is deprecated.(ÍòÛÕşÿÿÿÿ
+i
+java:S3252¸"MUse static access with "android.provider.MediaStore$MediaColumns" for "DATA".(ÅöÔ¡üÿÿÿÿ
+d
+java:S3252Á"MUse static access with "android.provider.MediaStore$MediaColumns" for "DATA".(€¾Ê
+\
+java:S3252Ö"@Use static access with "android.provider.BaseColumns" for "_ID".(¡·É•ÿÿÿÿÿ
+l
+java:S3252×"UUse static access with "android.provider.MediaStore$MediaColumns" for "DISPLAY_NAME".(´˜ÿú
+q
+java:S3252Û"UUse static access with "android.provider.MediaStore$MediaColumns" for "DISPLAY_NAME".(Ô„—Ûüÿÿÿÿ
+\
+java:S3252ô"@Use static access with "android.provider.BaseColumns" for "_ID".(Ç…Ü¤şÿÿÿÿ
+d
+java:S3252õ"MUse static access with "android.provider.MediaStore$MediaColumns" for "DATA".(­ùˆØ
+C
+java:S1874õ",Remove this use of "DATA"; it is deprecated.(­ùˆØ
+K
+java:S1874ö"4Remove this use of "managedQuery"; it is deprecated.(˜ÆÒ…
+\
+java:S3252ø"@Use static access with "android.provider.BaseColumns" for "_ID".(ÇÀ–Íøÿÿÿÿ
+L
+java:S1751ÿ"5Remove this "break" statement or make it conditional.(›ûä·
+J
+java:S1172¡".Remove this unused method parameter "context".(‰ØÒ­øÿÿÿÿ
+V
+java:S1854ö":Remove this useless assignment to local variable "height".(É´¬‰úÿÿÿÿ
+R
+java:S1854ğ";Remove this useless assignment to local variable "rHeight".(²¼¥
+N
+java:S1874“"2Remove this use of "getOpacity"; it is deprecated.(²öš´ùÿÿÿÿ
+M
+java:S1874é"6Remove this use of "BitmapDrawable"; it is deprecated.(ÖÙ•
+?	java:S108ƒ")Either remove or fill this block of code.(ï­£Ä
+F
+java:S2093ø"*Change this "try" to a try-with-resources.(¡»¢üùÿÿÿÿ
+f
+java:S2674•"JCheck the return value of the "read" call to see how many bytes were read.(€Ö¨ÿÿÿÿÿ
+H
+java:S1874Ù",Remove this use of "DATA"; it is deprecated.(¯ı¡¿ûÿÿÿÿ
+C
+java:S1874Ş",Remove this use of "DATA"; it is deprecated.(ÖşÌø
+H
+java:S1874ì",Remove this use of "DATA"; it is deprecated.(ø–ø©ùÿÿÿÿ
+\
+java:S2147ş"ECombine this catch with the one at line 764, which has the same body.(ï­£Ä
+H
+java:S1874ú"1Remove this use of "getBitmap"; it is deprecated.(°Á¿ï
+?
+java:S1905°"(Remove this unnecessary cast to "float".(˜­ú‰
+>
+java:S1905³"(Remove this unnecessary cast to "float".(áÅ›2
+j
+java:S1602¢"SRemove useless curly braces around statement and then remove useless return keyword(ŞâúÒ
+j
+java:S1602´"SRemove useless curly braces around statement and then remove useless return keyword(ŞâúÒ
+C
+java:S1481ğ",Remove this unused "rHeight" local variable.(²¼¥
+G
+java:S1481ö"+Remove this unused "height" local variable.(É´¬‰úÿÿÿÿ
+R	java:S125ß"<This block of commented-out lines of code should be removed.(¦ö×å
+R	java:S125ò"<This block of commented-out lines of code should be removed.(•ÿÛß

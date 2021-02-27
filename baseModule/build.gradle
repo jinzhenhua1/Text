@@ -1,0 +1,82 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+
+android {
+    compileSdkVersion rootProject.ext.versions.compileSdkVersion
+    buildToolsVersion rootProject.ext.versions.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.versions.minSdkVersion
+        targetSdkVersion rootProject.ext.versions.targetSdkVersion
+        versionCode rootProject.ext.versions.versionCode
+        versionName rootProject.ext.versions.versionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+
+// 上传maven指令
+uploadArchives {
+    configuration = configurations.archives
+    repositories {
+        mavenDeployer {
+            //maven 本地文件地址，这里是 .. 表示项目的根目录
+//            def mavenLib = file(getProperty('mavenPath'))
+//            repository(url: "file://${mavenLib.absolutePath}")
+
+            def mavenLib = file('D:/android_workspace/aar_lib/library')
+            repository(url: "file://${mavenLib.absolutePath}")
+
+//            repository(url:rootProject.ext.maven.mavenUrl) {
+//                authentication(userName: rootProject.ext.maven.mavenAccount,
+//                        password: rootProject.ext.maven.mavenPwd)
+//            }
+            pom.project {
+                //版本
+                version "1.0.0"
+                //描述
+                description "基础模块"
+
+                // 对应maven的groupId的值(包名)
+                groupId "com.jzh.lib"
+                artifactId "baseModule"
+//                packaging rootProject.ext.maven.fileAAR
+            }
+        }
+    }
+}
+
+dependencies {
+    Map<String, String> dependencies = rootProject.ext.dependencies
+
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    api dependencies.gson
+    api dependencies.rxJava
+    api dependencies.rxAndroid
+    api dependencies.securePreferences
+    api dependencies.systembar
+    //网络包
+    api dependencies.retrofit
+    api dependencies.retrofitConverterGson
+    api dependencies.okhttp_logging
+    api dependencies.retrofitAdapterRxJava
+}

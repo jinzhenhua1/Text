@@ -1,5 +1,6 @@
 package com.example.text.view.adapter;
 
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -37,7 +38,7 @@ class WrapRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int position) {
-
+//        Log.e("WrapRecyclerAdapter","调用了onCreateViewHolder");
         //头部
         if(position < mHeaderViews.size()){
             return createFooterHeaderViewHolder(mHeaderViews.get(position));
@@ -53,7 +54,7 @@ class WrapRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
-
+        Log.e("WrapRecyclerAdapter","调用了onBindViewHolder: " + position + ",holder:" + holder.hashCode());
         if(position < mHeaderViews.size()){
             return;
         }else if(position < mHeaderViews.size() + mRealAdapter.getItemCount()){

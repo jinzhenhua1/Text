@@ -1,0 +1,14 @@
+
+1
+java:S36265"Remove this redundant jump.(ûÁÝ…
+m
+java:S3776!"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(žš³ÿÿÿÿÿÿ
+>	java:S108A")Either remove or fill this block of code.(å¥ž‡
+P	java:S1259"<This block of commented-out lines of code should be removed.(ž¹Å1
+Q	java:S125K"<This block of commented-out lines of code should be removed.(«½æí
+V	java:S125O"<This block of commented-out lines of code should be removed.(Ç¸Øýùÿÿÿÿ
+Q	java:S125Q"<This block of commented-out lines of code should be removed.(ÁÇ€í
+V	java:S125X"<This block of commented-out lines of code should be removed.(¶ùËàúÿÿÿÿ
+Q	java:S125]"<This block of commented-out lines of code should be removed.(ÍžªÄ
+V	java:S125`"<This block of commented-out lines of code should be removed.(ñ£“óÿÿÿÿÿ
+V	java:S125c"<This block of commented-out lines of code should be removed.(»×í±ÿÿÿÿÿ

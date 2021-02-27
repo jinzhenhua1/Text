@@ -1,0 +1,59 @@
+
+F
+java:S3740Â"/Provide the parametrized type for this generic.(·à»ã
+F
+java:S3740Í"/Provide the parametrized type for this generic.(ë±ùß
+d
+java:S1192¡"HDefine a constant instead of duplicating this literal "\\&amp;" 4 times.(ú­îÿÿÿÿÿ
+]
+java:S1192 "FDefine a constant instead of duplicating this literal "&amp;" 6 times.(‚¹íâ
+a
+java:S1192Í"JDefine a constant instead of duplicating this literal "ISO8859_1" 3 times.(í‹’í
+l	java:S117ö"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Îã‰Ôşÿÿÿÿ
+f	java:S117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(´¥èR
+5
+java:S2131¿"Use "Integer.toString" instead.(üèŞv
+3
+java:S2131É"Use "Long.toString" instead.(«üÀù
+v
+java:S1149œ"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(í…Ò‰
+\
+java:S1126N"AReplace this if-then-else statement by a single return statement.(ÆŞèÿÿÿÿÿ
+}
+java:S2178œ"fCorrect this "|" to "||" and extract the right operand to a variable if it should always be evaluated.(å–
+g
+java:S1764®"KCorrect one of the identical sub-expressions on both sides of operator "&&"(ÀÑø®øÿÿÿÿ
+U
+java:S4719Í">Replace charset name argument with StandardCharsets.ISO_8859_1(í‹’í
+D	java:S108Î")Either remove or fill this block of code.(±Ÿ—±ÿÿÿÿÿ
+T
+java:S4719Ş">Replace charset name argument with StandardCharsets.ISO_8859_1(ÛñÍ2
+D	java:S108ß")Either remove or fill this block of code.(±Ÿ—±ÿÿÿÿÿ
+P
+java:S4719ï"9Replace charset name argument with StandardCharsets.UTF_8(Èå†¿
+U
+java:S4719ï">Replace charset name argument with StandardCharsets.ISO_8859_1(Èå†¿
+D	java:S108ğ")Either remove or fill this block of code.(±Ÿ—±ÿÿÿÿÿ
+D	java:S108¢")Either remove or fill this block of code.(±Ÿ—±ÿÿÿÿÿ
+D	java:S108³")Either remove or fill this block of code.(±Ÿ—±ÿÿÿÿÿ
+”
+java:S1158¿"~Call the static method Integer.toString(...) instead of instantiating a temporary object to perform this to string conversion.(üèŞv
+7
+java:S2129¿"!Remove this "Integer" constructor(üèŞv
+’
+java:S1158É"{Call the static method Long.toString(...) instead of instantiating a temporary object to perform this to string conversion.(«üÀù
+5
+java:S2129É"Remove this "Long" constructor(«üÀù
+D	java:S108")Either remove or fill this block of code.(±Ÿ—±ÿÿÿÿÿ
+D	java:S108Ù")Either remove or fill this block of code.(±Ÿ—±ÿÿÿÿÿ
+D	java:S108ê")Either remove or fill this block of code.(±Ÿ—±ÿÿÿÿÿ
+D	java:S108ú")Either remove or fill this block of code.(±Ÿ—±ÿÿÿÿÿ
+d
+java:S1871 "MThis branch's code block is the same as the block for the branch on line 538.(ØŠ÷ò
+i
+java:S1871¥"MThis branch's code block is the same as the block for the branch on line 538.(°»Âôùÿÿÿÿ
+d
+java:S1871"MThis branch's code block is the same as the block for the branch on line 538.(±¬§ˆ
+V	java:S125S"<This block of commented-out lines of code should be removed.(åô×Ïşÿÿÿÿ
+E
+java:S1144".Remove this unused private "isTimeOut" method.(ÎÏ˜¡

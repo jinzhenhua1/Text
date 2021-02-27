@@ -1,0 +1,14 @@
+
+
+java:S1319"wThe type of the "mHeaderViews" object should be an interface such as "List" rather than the implementation "ArrayList".(·Š
+
+java:S1319"wThe type of the "mFooterViews" object should be an interface such as "List" rather than the implementation "ArrayList".(·Š
+J
+java:S3740"/Provide the parametrized type for this generic.(ô¢°öÿÿÿÿÿ
+E
+java:S3740"/Provide the parametrized type for this generic.(·Š
+1
+java:S3626:"Remove this redundant jump.(ûÁİ…
+1
+java:S3626@"Remove this redundant jump.(ûÁİ…
+Q	java:S125"<This block of commented-out lines of code should be removed.(Äá©ä

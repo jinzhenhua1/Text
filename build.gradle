@@ -52,9 +52,15 @@ allprojects {
         maven {
             url 'https://jitpack.io'
         }
-        
+
+
+        //我的私人镜像，格式：https://raw.githubusercontent.com/{username}/{projeceName}/{branch}
+        maven{
+            url 'https://raw.githubusercontent.com/jinzhenhua1/library/main'
+        }
     }
 }
+apply from: 'dependencies.gradle'
 
 task clean(type: Delete) {
     delete rootProject.buildDir
