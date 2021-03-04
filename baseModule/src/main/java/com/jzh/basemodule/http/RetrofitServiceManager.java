@@ -2,8 +2,10 @@ package com.jzh.basemodule.http;
 
 import com.google.gson.Gson;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
@@ -22,14 +24,18 @@ class RetrofitServiceManager {
     private static RetrofitServiceManager manager;
     private final Retrofit retrofit;
 
-    private static String BASE_URL;
+    private static String BASE_URL = "";
 
-    public static String getBaseUrl() {
-        return BASE_URL;
-    }
+    private static List<Interceptor> interceptorList;
 
-    public static void setBaseUrl(String baseUrl) {
-        BASE_URL = baseUrl;
+    /**
+     * 初始化方法
+     * @param BASE_URL
+     * @param interceptorList
+     */
+    public static void init(String BASE_URL,List<Interceptor> interceptorList){
+        RetrofitServiceManager.BASE_URL = BASE_URL;
+        RetrofitServiceManager.interceptorList = interceptorList;
     }
 
     public static synchronized RetrofitServiceManager getInstance() {
@@ -49,6 +55,12 @@ class RetrofitServiceManager {
                 .retryOnConnectionFailure(true)
                 .addInterceptor(httpLoggingInterceptor);
 //                .addInterceptor(new ResponseCodeInterceptor());
+
+        if(interceptorList != null){
+            for(Interceptor interceptor : interceptorList){
+                builder.addInterceptor(interceptor);
+            }
+        }
         retrofit = new Retrofit.Builder()
                 .client(builder.build())
                 .baseUrl(BASE_URL)

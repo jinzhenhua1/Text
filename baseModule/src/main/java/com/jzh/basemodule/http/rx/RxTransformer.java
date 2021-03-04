@@ -2,6 +2,7 @@ package com.jzh.basemodule.http.rx;
 
 
 import com.jzh.basemodule.callback.HttpResponseListener;
+import com.jzh.basemodule.http.bean.ReturnBean;
 
 import io.reactivex.Observable;
 import io.reactivex.ObservableSource;
@@ -20,48 +21,38 @@ import io.reactivex.schedulers.Schedulers;
  * @author jinzhenhua
  * @version 1.0  ,create at:2020/5/26 17:15
  */
-public class RxTransformer {
-
-    private Function baseMap;
-
-    public void setBaseMap(Function baseMap) {
-        this.baseMap = baseMap;
-    }
+public abstract class RxTransformer {
 
     /**
      * 请求接口调用该方法
+     *
      * @param observable
      * @param callback
      * @param <T>
      * @return
      */
-    public <T> Disposable apiRequest(Observable<T> observable, HttpResponseListener<T> callback){
-        if(baseMap != null){
-            observable.map(baseMap);
+    public <T extends ReturnBean<P>,P> Disposable apiRequest(Observable<T> observable, HttpResponseListener<P> callback) {
+        if (getMap() != null) {
+            observable.map(getMap());
         }
         return observable.compose(applySchedulers()).subscribe(
-            new Consumer<T>() {
-                @Override
-                public void accept(T o) throws Exception {
-//                    if(o.getStatus() == 1000){
-//                        //登录信息过期，具体状态码自定义，跟后台统一就行
-//                        handleRelogin();
-//                    }
-
-                    callback.onSuccess(o);
+                (Consumer<T>) o -> callback.onSuccess(o.getData()), new Consumer<Throwable>() {
+                    @Override
+                    public void accept(Throwable throwable) throws Exception {
+                        callback.onFailure(throwable);
+                    }
                 }
-            }, new Consumer<Throwable>() {
-                @Override
-                public void accept(Throwable throwable) throws Exception {
-                    callback.onFailure(throwable);
-                }
-            }
         );
     }
 
-    //设置操作符
-    public <T> ObservableTransformer applySchedulers(){
-        return new ObservableTransformer<T,T>(){
+    /**
+     * 设置操作符
+     *
+     * @param <T>
+     * @return
+     */
+    public <T> ObservableTransformer applySchedulers() {
+        return new ObservableTransformer<T, T>() {
             @Override
             public ObservableSource<T> apply(Observable<T> upstream) {
                 return upstream
@@ -76,6 +67,13 @@ public class RxTransformer {
             }
         };
     }
+
+    /**
+     * map操作符
+     *
+     * @return 返回map操作符的对象
+     */
+    public abstract Function getMap();
 
     /**
      * 返回到登录页面，根据实际情况来实现

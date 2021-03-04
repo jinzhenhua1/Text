@@ -34,24 +34,5 @@ public class ResponseCodeInterceptor implements Interceptor {
         Request newRequest = newBuilder.url(newHttpUrl).build();
         return chain.proceed(newRequest);
 
-//        Response response = chain.proceed(request);
-//        String responseJson = "";
-//        MediaType mediaType = null;
-//        try {
-//            ResponseBody responseBody = response.body();
-//
-//            mediaType = responseBody.contentType();
-//            responseJson = responseBody.string();
-//            JSONObject jo = new JSONObject(responseJson);
-//            int code = jo.optInt(HttpConfig.RESPONSE_CODE);
-//            if (code == 412) {
-//                ToastUtil.getInstance(CdtyeApplication.getApplication()).showToastOnMain(jo.optString("message"));
-//            }
-//        } catch (Exception e) {
-//            LogUtils.e("ResponseCodeInterceptor", e.toString());
-//        }
-//        return response.newBuilder()
-//                .body(ResponseBody.create(mediaType, responseJson))
-//                .build();
     }
 }

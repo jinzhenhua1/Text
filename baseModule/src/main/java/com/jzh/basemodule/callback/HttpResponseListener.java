@@ -17,7 +17,7 @@ public interface HttpResponseListener<T> {
 
     /**
      * 网络请求失败()
-     * throwable 错误信息
+     * @param throwable 错误信息
      */
     void onFailure(Throwable throwable);
 }
