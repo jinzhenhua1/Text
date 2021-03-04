@@ -5,6 +5,7 @@ import android.util.AttributeSet;
 import android.util.Base64;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -62,6 +63,13 @@ public class ParentScrollView extends ScrollView {
         Log.e("ParentScrollView","调用onMeasure前");
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         Log.e("ParentScrollView","调用onMeasure后");
+    }
+
+    @Override
+    public boolean onInterceptTouchEvent(MotionEvent ev) {
+        boolean flag = super.onInterceptTouchEvent(ev);
+        Log.e("ParentScrollView","父view的onInterceptTouchEvent返回值：" + flag);
+        return flag;
     }
 
     /**

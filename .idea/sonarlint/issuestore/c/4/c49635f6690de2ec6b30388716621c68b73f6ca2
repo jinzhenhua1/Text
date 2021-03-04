@@ -1,12 +1,14 @@
 
-8
-java:S36260"Remove this redundant jump.(ûÁİ…8¶É”‹¢.
-]	java:S1251"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8¶É”‹¢.
-X	java:S1253"<This block of commented-out lines of code should be removed.(§èü÷8¶É”‹¢.
 ]	java:S1259"<This block of commented-out lines of code should be removed.(ùÀŒâøÿÿÿÿ8¶É”‹¢.
+]	java:S125"<This block of commented-out lines of code should be removed.(éëš’øÿÿÿÿ8¶É”‹¢.
 g
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(úíºùùÿÿÿÿ8¶É”‹¢.
-X	java:S125,"<This block of commented-out lines of code should be removed.(ç©òË8¶É”‹¢.
 b
 java:S1124"EReorder the modifiers to comply with the Java Language Specification.(¾»×á8¶É”‹¢.
-]	java:S125"<This block of commented-out lines of code should be removed.(éëš’øÿÿÿÿ8¶É”‹¢.
+i
+java:S3252?"LUse static access with "android.content.Context" for "NOTIFICATION_SERVICE".(–Âèé8íÁ¨ƒÂ.
+X	java:S125,"<This block of commented-out lines of code should be removed.(ç©òË8¶É”‹¢.
+]	java:S1251"<This block of commented-out lines of code should be removed.(éØ»Úûÿÿÿÿ8¶É”‹¢.
+X	java:S1253"<This block of commented-out lines of code should be removed.(§èü÷8¶É”‹¢.
+8
+java:S36260"Remove this redundant jump.(ûÁİ…8¶É”‹¢.
