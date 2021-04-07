@@ -38,7 +38,7 @@ uploadArchives {
 //            def mavenLib = file(getProperty('mavenPath'))
 //            repository(url: "file://${mavenLib.absolutePath}")
 
-            def mavenLib = file('D:/android_workspace/aar_lib/library')
+            def mavenLib = file('D:/android_workspace/aar_lib/aar_lib')
             repository(url: "file://${mavenLib.absolutePath}")
 
 //            repository(url:rootProject.ext.maven.mavenUrl) {
@@ -47,7 +47,7 @@ uploadArchives {
 //            }
             pom.project {
                 //版本
-                version "1.0.1"
+                version "1.0.7"
                 //描述
                 description "基础模块"
 
@@ -79,4 +79,7 @@ dependencies {
     api dependencies.retrofitConverterGson
     api dependencies.okhttp_logging
     api dependencies.retrofitAdapterRxJava
+
+    //仿IOD弹窗
+    api 'com.github.limxing:Android-PromptDialog:1.1.3'
 }

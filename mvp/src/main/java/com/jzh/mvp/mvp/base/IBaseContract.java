@@ -1,4 +1,4 @@
-package com.huaweisoft.mvp.mvp.base;
+package com.jzh.mvp.mvp.base;
 
 public class IBaseContract {
     public interface IBasePresenter<T extends IBaseContract.IBaseView> {
@@ -34,12 +34,12 @@ public class IBaseContract {
          * 带文字的加载框
          * @param loadingText
          */
-        void  showLoadingWithMessage(String loadingText);
+        void  showProgressLoadingWithMessage(String loadingText);
 
         /**
          * 默认文字的加载框
          */
-        void  showLoading();
+        void  showProgressLoading();
 
         /**
          * 正中央的提示信息
@@ -51,7 +51,7 @@ public class IBaseContract {
         /**
          * 关闭加载框
          */
-        void  dismissLoading();
+        void  dismissProgressLoading();
 
         /**
          * 显示提示框
@@ -67,6 +67,17 @@ public class IBaseContract {
          * @param buttonCancel  取消按钮文字
          */
         void showConfirmDialog(String title, String message, String buttonConfirm, String buttonCancel);
+
+        /**
+         * 显示PromptDialog 框架的加载框
+         * @param content
+         */
+        void showLoading(String content);
+
+        /**
+         * 隐藏PromptDialog 框架的加载框
+         */
+        void hideLoading();
     }
 
     public interface IBaseModel{

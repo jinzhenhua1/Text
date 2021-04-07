@@ -1,4 +1,4 @@
-package com.huaweisoft.mvp.mvp.base;
+package com.jzh.mvp.mvp.base;
 
 
 import com.jzh.basemodule.callback.HttpResponseListener;
@@ -20,8 +20,11 @@ public class BasePresenter<T extends IBaseContract.IBaseView,P extends IBaseCont
      */
     private WeakReference<T> mViewRef;
 
-    @Inject
     protected P model;
+
+    public BasePresenter(P model) {
+        this.model = model;
+    }
 
     @Override
     public void attachView(T view) {
@@ -58,8 +61,8 @@ public class BasePresenter<T extends IBaseContract.IBaseView,P extends IBaseCont
      * @param callback
      * @return
      */
-    public ApiCallbackWrapper getApiCallBackWithLoading(HttpResponseListener callback){
-        return new ApiCallbackWrapper(callback);
+    public ApiCallbackWrapper getApiCallBackWithLoading(HttpResponseListener callback,String context){
+        return new ApiCallbackWrapper(callback,context);
     }
 
     /**
@@ -70,25 +73,21 @@ public class BasePresenter<T extends IBaseContract.IBaseView,P extends IBaseCont
         private HttpResponseListener callback;
         private boolean showLoading;
 
-        public ApiCallbackWrapper(HttpResponseListener callback){
+        public ApiCallbackWrapper(HttpResponseListener callback,String context){
             this.callback = callback;
-            getView().showLoading();
+            getView().showLoading(context);
         }
 
         @Override
         public void onSuccess(T o) {
             callback.onSuccess(o);
-            if(showLoading){
-                getView().dismissLoading();
-            }
+            getView().hideLoading();
         }
 
         @Override
         public void onFailure(Throwable throwable) {
             callback.onFailure(throwable);
-            if(showLoading){
-                getView().dismissLoading();
-            }
+            getView().hideLoading();
         }
     }
 

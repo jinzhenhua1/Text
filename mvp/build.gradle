@@ -39,7 +39,7 @@ uploadArchives {
 //            def mavenLib = file(getProperty('mavenPath'))
 //            repository(url: "file://${mavenLib.absolutePath}")
 
-            def mavenLib = file('D:/android_workspace/aar_lib/library')
+            def mavenLib = file('D:/android_workspace/aar_lib/aar_lib')
             repository(url: "file://${mavenLib.absolutePath}")
 
 //            repository(url:rootProject.ext.maven.mavenUrl) {
@@ -48,7 +48,7 @@ uploadArchives {
 //            }
             pom.project {
                 //版本
-                version "1.0.0"
+                version "1.0.9"
                 //描述
                 description "MVP模块，次模块默认引用base模块"
 
@@ -82,7 +82,7 @@ dependencies {
 
     //dagger
     api 'com.google.dagger:dagger:2.4'
-    annotationProcessor 'com.google.dagger:dagger-compiler:2.4'
+//    annotationProcessor 'com.google.dagger:dagger-compiler:2.4'
 
     //StringUtils类库
     implementation 'org.apache.commons:commons-lang3:3.7'
@@ -91,10 +91,11 @@ dependencies {
     implementation "com.afollestad.material-dialogs:commons:0.9.6.0"
     //黄油刀butterknife
     api 'com.jakewharton:butterknife:10.2.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
 
     ///数据库框架
     api 'org.greenrobot:greendao:3.2.2'
 
-    api project(':baseModule')
+//    api project(':baseModule')
+    implementation 'com.jzh.lib:baseModule:1.0.7'
 }

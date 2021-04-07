@@ -1,12 +1,7 @@
-package com.huaweisoft.mvp.injection.module;
+package com.jzh.mvp.injection.module;
 
-import android.content.Context;
-
-
-import com.huaweisoft.mvp.injection.scope.PerApplication;
 
 import dagger.Module;
-import dagger.Provides;
 
 /**
  * <p>Dagger2 BaseModule.</p>
@@ -15,9 +10,9 @@ import dagger.Provides;
  * @version 1.0 , create at 2019/03/01 11:12
  */
 @Module
-public class BaseModule {
+public class BMBaseModule {
 	
-	public BaseModule() {
+	public BMBaseModule() {
 		// Default non-parameters constructor
 	}
 	

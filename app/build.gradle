@@ -111,7 +111,7 @@ dependencies {
     implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.42'
     //小米推送
     api project(':miPusher')
-    api project(':baseModule')
+    api project(':mvp')
 }
 repositories {
     mavenCentral()

@@ -56,5 +56,10 @@
       <option name="name" value="maven6" />
       <option name="url" value="https://raw.githubusercontent.com/jinzhenhua1/library/main" />
     </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven7" />
+      <option name="name" value="maven7" />
+      <option name="url" value="https://gitee.com/jinzhenhua1/aar_lib/raw/master" />
+    </remote-repository>
   </component>
 </project>

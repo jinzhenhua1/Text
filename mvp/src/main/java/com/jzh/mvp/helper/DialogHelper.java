@@ -1,4 +1,4 @@
-package com.huaweisoft.mvp.helper;
+package com.jzh.mvp.helper;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -10,7 +10,7 @@ import androidx.annotation.NonNull;
 import com.afollestad.materialdialogs.MaterialDialog;
 import com.afollestad.materialdialogs.MaterialDialog.Builder;
 import com.afollestad.materialdialogs.MaterialDialog.SingleButtonCallback;
-import com.huaweisoft.mvp.R;
+import com.jzh.mvp.R;
 
 /**
  * <p>对话框帮助类</p>

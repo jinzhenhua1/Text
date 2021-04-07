@@ -69,11 +69,11 @@ public abstract class RxTransformer {
     }
 
     /**
-     * map操作符
+     * map操作符，可以根据返回的状态码，自定义来判断是否是请求失败
      *
      * @return 返回map操作符的对象
      */
-    public abstract Function getMap();
+    public abstract <T extends ReturnBean> Function<T,T> getMap();
 
     /**
      * 返回到登录页面，根据实际情况来实现

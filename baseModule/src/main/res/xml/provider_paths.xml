@@ -2,6 +2,7 @@
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
 
     <external-path name="beta_external_files_path" path="Android/data/"/>
+    <external-path name="beta_external_media_path" path="Android/media/"/>
     <external-path name="root_path" path="/"/>
     <external-files-path name="root_files_path" path="/"/>
 

@@ -1,4 +1,4 @@
-package com.huaweisoft.mvp.mvp.base;
+package com.jzh.mvp.mvp.base;
 
 import com.jzh.basemodule.callback.HttpResponseListener;
 import com.jzh.basemodule.http.ApiServiceImpl;
@@ -10,6 +10,7 @@ import javax.inject.Inject;
 import io.reactivex.Observable;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
 
 /**
  * <p></p>
@@ -23,8 +24,11 @@ public abstract class BaseModel implements IBaseContract.IBaseModel {
     private CompositeDisposable disposableWhenStop = new CompositeDisposable();
     private CompositeDisposable disposableWhenDestroy = new CompositeDisposable();
 
-    @Inject
     protected RxTransformer api;
+
+    public BaseModel(RxTransformer api) {
+        this.api = api;
+    }
 
     @Override
     public void onStop() {
@@ -54,6 +58,10 @@ public abstract class BaseModel implements IBaseContract.IBaseModel {
         disposableWhenStop.add(api.apiRequest(observable,callback));
     }
 
+    protected void addRequestUntilStop(Disposable disposable){
+        disposableWhenStop.add(disposable);
+    }
+
     /**
      * 发送网络请求，页面destory时会解除绑定
      *
@@ -69,14 +77,14 @@ public abstract class BaseModel implements IBaseContract.IBaseModel {
     }
 
 
-    protected <T> T getService(){
-        return ApiServiceImpl.getApiService(getServiceClass());
+    protected void addRequestUntilDestroy(Disposable disposable){
+        disposableWhenDestroy.add(disposable);
     }
 
-    /**
-     * 获取网络的接口
-     * @return 接口的类
-     */
-    protected abstract <T> Class<T> getServiceClass();
+
+    protected <T> T getService(Class<T> clazz){
+        return ApiServiceImpl.getApiService(clazz);
+    }
+
 
 }

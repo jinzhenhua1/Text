@@ -15,8 +15,15 @@
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <!--    安装APK的权限，适用于8.0及以上-->
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <!--允许程序设置内置sd卡的写权限-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--允许程序设置内置sd卡的写权限-->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-    <application>
+    <!--    安卓9开始，限制了http接口的访问，要加上配置才能访问-->
+    <application
+        android:networkSecurityConfig="@xml/network_security_config">
+        <!--    安卓7开始，无法让外部程序访问自己创建的文件，需要提供临时权限    -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.jzh.basemodule.fileProvider"

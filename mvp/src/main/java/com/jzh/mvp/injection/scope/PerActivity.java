@@ -1,4 +1,4 @@
-package com.huaweisoft.mvp.injection.scope;
+package com.jzh.mvp.injection.scope;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

@@ -3,15 +3,6 @@
 buildscript {
     ext.kotlin_version = '1.3.50'
     repositories {
-        maven{
-            url 'http://maven.aliyun.com/nexus/content/groups/public/'//阿里云镜像
-        }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
-//        maven{
-//            url 'https://maven.google.com'
-//        }
         google()
         jcenter()
         
@@ -38,15 +29,6 @@ buildscript {
 
 allprojects {
     repositories {
-        maven{
-            url 'http://maven.aliyun.com/nexus/content/groups/public/'//阿里云镜像
-        }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/jcenter' }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/google' }
-        maven { url 'http://maven.aliyun.com/nexus/content/repositories/gradle-plugin' }
-//        maven{
-//            url 'https://maven.google.com'
-//        }
         google()
         jcenter()
         maven {
@@ -55,9 +37,14 @@ allprojects {
 
 
         //我的私人镜像，格式：https://raw.githubusercontent.com/{username}/{projeceName}/{branch}
+//        maven{
+//            url 'https://raw.githubusercontent.com/jinzhenhua1/library/main'
+//        }
+        //gitee 仓库, https://gitee.com/用户名/工程名/raw/分支
         maven{
-            url 'https://raw.githubusercontent.com/jinzhenhua1/library/main'
+            url "https://gitee.com/jinzhenhua1/aar_lib/raw/master"
         }
+
     }
 }
 apply from: 'dependencies.gradle'
