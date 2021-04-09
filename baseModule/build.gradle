@@ -61,6 +61,7 @@ uploadArchives {
 }
 
 dependencies {
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     Map<String, String> dependencies = rootProject.ext.dependencies
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -82,4 +83,12 @@ dependencies {
 
     //仿IOD弹窗
     api 'com.github.limxing:Android-PromptDialog:1.1.3'
+
+
+    //支持手势缩放的图片view
+    api 'com.github.chrisbanes:PhotoView:2.0.0'
+    api dependencies.glide
+
+    //点击水波纹
+    api 'com.patrickpissurno:ripple-effect:1.3.1'
 }

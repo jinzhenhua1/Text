@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/coordinator"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <androidx.viewpager.widget.ViewPager
+    android:id="@+id/show_image_activity_vp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" />
+
+    <com.andexert.library.RippleView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/main_activity_toolbar_ripple_menu"
+        android:layout_width="?android:actionBarSize"
+        android:layout_height="?android:actionBarSize"
+        app:rv_color="@color/color_white"
+        app:rv_centered="true"
+        app:rv_type="simpleRipple">
+
+        <ImageView
+            android:id="@+id/activity_show_image_iv_back"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_baseline_arrow_back_24" />
+
+    </com.andexert.library.RippleView>
+
+
+    <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/show_image_activity_tv_page_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="1/1"
+        android:textColor="@color/color_white"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

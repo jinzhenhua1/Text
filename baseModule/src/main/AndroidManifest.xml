@@ -23,6 +23,7 @@
     <!--    安卓9开始，限制了http接口的访问，要加上配置才能访问-->
     <application
         android:networkSecurityConfig="@xml/network_security_config">
+
         <!--    安卓7开始，无法让外部程序访问自己创建的文件，需要提供临时权限    -->
         <provider
             android:name="androidx.core.content.FileProvider"
