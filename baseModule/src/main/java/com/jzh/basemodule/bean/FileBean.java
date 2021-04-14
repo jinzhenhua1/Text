@@ -5,13 +5,8 @@ public abstract class FileBean {
     public static final int TYPE_PDF = 1;
     public static final int TYPE_HTML = 2;
 
-    protected String path;
 
-    public String getPath() {
-        return path;
-    }
+    public abstract String getPath();
 
-    public void setPath(String path) {
-        this.path = path;
-    }
+    public abstract void setPath(String path);
 }

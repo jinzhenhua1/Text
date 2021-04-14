@@ -8,6 +8,7 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import com.andexert.library.RippleView;
 import com.jzh.basemodule.R;
 import com.jzh.basemodule.bean.FileBean;
 import com.jzh.basemodule.view.adapter.ShowImagePagerAdapter;
@@ -36,8 +37,8 @@ public class ShowImageActivity<T extends FileBean> extends AppCompatActivity imp
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_show_image);
-        initView();
         initData();
+        initView();
     }
 
 
@@ -71,7 +72,7 @@ public class ShowImageActivity<T extends FileBean> extends AppCompatActivity imp
             }
         });
 
-        ImageView ibBack = findViewById(R.id.activity_show_image_iv_back);
+        RippleView ibBack = findViewById(R.id.main_activity_toolbar_ripple_menu);
         ibBack.setOnClickListener(v -> finish());
     }
 

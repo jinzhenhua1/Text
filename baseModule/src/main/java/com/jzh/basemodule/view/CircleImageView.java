@@ -60,6 +60,11 @@ public class CircleImageView extends androidx.appcompat.widget.AppCompatImageVie
     private boolean mReady;
     private boolean mSetupPending;
 
+    /**
+     * 是否只更改边框
+     */
+    private boolean onylChangeBorder = false;
+
     public CircleImageView(Context context) {
         super(context);
 
@@ -118,10 +123,14 @@ public class CircleImageView extends androidx.appcompat.widget.AppCompatImageVie
             return;
         }
 
-        canvas.drawCircle(getWidth() / 2, getHeight() / 2, mDrawableRadius, mBitmapPaint);
+//        if(!onylChangeBorder){
+            canvas.drawCircle(getWidth() / 2, getHeight() / 2, mDrawableRadius, mBitmapPaint);
+//        }
         if (mBorderWidth != 0) {
             canvas.drawCircle(getWidth() / 2, getHeight() / 2, mBorderRadius, mBorderPaint);
         }
+
+//        onylChangeBorder = false;
     }
 
     @Override
@@ -138,7 +147,7 @@ public class CircleImageView extends androidx.appcompat.widget.AppCompatImageVie
         if (borderColor == mBorderColor) {
             return;
         }
-
+        onylChangeBorder = true;
         mBorderColor = borderColor;
         mBorderPaint.setColor(mBorderColor);
         invalidate();
@@ -152,7 +161,7 @@ public class CircleImageView extends androidx.appcompat.widget.AppCompatImageVie
         if (borderWidth == mBorderWidth) {
             return;
         }
-
+        onylChangeBorder = true;
         mBorderWidth = borderWidth;
         setup();
     }

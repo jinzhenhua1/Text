@@ -7,6 +7,7 @@ import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.media.AudioManager;
 import android.net.ConnectivityManager;
+import android.net.NetworkCapabilities;
 import android.net.NetworkInfo;
 import android.net.wifi.WifiInfo;
 import android.net.wifi.WifiManager;
@@ -255,43 +256,6 @@ public class PhoneUtil {
         return availableBlocks * blockSize / (1024 * 1024);
     }
 
-    public boolean isWifi() {
-        ConnectivityManager connectivity = (ConnectivityManager) mContext.getSystemService(Context.CONNECTIVITY_SERVICE);
-        if (connectivity != null) {
-            NetworkInfo info = connectivity.getActiveNetworkInfo();
-            if (info != null && info.isConnected()) {
-                //当前网络是连接的
-                return info.getState() == NetworkInfo.State.CONNECTED && "WIFI".equals(info.getTypeName());
-            }
-        }
-        return false;
-    }
-
-    public String getSensorListInfo(Context context) {
-        // 获取传感器管理器
-        SensorManager sensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
-
-        // 获取全部传感器列表
-        List<Sensor> sensors = sensorManager.getSensorList(Sensor.TYPE_ALL);
-
-        // 打印每个传感器信息
-        List<Integer> sensorTypes = new ArrayList<>();
-        for (Sensor item : sensors) {
-            sensorTypes.add(item.getType());
-        }
-        StringBuilder rst = new StringBuilder();
-        if (!sensorTypes.contains(Sensor.TYPE_ACCELEROMETER)) {
-            rst.append("没有加速度传感器\n");
-        }
-        if (!sensorTypes.contains(Sensor.TYPE_MAGNETIC_FIELD)) {
-            rst.append("没有地磁传感器\n");
-        }
-        if (!sensorTypes.contains(Sensor.TYPE_GYROSCOPE)) {
-            rst.append("没有陀螺仪传感器\n");
-        }
-        return rst.toString().isEmpty() ? "PASS" : rst.toString();
-    }
-
     /**
      * 获取SIM卡信息
      *
@@ -313,50 +277,6 @@ public class PhoneUtil {
         return result;
     }
 
-
-    private static final String HEADSET_STATE_PATH = "/sys/class/switch/wfd/state";
-
-    /**
-     * 判断耳机是否接入了
-     *
-     * @return 耳机是否接入
-     */
-    public boolean isHeadsetExists() throws IOException {
-        char[] buffer = new char[1024];
-        int newState = 0;
-        FileReader file = null;
-        try {
-            file = new FileReader(HEADSET_STATE_PATH);
-            int len = file.read(buffer, 0, 1024);
-            newState = Integer.parseInt((new String(buffer, 0, len)).trim());
-        } catch (FileNotFoundException e) {
-            Log.e("FMTest", "This kernel does not have wired headset support");
-        } catch (Exception e) {
-            Log.e("FMTest", "", e);
-        } finally {
-            if (file != null) {
-                file.close();
-            }
-        }
-        return newState != 0;
-    }
-
-    public static String getMobileStrengthStr(int mobileStrength) {
-        switch (mobileStrength) {
-            case -1:
-                return "无信号";
-            case 1:
-                return "信号微弱";
-            case 2:
-                return "信号较弱";
-            case 3:
-                return "信号较强";
-            case 4:
-                return "信号最强";
-            default:
-                return "无信号";
-        }
-    }
 
     /**
      * 获取当前的运营商 需要 android.permission.READ_PHONE_STATE 权限，6.0后要动态申请
@@ -382,6 +302,80 @@ public class PhoneUtil {
             return "没有获取到sim卡信息";
         }
     }
+
+    /**
+     * 网络是否已连接
+     *
+     * @return true:已连接 false:未连接
+     */
+    @SuppressWarnings("deprecation")
+    @RequiresPermission(Manifest.permission.ACCESS_NETWORK_STATE)
+    public boolean iNetWorkConnected() {
+//        ConnectivityManager manager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        if (mConnManager != null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                NetworkCapabilities networkCapabilities = mConnManager.getNetworkCapabilities(mConnManager.getActiveNetwork());
+                if (networkCapabilities != null) {
+                    return networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)
+                            || networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR)
+                            || networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET);
+                }
+            } else {
+                NetworkInfo networkInfo = mConnManager.getActiveNetworkInfo();
+                if (networkInfo != null && networkInfo.isConnected()) {
+                    if (networkInfo.getState() == NetworkInfo.State.CONNECTED) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+                return false;
+//                return networkInfo != null && networkInfo.isConnected();
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 是否为流量
+     */
+    @SuppressWarnings("deprecation")
+    @RequiresPermission(Manifest.permission.ACCESS_NETWORK_STATE)
+    public boolean isMobileData() {
+        if (mConnManager != null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                NetworkCapabilities networkCapabilities = mConnManager.getNetworkCapabilities(mConnManager.getActiveNetwork());
+                if (networkCapabilities != null) {
+                    return networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_CELLULAR);
+                }
+            } else {
+                NetworkInfo networkInfo = mConnManager.getActiveNetworkInfo();
+                return networkInfo != null && networkInfo.isConnected() && networkInfo.getType() == ConnectivityManager.TYPE_MOBILE;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * 是否为wifi连接
+     */
+    @SuppressWarnings("deprecation")
+    @RequiresPermission(Manifest.permission.ACCESS_NETWORK_STATE)
+    public boolean isWifiData() {
+        if (mConnManager != null) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                NetworkCapabilities networkCapabilities = mConnManager.getNetworkCapabilities(mConnManager.getActiveNetwork());
+                if (networkCapabilities != null) {
+                    return networkCapabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI);
+                }
+            } else {
+                NetworkInfo networkInfo = mConnManager.getActiveNetworkInfo();
+                return networkInfo != null && networkInfo.isConnected() && networkInfo.getType() == ConnectivityManager.TYPE_WIFI;
+            }
+        }
+        return false;
+    }
+
 
     /**
      * 安卓10及以上 无法获取IMEI

@@ -14,7 +14,7 @@ import com.jzh.basemodule.utils.LogUtils;
 import com.jzh.basemodule.utils.PhoneUtil;
 
 /**
- * <p></p>
+ * <p>获取移动信号</p>
  * <p></p>
  *
  * @author jinzhenhua
