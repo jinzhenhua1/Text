@@ -30,6 +30,7 @@ import io.reactivex.ObservableOnSubscribe;
 import io.reactivex.ObservableSource;
 import io.reactivex.Observer;
 import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.Disposable;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
@@ -198,6 +199,13 @@ public class TestRxjavaActivity extends AppCompatActivity {
                 Observable<ResponseData<ContextData>> observable = service.getResponseBody("广州");
                 observable.observeOn(AndroidSchedulers.mainThread())//最后在主线程中执行
                 .subscribeOn(Schedulers.io())
+                        .map(new Function<ResponseData<ContextData>, ResponseData<ContextData>>() {
+                            @Override
+                            public ResponseData<ContextData> apply(@NonNull ResponseData<ContextData> contextDataResponseData) throws Exception {
+                                Log.e(TAG,"当前线程：" + Thread.currentThread().getName());
+                                return contextDataResponseData;
+                            }
+                        })
                 .subscribe(new Observer<ResponseData<ContextData>>() {
                     @Override
                     public void onSubscribe(Disposable d) {

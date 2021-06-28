@@ -39,7 +39,7 @@ public class InstallUtils {
         //android7.0适配，7.0 开始要使用外部程序打开本程序的文件，需要通过FileProvider
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             i.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            Uri contentUri = FileProvider.getUriForFile(context, BuildConfig.LIBRARY_PACKAGE_NAME + ".fileProvider", apkfile);
+            Uri contentUri = FileProvider.getUriForFile(context, context.getPackageName() + ".fileProvider", apkfile);
             i.setDataAndType(contentUri, "application/vnd.android.package-archive");
             // android8.0适配，8.0开始要动态申请安装的权限
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {

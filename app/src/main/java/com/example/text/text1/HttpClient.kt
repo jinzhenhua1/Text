@@ -6,6 +6,7 @@ package com.example.text.text1
 //import com.gzkit.realname_system_android.utils.LogUtil
 //import com.gzkit.realname_system_android.utils.SPUtil
 //import com.gzkit.realname_system_android.utils.Utils
+import android.util.Log
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -51,6 +52,7 @@ class HttpClient {
 //        LogUtil.i("handleHeaderResponseTokenInterceptor#time=${System.currentTimeMillis()}")
         val utf8 = Charset.forName("UTF-8")
         return Interceptor { chain ->
+            Log.e("HttpClient","当前线程：" + Thread.currentThread().name)
             val request = chain.request()
             var response = chain.proceed(request)
             try {

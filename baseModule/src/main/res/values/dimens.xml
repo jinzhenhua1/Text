@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!-- 公用资源 -->
+  <dimen name="dimen_zero_dp">0dp</dimen>
+  <dimen name="dimen_half_one_dp">0.5dp</dimen>
+  <dimen name="dimen_line_one_dp">1dp</dimen>
+  <dimen name="dimen_line_two_dp">2dp</dimen>
+  <dimen name="dimen_small_most">4dp</dimen>
+  <dimen name="dimen_small">8dp</dimen>
+  <dimen name="dimen_normal">16dp</dimen>
+  <dimen name="dimen_middle">24dp</dimen>
+  <dimen name="dimen_middle_half">12dp</dimen>
+  <dimen name="dimen_large">32dp</dimen>
+  <dimen name="dimen_large_most">48dp</dimen>
+  <dimen name="dimen_text_size_small">12sp</dimen>
+  <dimen name="dimen_text_size_middle">14sp</dimen>
+  <dimen name="dimen_text_size_normal">16sp</dimen>
+  <dimen name="dimen_text_size_large">18sp</dimen>
+  <dimen name="dimen_text_size_large_most">20sp</dimen>
+  <dimen name="dimen_radius_small">4dp</dimen>
+  <dimen name="dimen_radius_normal">8dp</dimen>
+  <dimen name="dimen_radius_middle">12dp</dimen>
+  <dimen name="dimen_radius_large">16dp</dimen>
+
+  <dimen name="dimen_btn_height_small">32dp</dimen>
+  <dimen name="dimen_btn_height">44dp</dimen>
+  <dimen name="dimen_btn_text_size">16sp</dimen>
+  <dimen name="dimen_btn_radius_small">4dp</dimen>
+  <dimen name="dimen_btn_radius_default">8dp</dimen>
+  <dimen name="dimen_btn_radius">12dp</dimen>
+  <dimen name="dimen_btn_margin_vertical">12dp</dimen>
+  <dimen name="dimen_btn_margin_horizontal">24dp</dimen>
+
+  <dimen name="dimen_recycler_item_height_small">48dp</dimen>
+  <dimen name="dimen_recycler_item_height">56dp</dimen>
+  <dimen name="dimen_recycler_item_height_large">64dp</dimen>
+
+  <dimen name="dimen_edit_height_default">44dp</dimen>
+  <dimen name="dimen_edit_height_normal">56dp</dimen>
+
+  <!-- 标题栏 -->
+  <dimen name="toolbar_common_iv_arrow_left_size">28dp</dimen>
+
+  <!-- 提示对话框 -->
+  <dimen name="dialog_common_progress_size">30dp</dimen>
+
+  <!-- activity_helmet_detail -->
+  <dimen name="helmet_activity_detail_item_height">45dp</dimen>
+
+  <!-- dialog_wifi对话框 -->
+  <dimen name="wifi_dialog_height">250dp</dimen>
+  <dimen name="wifi_dialog_root_padding">3dp</dimen>
+  <dimen name="wifi_dialog_ll_item_height">50dp</dimen>
+  <dimen name="wifi_dialog_ll_item_padding">10dp</dimen>
+  <dimen name="wifi_dialog_tv_state_size">12sp</dimen>
+  <dimen name="wifi_dialog_tv_state_padding_r">10dp</dimen>
+
+</resources>

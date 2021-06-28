@@ -24,7 +24,10 @@ import io.reactivex.functions.Function;
 import io.reactivex.functions.Predicate;
 import io.reactivex.schedulers.Schedulers;
 
-
+/**
+ * 图片压缩
+ * 依赖： implementation 'top.zibin:Luban:1.1.3'
+ */
 public class Luban {
 
     private static final int FIRST_GEAR = 1;

@@ -1,6 +1,7 @@
 package com.example.text.mvp.http;
 
 import com.example.text.bean.ContextData;
+import com.jzh.basemodule.http.bean.ReturnBean;
 
 /**
  * <p>请求返回的 数据格式类</p>
@@ -9,11 +10,12 @@ import com.example.text.bean.ContextData;
  * @author jinzhenhua
  * @version 1.0  ,create at:2020/5/26 17:21
  */
-public class HttpRespondData<T> {
+public class HttpRespondData<T> extends ReturnBean<T> {
     private T data;
     private int status = 0;
     private String desc = "";
 
+    @Override
     public T getData() {
         return data;
     }

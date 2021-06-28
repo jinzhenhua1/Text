@@ -11,6 +11,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
@@ -266,7 +268,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         }
     }
 
-    //设置标题栏的按钮
+//    设置标题栏的按钮
 //    @Override
 //    public boolean onCreateOptionsMenu(Menu menu) {
 //        getMenuInflater().inflate(R.menu.menu_main_activity, menu);

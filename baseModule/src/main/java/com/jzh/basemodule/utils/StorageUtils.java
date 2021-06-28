@@ -111,6 +111,30 @@ public class StorageUtils {
     }
 
     /**
+     * 创建 Android/media/<包名>/mediaFolder 文件夹
+     * 默认是创建在外置SD卡中，当没有挂载SD卡时，创建在默认内部存储中
+     *
+     * @param mediaFolder 文件夹分类名，如photo、video、pre
+     * @return File
+     */
+    public static File getOutputDirectory(Context context,String mediaFolder) {
+
+        File[] files = context.getExternalMediaDirs();
+        if (files[files.length - 1] != null) {
+//            File mediaDir = new File(files[files.length - 1], "FB");
+            File classifyDir = new File(files[files.length - 1], mediaFolder);
+            if (!classifyDir.exists()) {
+                classifyDir.mkdirs();
+            }
+            if (classifyDir.exists()) {
+                return classifyDir;
+            }
+        }
+        File file = context.getFilesDir();
+        return file;
+    }
+
+    /**
      * 获取内部存储根目录
      * @return  如：/data
      */
@@ -142,7 +166,7 @@ public class StorageUtils {
      * 获取应用在内部存储中的 自定义 路径
      * @param context
      * @param name
-     * @return 如：/data/user/0/packname/{@link #name}
+     * @return 如：/data/user/0/packname/{@link # name}
      * 经过验证，用as自带的device file explorer查看目录， 前面的 /data/user/0 再红米6手机中真实路径 /data/data
      */
     public static String getDirPath(Context context,String name){

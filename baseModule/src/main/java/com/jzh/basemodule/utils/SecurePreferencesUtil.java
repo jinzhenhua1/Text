@@ -95,8 +95,8 @@ public class SecurePreferencesUtil {
     }
 
     @SuppressWarnings("unused")
-    public float getLong(String key) {
-        return mPreferences.getFloat(key, 0L);
+    public long getLong(String key) {
+        return mPreferences.getLong(key, 0L);
     }
 
     /**

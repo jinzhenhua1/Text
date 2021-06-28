@@ -6,11 +6,8 @@ import com.example.text.mvp.http.HttpUtils;
 import com.example.text.mvp.http.RxTransformer;
 
 import io.reactivex.Observable;
-import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.disposables.CompositeDisposable;
-import io.reactivex.functions.Consumer;
-import io.reactivex.schedulers.Schedulers;
 
 public class BaseModel implements IBaseContract.IBaseModel {
 

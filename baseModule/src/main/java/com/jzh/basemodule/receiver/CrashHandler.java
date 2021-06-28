@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 
 import com.jzh.basemodule.R;
+import com.jzh.basemodule.utils.StorageUtils;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -212,7 +213,7 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         String time = formatter.format(new Date());
         String fileName = "crash-" + time + ".log";
         if(Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)){///sd卡正常挂载
-            String path = Environment.getExternalStorageDirectory().getAbsolutePath()
+            String path = StorageUtils.getExternalFilesPath(mContext)
                     + File.separator
                     + folderName
                     + "/logs/";;

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- 覆盖 Material Dialog 的字体属性 -->
+    <dimen name="md_action_corner_radius" tools:override="true">8dp</dimen>
+    <dimen name="md_title_textsize" tools:override="true">20sp</dimen>
+    <dimen name="md_content_textsize" tools:override="true">18sp</dimen>
+    <dimen name="md_message_textsize" tools:override="true">18sp</dimen>
+    <dimen name="md_button_textsize" tools:override="true">18sp</dimen>
+    <dimen name="md_listitem_textsize" tools:override="true">18sp</dimen>
+
+    <dimen name="dimen_small">8dp</dimen>
+    <dimen name="dimen_normal">16dp</dimen>
+    <dimen name="dimen_middle">24dp</dimen>
+    <dimen name="dimen_large">32dp</dimen>
+    <dimen name="dimen_00">0dp</dimen>
+    <dimen name="dimen_05">0.5dp</dimen>
+    <dimen name="dimen_1">1dp</dimen>
+    <dimen name="dimen_3">3dp</dimen>
+    <dimen name="dimen_2">2dp</dimen>
+    <dimen name="dimen_4">4dp</dimen>
+    <dimen name="dimen_5">5dp</dimen>
+    <dimen name="dimen_6">6dp</dimen>
+    <dimen name="dimen_8">8dp</dimen>
+    <dimen name="dimen_10">10dp</dimen>
+    <dimen name="dimen_12">12dp</dimen>
+    <dimen name="dimen_15">15dp</dimen>
+    <dimen name="dimen_16">16dp</dimen>
+    <dimen name="dimen_18">18dp</dimen>
+    <dimen name="dimen_20">20dp</dimen>
+    <dimen name="dimen_22">22dp</dimen>
+    <dimen name="dimen_24">24dp</dimen>
+    <dimen name="dimen_28">28dp</dimen>
+    <dimen name="dimen_30">30dp</dimen>
+    <dimen name="dimen_32">32dp</dimen>
+    <dimen name="dimen_36">36dp</dimen>
+    <dimen name="dimen_40">40dp</dimen>
+    <dimen name="dimen_44">44dp</dimen>
+    <dimen name="dimen_45">45dp</dimen>
+    <dimen name="dimen_48">48dp</dimen>
+    <dimen name="dimen_50">50dp</dimen>
+    <dimen name="dimen_52">52dp</dimen>
+    <dimen name="dimen_56">56dp</dimen>
+    <dimen name="dimen_60">60dp</dimen>
+    <dimen name="dimen_64">64dp</dimen>
+    <dimen name="dimen_72">72dp</dimen>
+    <dimen name="dimen_74">74dp</dimen>
+    <dimen name="dimen_76">76dp</dimen>
+    <dimen name="dimen_80">80dp</dimen>
+    <dimen name="dimen_84">84dp</dimen>
+    <dimen name="dimen_90">90dp</dimen>
+    <dimen name="dimen_95">95dp</dimen>
+    <dimen name="dimen_100">100dp</dimen>
+    <dimen name="dimen_105">105dp</dimen>
+    <dimen name="dimen_110">110dp</dimen>
+    <dimen name="dimen_115">115dp</dimen>
+    <dimen name="dimen_120">120dp</dimen>
+    <dimen name="dimen_124">124dp</dimen>
+    <dimen name="dimen_130">130dp</dimen>
+    <dimen name="dimen_140">140dp</dimen>
+    <dimen name="dimen_150">150dp</dimen>
+    <dimen name="dimen_160">160dp</dimen>
+    <dimen name="dimen_200">200dp</dimen>
+    <dimen name="dimen_240">240dp</dimen>
+    <dimen name="dimen_260">260dp</dimen>
+    <dimen name="dimen_480">480dp</dimen>
+    <dimen name="dimen_920">920dp</dimen>
+
+    <dimen name="dimen_sp_12">12sp</dimen>
+    <dimen name="dimen_sp_14">14sp</dimen>
+    <dimen name="dimen_sp_16">16sp</dimen>
+    <dimen name="dimen_sp_18">18sp</dimen>
+    <dimen name="dimen_sp_20">20sp</dimen>
+    <dimen name="dimen_sp_22">22sp</dimen>
+    <dimen name="dimen_sp_24">24sp</dimen>
+    <dimen name="dimen_sp_26">26sp</dimen>
+    <dimen name="dimen_sp_28">28sp</dimen>
+    <dimen name="dimen_sp_30">30sp</dimen>
+    <dimen name="dimen_sp_32">32sp</dimen>
+    <dimen name="dimen_sp_36">36sp</dimen>
+    <dimen name="dimen_sp_40">40sp</dimen>
+    <dimen name="dimen_sp_50">50sp</dimen>
+    <dimen name="dimen_sp_60">60sp</dimen>
+
+    <dimen name="dimen_button_height">44dp</dimen>
+    <dimen name="dimen_button_text_size">24sp</dimen>
+
+    <dimen name="dimen_edit_height">64dp</dimen>
+    <dimen name="dimen_edit_text_size">24sp</dimen>
+
+    <dimen name="main_berth_item_height">106dp</dimen>
+    <dimen name="main_berth_item_width">118dp</dimen>
+
+    <dimen name="setting_item_height">95dp</dimen>
+    <dimen name="setting_item_image_size">60dp</dimen>
+    <dimen name="statistics_item_height">78dp</dimen>
+    <dimen name="statistics_item_image_size">60dp</dimen>
+
+</resources>

@@ -1,4 +1,4 @@
-package com.jzh.basemodule.rx;
+package com.jzh.basemodule.http.rx;
 
 
 

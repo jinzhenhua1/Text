@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Mvp_Demo</string>
+    <string name="string_loading">请稍等片刻&#8230;</string>
+    <string name="string_title_dialog">提&#160;示</string>
+    <string name="string_confirm">确&#160;定</string>
+    <string name="string_cancel">取&#160;消</string>
+</resources>

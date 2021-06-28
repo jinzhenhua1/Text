@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'maven'
 
 android {
     compileSdkVersion rootProject.ext.versions.compileSdkVersion
@@ -27,7 +28,40 @@ android {
     }
 }
 
+
+// 上传maven指令
+uploadArchives {
+    configuration = configurations.archives
+    repositories {
+        mavenDeployer {
+            //maven 本地文件地址，这里是 .. 表示项目的根目录
+//            def mavenLib = file(getProperty('mavenPath'))
+//            repository(url: "file://${mavenLib.absolutePath}")
+
+            def mavenLib = file('D:/android_workspace/aar_lib/aar_lib')
+            repository(url: "file://${mavenLib.absolutePath}")
+
+//            repository(url:rootProject.ext.maven.mavenUrl) {
+//                authentication(userName: rootProject.ext.maven.mavenAccount,
+//                        password: rootProject.ext.maven.mavenPwd)
+//            }
+            pom.project {
+                //版本
+                version "1.1.5"
+                //描述
+                description "基础模块"
+
+                // 对应maven的groupId的值(包名)
+                groupId "com.jzh.lib"
+                artifactId "baseModule"
+//                packaging rootProject.ext.maven.fileAAR
+            }
+        }
+    }
+}
+
 dependencies {
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
     Map<String, String> dependencies = rootProject.ext.dependencies
 
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -46,4 +80,15 @@ dependencies {
     api dependencies.retrofitConverterGson
     api dependencies.okhttp_logging
     api dependencies.retrofitAdapterRxJava
+
+    //仿IOD弹窗
+    api 'com.github.limxing:Android-PromptDialog:1.1.3'
+
+
+    //支持手势缩放的图片view
+    api 'com.github.chrisbanes:PhotoView:2.0.0'
+    api dependencies.glide
+
+    //点击水波纹
+    api 'com.patrickpissurno:ripple-effect:1.3.1'
 }
