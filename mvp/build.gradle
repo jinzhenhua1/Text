@@ -48,7 +48,7 @@ uploadArchives {
 //            }
             pom.project {
                 //版本
-                version "1.0.9"
+                version "1.1.0"
                 //描述
                 description "MVP模块，次模块默认引用base模块"
 
@@ -97,5 +97,5 @@ dependencies {
     api 'org.greenrobot:greendao:3.2.2'
 
 //    api project(':baseModule')
-    implementation 'com.jzh.lib:baseModule:1.0.7'
+    implementation 'com.jzh.lib:baseModule:1.1.8'
 }

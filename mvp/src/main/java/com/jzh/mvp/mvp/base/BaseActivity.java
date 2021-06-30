@@ -19,6 +19,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.jzh.basemodule.manager.ActivityManager;
 import com.jzh.mvp.R;
 import com.jzh.mvp.helper.DialogHelper;
 import com.jzh.mvp.mvp.listener.IListener;
@@ -69,6 +70,7 @@ public abstract class BaseActivity<T extends IBaseContract.IBasePresenter> exten
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context = this;
+        ActivityManager.getInstance().addActivity(this);
         inquiryDialog = DialogHelper.inquiryDialog(context, this);
         confirmDialog = DialogHelper.confirmDialog(context, confirmCallback, cancelCallback);
 //        presenter = createPresenter();
@@ -88,6 +90,7 @@ public abstract class BaseActivity<T extends IBaseContract.IBasePresenter> exten
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        ActivityManager.getInstance().popActivity(this);
         if(presenter != null){
             presenter.onDestroy();
         }

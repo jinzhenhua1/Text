@@ -25,6 +25,15 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" /> <!-- //蓝牙权限 -->
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" /> <!-- 小米推送配置 -->
+
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 安装权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_NUMBERS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!--    Android 10进一步对后台定位做了限制，如果开发者的应用targetSDK>=29，需要在Manifest清单文件中添加后台定位权限申请：-->
+    <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION"/>
     <permission
         android:name="com.example.text.permission.MIPUSH_RECEIVE"
         android:protectionLevel="signature" />
