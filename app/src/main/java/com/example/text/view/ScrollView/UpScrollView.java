@@ -83,7 +83,7 @@ public class UpScrollView extends ScrollView {
                 // 能等于屏幕的高度。也就是说，父控件永远拿不到事件。
                 int translateY = mChildH - mScrollY;
 
-                // 只有一个子view，所以这里其实就是拿到了整个
+                // 只有一个子view，所以这里其实就是拿到了整个高度
                 mChildH = this.getChildAt(0).getMeasuredHeight();
                 Log.e("UpScrollView","mChildH:" + mChildH + ",mScreenHeight:" + mScreenHeight
                         + ",translateY:" + translateY + ",realHeight:" + getHeight());

@@ -112,6 +112,7 @@ dependencies {
     //小米推送
     api project(':miPusher')
     api project(':mvp')
+    api project(':baseModule')
 }
 repositories {
     mavenCentral()

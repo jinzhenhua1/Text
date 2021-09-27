@@ -18,6 +18,7 @@ public class StudentActivity extends BaseActivity<ActivityStudentBinding,Student
         dataBinding = DataBindingUtil.setContentView(this,R.layout.activity_student);
         viewModel = new StudentViewModel();
         super.onCreate(savedInstanceState);
+//        ActivityStudentBinding
 
         initData();
 
