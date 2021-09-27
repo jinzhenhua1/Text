@@ -35,6 +35,18 @@ public abstract class RxTransformer {
         if (getMap() != null) {
             observable.map(getMap());
         }
+        if (getErrorMap() != null) {
+            return observable.compose(applySchedulers())
+                    .onErrorResumeNext(getErrorMap())
+                    .subscribe(
+                    (Consumer<T>) o -> callback.onSuccess(o.getData()), new Consumer<Throwable>() {
+                        @Override
+                        public void accept(Throwable throwable) throws Exception {
+                            callback.onFailure(throwable);
+                        }
+                    }
+            );
+        }
         return observable.compose(applySchedulers()).subscribe(
                 (Consumer<T>) o -> callback.onSuccess(o.getData()), new Consumer<Throwable>() {
                     @Override
@@ -74,6 +86,12 @@ public abstract class RxTransformer {
      * @return 返回map操作符的对象
      */
     public abstract <T extends ReturnBean> Function<T,T> getMap();
+
+    /**
+     * 获取错误消息统一处理
+     * @return
+     */
+    public abstract Function getErrorMap();
 
     /**
      * 返回到登录页面，根据实际情况来实现

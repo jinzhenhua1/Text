@@ -1,5 +1,6 @@
 package com.example.text;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -8,6 +9,8 @@ import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -38,6 +41,7 @@ import com.example.text.util.SystemUtils;
 import com.example.text.view.ScrollView.TestScrollActivity;
 import com.example.text.view.TestGridLayoutActivity;
 import com.example.text.view.adapter.TestAdapterActivity;
+import com.jzh.basemodule.utils.PermissionUtil;
 import com.jzh.basemodule.utils.PhoneUtil;
 import com.jzh.basemodule.utils.StorageUtils;
 import com.tbruyelle.rxpermissions2.Permission;
@@ -83,7 +87,30 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
 
     private Handler handler = new Handler();
 
+    /**
+     * 所需的所有权限信息
+     */
+    private static final String[] NEEDED_PERMISSIONS = new String[]{
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.CAMERA,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+    };
 
+    /**
+     * 所需的所有权限信息
+     */
+    private static final String[] NEEDED_PERMISSIONS_10 = new String[]{
+            Manifest.permission.READ_PHONE_STATE,
+            Manifest.permission.CAMERA,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE,
+            Manifest.permission.READ_EXTERNAL_STORAGE,
+            Manifest.permission.ACCESS_FINE_LOCATION,
+            Manifest.permission.ACCESS_COARSE_LOCATION,
+            Manifest.permission.ACCESS_BACKGROUND_LOCATION
+    };
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -201,7 +228,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
 
             }
         });
-
+        onGlobalLayout();
 
     }
 
@@ -209,7 +236,7 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
     private void initData(){
         String processName = SystemUtils.getProcessName(android.os.Process.myPid());
         Log.e(TAG,"进程名称为：:" + processName);
-        requestPermission();
+//        requestPermission();
     }
 
     private void initView(){
@@ -329,4 +356,22 @@ public class MainActivity extends AppCompatActivity {//带有titleBar
         }catch (Exception e){}
 
     }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        boolean isAllGranted = true;
+        for (int grantResult : grantResults) {
+            isAllGranted &= (grantResult == PackageManager.PERMISSION_GRANTED);
+        }
+    }
+
+    public void onGlobalLayout() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
+            PermissionUtil.checkAndRequestPermissionsInActivity(this, NEEDED_PERMISSIONS_10);
+        } else {
+            PermissionUtil.checkAndRequestPermissionsInActivity(this, NEEDED_PERMISSIONS);
+        }
+    }
+
 }

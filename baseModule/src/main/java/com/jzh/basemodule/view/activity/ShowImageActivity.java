@@ -15,6 +15,7 @@ import com.jzh.basemodule.view.adapter.ShowImagePagerAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.PrimitiveIterator;
 
 /**
  * 显示图片
@@ -24,6 +25,7 @@ public class ShowImageActivity<T extends FileBean> extends AppCompatActivity imp
 
     public static final String KEY_SHOW_IMAGE_POSITION = "position";
     public static final String KEY_SHOW_IMAGE_PATH = "images";
+    public static final String KEY_TEXT_SIZE = "KEY_TEXT_SIZE";
 
     ViewPager mImageVp;
     TextView mPagerNumTv;
@@ -32,6 +34,8 @@ public class ShowImageActivity<T extends FileBean> extends AppCompatActivity imp
     private List<T> fileList = new ArrayList<>();
     private String currentPageStr = "";
     private int currentPosition = 0;
+
+    private int textSize = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +53,9 @@ public class ShowImageActivity<T extends FileBean> extends AppCompatActivity imp
         mPagerNumTv = findViewById(R.id.show_image_activity_tv_page_number);
 
         mPagerNumTv.setText(currentPageStr);
+        if(textSize != 0){
+            mPagerNumTv.setTextSize(textSize);
+        }
 
         mAdapter = new ShowImagePagerAdapter<>(this, fileList);
         mAdapter.setOnBackListener(this);
@@ -82,6 +89,7 @@ public class ShowImageActivity<T extends FileBean> extends AppCompatActivity imp
             currentPosition = bundle.getInt(KEY_SHOW_IMAGE_POSITION);
             fileList.addAll((List<T>) bundle.getSerializable(KEY_SHOW_IMAGE_PATH));
             currentPageStr = currentPosition + 1 + "/" + fileList.size();
+            textSize = bundle.getInt(KEY_TEXT_SIZE,0);
         }
     }
 
