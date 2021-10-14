@@ -88,7 +88,7 @@ public class UpScrollView extends ScrollView {
                 Log.e("UpScrollView","mChildH:" + mChildH + ",mScreenHeight:" + mScreenHeight
                         + ",translateY:" + translateY + ",realHeight:" + getHeight());
 
-                //向上滑动时，如果translateY等于屏幕高度时，即表明滑动到底部，可又顶层View控制滑动
+                //向上滑动时，如果translateY等于屏幕高度时，即表明滑动到底部，可由顶层View控制滑动
                 if (deltaY < 0 && translateY == getHeight()) {//todo 这里修改为等于控件本身高度，可解决上面的BUG
                     getParent().getParent().requestDisallowInterceptTouchEvent(false);
                 }
@@ -113,5 +113,6 @@ public class UpScrollView extends ScrollView {
     protected void onScrollChanged(int l, int t, int oldl, int oldt) {
         super.onScrollChanged(l, t, oldl, oldt);
         mScrollY = t;
+        Log.e("UpScrollView","onScrollChanged:mScrollY:" + t);
     }
 }

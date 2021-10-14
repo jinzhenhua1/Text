@@ -63,7 +63,7 @@ public abstract class RxTransformer {
      * @param <T>
      * @return
      */
-    public <T> ObservableTransformer applySchedulers() {
+    public <T> ObservableTransformer<T,T> applySchedulers() {
         return new ObservableTransformer<T, T>() {
             @Override
             public ObservableSource<T> apply(Observable<T> upstream) {
